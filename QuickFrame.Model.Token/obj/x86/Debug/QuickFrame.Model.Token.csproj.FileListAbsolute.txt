@@ -1,0 +1,8 @@
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Model.Token\bin\x86\Debug\QuickFrame.Model.Token.dll
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Model.Token\bin\x86\Debug\QuickFrame.Model.Token.pdb
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Model.Token\obj\x86\Debug\QuickFrame.Model.Token.dll
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Model.Token\obj\x86\Debug\QuickFrame.Model.Token.pdb
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Model.Token\bin\x86\Debug\QuickFrame.Model.Token.dll
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Model.Token\bin\x86\Debug\QuickFrame.Model.Token.pdb
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Model.Token\obj\x86\Debug\QuickFrame.Model.Token.dll
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Model.Token\obj\x86\Debug\QuickFrame.Model.Token.pdb

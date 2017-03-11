@@ -1,0 +1,9 @@
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Common\bin\x86\Release\QuickFrame.Common.dll
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Common\bin\x86\Release\QuickFrame.Common.pdb
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Common\obj\x86\Release\QuickFrame.Common.dll
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Common\obj\x86\Release\QuickFrame.Common.pdb
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Common\bin\x86\Release\QuickFrame.Common.dll
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Common\bin\x86\Release\QuickFrame.Common.pdb
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Common\obj\x86\Release\QuickFrame.Common.csprojResolveAssemblyReference.cache
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Common\obj\x86\Release\QuickFrame.Common.dll
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Common\obj\x86\Release\QuickFrame.Common.pdb

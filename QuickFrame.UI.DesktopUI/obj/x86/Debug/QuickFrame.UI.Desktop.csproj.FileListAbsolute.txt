@@ -1,0 +1,16 @@
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.UI.DesktopUI\bin\x86\Debug\QuickFrame.UI.Desktop.dll
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.UI.DesktopUI\bin\x86\Debug\QuickFrame.UI.Desktop.pdb
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.UI.DesktopUI\bin\x86\Debug\QuickFrame.Common.dll
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.UI.DesktopUI\bin\x86\Debug\QuickFrame.UI.Common.dll
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.UI.DesktopUI\bin\x86\Debug\QuickFrame.Common.pdb
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.UI.DesktopUI\bin\x86\Debug\QuickFrame.UI.Common.pdb
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.UI.DesktopUI\obj\x86\Debug\QuickFrame.UI.Desktop.dll
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.UI.DesktopUI\obj\x86\Debug\QuickFrame.UI.Desktop.pdb
+D:\beifen\1实习\代码\DS\DS\QuickFrame.UI.DesktopUI\bin\x86\Debug\QuickFrame.UI.Desktop.dll
+D:\beifen\1实习\代码\DS\DS\QuickFrame.UI.DesktopUI\bin\x86\Debug\QuickFrame.UI.Desktop.pdb
+D:\beifen\1实习\代码\DS\DS\QuickFrame.UI.DesktopUI\bin\x86\Debug\QuickFrame.Common.dll
+D:\beifen\1实习\代码\DS\DS\QuickFrame.UI.DesktopUI\bin\x86\Debug\QuickFrame.UI.Common.dll
+D:\beifen\1实习\代码\DS\DS\QuickFrame.UI.DesktopUI\bin\x86\Debug\QuickFrame.Common.pdb
+D:\beifen\1实习\代码\DS\DS\QuickFrame.UI.DesktopUI\bin\x86\Debug\QuickFrame.UI.Common.pdb
+D:\beifen\1实习\代码\DS\DS\QuickFrame.UI.DesktopUI\obj\x86\Debug\QuickFrame.UI.Desktop.dll
+D:\beifen\1实习\代码\DS\DS\QuickFrame.UI.DesktopUI\obj\x86\Debug\QuickFrame.UI.Desktop.pdb

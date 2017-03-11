@@ -1,0 +1,8 @@
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Model\bin\Release\QuickFrame.Model.dll
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Model\bin\Release\QuickFrame.Model.pdb
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Model\obj\Release\QuickFrame.Model.dll
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Model\obj\Release\QuickFrame.Model.pdb
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Model\bin\Release\QuickFrame.Model.dll
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Model\bin\Release\QuickFrame.Model.pdb
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Model\obj\Release\QuickFrame.Model.dll
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Model\obj\Release\QuickFrame.Model.pdb

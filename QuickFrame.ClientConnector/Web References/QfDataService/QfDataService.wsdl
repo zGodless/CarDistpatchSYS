@@ -1,0 +1,2003 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://qf.nolyoh.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://qf.nolyoh.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://qf.nolyoh.com/">
+      <s:element name="GetToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteSignature" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteTimestamp" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteNonce" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTokenResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteToken" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryTokenResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateClientInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteClientInfo" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteToken" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateClientInfoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetClientInfoByUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteToken" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientInfoByUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientInfoByUserIDResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CloseToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteToken" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CloseTokenResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServerDateTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServerDateTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServerDateTimeResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ColumnExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteTableName" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteColumnName" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ColumnExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ColumnExistsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaxID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteFieldName" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteTableName" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaxIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMaxIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Exists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStrSql" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExistsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistsByParams">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStrSql" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteCmdParms" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistsByParamsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExistsByParamsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TabExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteTableName" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TabExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TabExistsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSql">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStrSql" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExecuteSqlResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExcuteSqlByNoTimeOut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStrSql" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExcuteSqlByNoTimeOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExcuteSqlByNoTimeOutResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlByTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStrSql" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="timeout" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlByTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExecuteSqlByTimeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlTran">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteListStrSql" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlTranResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExecuteSqlTranResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlByContent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStrSql" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteContent" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlByContentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExecuteSqlByContentResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlGetByContent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStrSql" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteContent" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlGetByContentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExecuteSqlGetByContentResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlInsertImg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStrSql" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteImageBytes" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlInsertImgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExecuteSqlInsertImgResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSingle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStrSql" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSingleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSingleResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSingleByTimeOut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStrSql" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="timeout" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSingleByTimeOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSingleByTimeOutResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Query">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStrSql" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryByTimeOut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStrSql" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="timeout" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryByTimeOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryByTimeOutResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlByParams">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStrSql" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteCmdParms" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlByParamsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExecuteSqlByParamsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlTranByHashtable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteHtSql" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlTranByHashtableResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ExecuteSqlTranByCmdList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteCmdList" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlTranByCmdListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExecuteSqlTranByCmdListResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlTranWithIndentity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteCmdList" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlTranWithIndentityResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ExecuteSqlTranWithIndentityByHashtable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteHtSql" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteSqlTranWithIndentityByHashtableResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSingleByParams">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStrSql" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteCmdParms" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSingleByParamsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSingleByParamsResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryByParams">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStrSql" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteCmdParms" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryByParamsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryByParamsResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunProcedureByDicParams">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStoredProcName" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteParameters" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunProcedureByDicParamsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RunProcedureByDicParamsResult" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteParameters" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunProcedure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStoredProcName" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteTableName" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteParameters" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunProcedureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RunProcedureResult" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteParameters" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunProcedureByTimeOut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStoredProcName" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteTableName" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="timeout" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteParameters" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunProcedureByTimeOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RunProcedureByTimeOutResult" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteParameters" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunProcedureDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStoredProcName" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteParameters" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunProcedureDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RunProcedureDataSetResult" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteParameters" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunProcedureRetRowsAffected">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStoredProcName" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteParameters" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunProcedureRetRowsAffectedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RunProcedureRetRowsAffectedResult" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="rowsAffected" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteParameters" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunProcedureByDicParams_">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStoredProcName" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteParameters" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunProcedureByDicParams_Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RunProcedureByDicParams_Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteParameters" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunProcedure_">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteStoredProcName" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteParameters" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunProcedure_Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RunProcedure_Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="byteParameters" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateDirectory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="directory" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateDirectoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateDirectoryResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUploadInstance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="path" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUploadInstanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateUploadInstanceResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFileData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteInstance" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="offset" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="dataLength" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFileDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadFileDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbortUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="byteInstance" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbortUploadResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="FileExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="path" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FileExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FileExistsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileLength">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="path" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileLengthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetFileLengthResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadFileData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="path" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="offset" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="dataLength" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadFileDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DownloadFileDataResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateThumbnail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filePath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="width" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="height" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateThumbnailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GenerateThumbnailResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateThumbnails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filePath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateThumbnailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateThumbnailsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWechatUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WechatOpenID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWechatUserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWechatUserInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:GetToken" />
+  </wsdl:message>
+  <wsdl:message name="GetTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryToken" />
+  </wsdl:message>
+  <wsdl:message name="QueryTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateClientInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateClientInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateClientInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateClientInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientInfoByUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientInfoByUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetClientInfoByUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientInfoByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CloseTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:CloseToken" />
+  </wsdl:message>
+  <wsdl:message name="CloseTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:CloseTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServerDateTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServerDateTime" />
+  </wsdl:message>
+  <wsdl:message name="GetServerDateTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServerDateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ColumnExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:ColumnExists" />
+  </wsdl:message>
+  <wsdl:message name="ColumnExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:ColumnExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMaxID" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMaxIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:Exists" />
+  </wsdl:message>
+  <wsdl:message name="ExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:ExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExistsByParamsSoapIn">
+    <wsdl:part name="parameters" element="tns:ExistsByParams" />
+  </wsdl:message>
+  <wsdl:message name="ExistsByParamsSoapOut">
+    <wsdl:part name="parameters" element="tns:ExistsByParamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="TabExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:TabExists" />
+  </wsdl:message>
+  <wsdl:message name="TabExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:TabExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteSql" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExcuteSqlByNoTimeOutSoapIn">
+    <wsdl:part name="parameters" element="tns:ExcuteSqlByNoTimeOut" />
+  </wsdl:message>
+  <wsdl:message name="ExcuteSqlByNoTimeOutSoapOut">
+    <wsdl:part name="parameters" element="tns:ExcuteSqlByNoTimeOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlByTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlByTime" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlByTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlByTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlTranSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlTran" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlTranSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlByContentSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlByContent" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlByContentSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlByContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlGetByContentSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlGetByContent" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlGetByContentSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlGetByContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlInsertImgSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlInsertImg" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlInsertImgSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlInsertImgResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSingle" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSingleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleByTimeOutSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSingleByTimeOut" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleByTimeOutSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSingleByTimeOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuerySoapIn">
+    <wsdl:part name="parameters" element="tns:Query" />
+  </wsdl:message>
+  <wsdl:message name="QuerySoapOut">
+    <wsdl:part name="parameters" element="tns:QueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryByTimeOutSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryByTimeOut" />
+  </wsdl:message>
+  <wsdl:message name="QueryByTimeOutSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryByTimeOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlByParamsSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlByParams" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlByParamsSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlByParamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlTranByHashtableSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlTranByHashtable" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlTranByHashtableSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlTranByHashtableResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlTranByCmdListSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlTranByCmdList" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlTranByCmdListSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlTranByCmdListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlTranWithIndentitySoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlTranWithIndentity" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlTranWithIndentitySoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlTranWithIndentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlTranWithIndentityByHashtableSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlTranWithIndentityByHashtable" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSqlTranWithIndentityByHashtableSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteSqlTranWithIndentityByHashtableResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleByParamsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSingleByParams" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleByParamsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSingleByParamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryByParamsSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryByParams" />
+  </wsdl:message>
+  <wsdl:message name="QueryByParamsSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryByParamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunProcedureByDicParamsSoapIn">
+    <wsdl:part name="parameters" element="tns:RunProcedureByDicParams" />
+  </wsdl:message>
+  <wsdl:message name="RunProcedureByDicParamsSoapOut">
+    <wsdl:part name="parameters" element="tns:RunProcedureByDicParamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunProcedureSoapIn">
+    <wsdl:part name="parameters" element="tns:RunProcedure" />
+  </wsdl:message>
+  <wsdl:message name="RunProcedureSoapOut">
+    <wsdl:part name="parameters" element="tns:RunProcedureResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunProcedureByTimeOutSoapIn">
+    <wsdl:part name="parameters" element="tns:RunProcedureByTimeOut" />
+  </wsdl:message>
+  <wsdl:message name="RunProcedureByTimeOutSoapOut">
+    <wsdl:part name="parameters" element="tns:RunProcedureByTimeOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunProcedureDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:RunProcedureDataSet" />
+  </wsdl:message>
+  <wsdl:message name="RunProcedureDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:RunProcedureDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunProcedureRetRowsAffectedSoapIn">
+    <wsdl:part name="parameters" element="tns:RunProcedureRetRowsAffected" />
+  </wsdl:message>
+  <wsdl:message name="RunProcedureRetRowsAffectedSoapOut">
+    <wsdl:part name="parameters" element="tns:RunProcedureRetRowsAffectedResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunProcedureByDicParams_SoapIn">
+    <wsdl:part name="parameters" element="tns:RunProcedureByDicParams_" />
+  </wsdl:message>
+  <wsdl:message name="RunProcedureByDicParams_SoapOut">
+    <wsdl:part name="parameters" element="tns:RunProcedureByDicParams_Response" />
+  </wsdl:message>
+  <wsdl:message name="RunProcedure_SoapIn">
+    <wsdl:part name="parameters" element="tns:RunProcedure_" />
+  </wsdl:message>
+  <wsdl:message name="RunProcedure_SoapOut">
+    <wsdl:part name="parameters" element="tns:RunProcedure_Response" />
+  </wsdl:message>
+  <wsdl:message name="CreateDirectorySoapIn">
+    <wsdl:part name="parameters" element="tns:CreateDirectory" />
+  </wsdl:message>
+  <wsdl:message name="CreateDirectorySoapOut">
+    <wsdl:part name="parameters" element="tns:CreateDirectoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateUploadInstanceSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateUploadInstance" />
+  </wsdl:message>
+  <wsdl:message name="CreateUploadInstanceSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateUploadInstanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileDataSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadFileData" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileDataSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadFileDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AbortUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:AbortUpload" />
+  </wsdl:message>
+  <wsdl:message name="AbortUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:AbortUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="FileExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:FileExists" />
+  </wsdl:message>
+  <wsdl:message name="FileExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:FileExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileLengthSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFileLength" />
+  </wsdl:message>
+  <wsdl:message name="GetFileLengthSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileLengthResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileDataSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadFileData" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileDataSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadFileDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerateThumbnailSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateThumbnail" />
+  </wsdl:message>
+  <wsdl:message name="GenerateThumbnailSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateThumbnailResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateThumbnailsSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateThumbnails" />
+  </wsdl:message>
+  <wsdl:message name="CreateThumbnailsSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateThumbnailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWechatUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWechatUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetWechatUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWechatUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="QfDataServiceSoap">
+    <wsdl:operation name="GetToken">
+      <wsdl:input message="tns:GetTokenSoapIn" />
+      <wsdl:output message="tns:GetTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryToken">
+      <wsdl:input message="tns:QueryTokenSoapIn" />
+      <wsdl:output message="tns:QueryTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClientInfo">
+      <wsdl:input message="tns:UpdateClientInfoSoapIn" />
+      <wsdl:output message="tns:UpdateClientInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientInfoByUserID">
+      <wsdl:input message="tns:GetClientInfoByUserIDSoapIn" />
+      <wsdl:output message="tns:GetClientInfoByUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseToken">
+      <wsdl:input message="tns:CloseTokenSoapIn" />
+      <wsdl:output message="tns:CloseTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerDateTime">
+      <wsdl:input message="tns:GetServerDateTimeSoapIn" />
+      <wsdl:output message="tns:GetServerDateTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ColumnExists">
+      <wsdl:input message="tns:ColumnExistsSoapIn" />
+      <wsdl:output message="tns:ColumnExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxID">
+      <wsdl:input message="tns:GetMaxIDSoapIn" />
+      <wsdl:output message="tns:GetMaxIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Exists">
+      <wsdl:input message="tns:ExistsSoapIn" />
+      <wsdl:output message="tns:ExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExistsByParams">
+      <wsdl:input message="tns:ExistsByParamsSoapIn" />
+      <wsdl:output message="tns:ExistsByParamsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TabExists">
+      <wsdl:input message="tns:TabExistsSoapIn" />
+      <wsdl:output message="tns:TabExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSql">
+      <wsdl:input message="tns:ExecuteSqlSoapIn" />
+      <wsdl:output message="tns:ExecuteSqlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcuteSqlByNoTimeOut">
+      <wsdl:input message="tns:ExcuteSqlByNoTimeOutSoapIn" />
+      <wsdl:output message="tns:ExcuteSqlByNoTimeOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlByTime">
+      <wsdl:input message="tns:ExecuteSqlByTimeSoapIn" />
+      <wsdl:output message="tns:ExecuteSqlByTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlTran">
+      <wsdl:input message="tns:ExecuteSqlTranSoapIn" />
+      <wsdl:output message="tns:ExecuteSqlTranSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlByContent">
+      <wsdl:input message="tns:ExecuteSqlByContentSoapIn" />
+      <wsdl:output message="tns:ExecuteSqlByContentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlGetByContent">
+      <wsdl:input message="tns:ExecuteSqlGetByContentSoapIn" />
+      <wsdl:output message="tns:ExecuteSqlGetByContentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlInsertImg">
+      <wsdl:input message="tns:ExecuteSqlInsertImgSoapIn" />
+      <wsdl:output message="tns:ExecuteSqlInsertImgSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingle">
+      <wsdl:input message="tns:GetSingleSoapIn" />
+      <wsdl:output message="tns:GetSingleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleByTimeOut">
+      <wsdl:input message="tns:GetSingleByTimeOutSoapIn" />
+      <wsdl:output message="tns:GetSingleByTimeOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Query">
+      <wsdl:input message="tns:QuerySoapIn" />
+      <wsdl:output message="tns:QuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByTimeOut">
+      <wsdl:input message="tns:QueryByTimeOutSoapIn" />
+      <wsdl:output message="tns:QueryByTimeOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlByParams">
+      <wsdl:input message="tns:ExecuteSqlByParamsSoapIn" />
+      <wsdl:output message="tns:ExecuteSqlByParamsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlTranByHashtable">
+      <wsdl:input message="tns:ExecuteSqlTranByHashtableSoapIn" />
+      <wsdl:output message="tns:ExecuteSqlTranByHashtableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlTranByCmdList">
+      <wsdl:input message="tns:ExecuteSqlTranByCmdListSoapIn" />
+      <wsdl:output message="tns:ExecuteSqlTranByCmdListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlTranWithIndentity">
+      <wsdl:input message="tns:ExecuteSqlTranWithIndentitySoapIn" />
+      <wsdl:output message="tns:ExecuteSqlTranWithIndentitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlTranWithIndentityByHashtable">
+      <wsdl:input message="tns:ExecuteSqlTranWithIndentityByHashtableSoapIn" />
+      <wsdl:output message="tns:ExecuteSqlTranWithIndentityByHashtableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleByParams">
+      <wsdl:input message="tns:GetSingleByParamsSoapIn" />
+      <wsdl:output message="tns:GetSingleByParamsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByParams">
+      <wsdl:input message="tns:QueryByParamsSoapIn" />
+      <wsdl:output message="tns:QueryByParamsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedureByDicParams">
+      <wsdl:input message="tns:RunProcedureByDicParamsSoapIn" />
+      <wsdl:output message="tns:RunProcedureByDicParamsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedure">
+      <wsdl:input message="tns:RunProcedureSoapIn" />
+      <wsdl:output message="tns:RunProcedureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedureByTimeOut">
+      <wsdl:input message="tns:RunProcedureByTimeOutSoapIn" />
+      <wsdl:output message="tns:RunProcedureByTimeOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedureDataSet">
+      <wsdl:input message="tns:RunProcedureDataSetSoapIn" />
+      <wsdl:output message="tns:RunProcedureDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedureRetRowsAffected">
+      <wsdl:input message="tns:RunProcedureRetRowsAffectedSoapIn" />
+      <wsdl:output message="tns:RunProcedureRetRowsAffectedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedureByDicParams_">
+      <wsdl:input message="tns:RunProcedureByDicParams_SoapIn" />
+      <wsdl:output message="tns:RunProcedureByDicParams_SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedure_">
+      <wsdl:input message="tns:RunProcedure_SoapIn" />
+      <wsdl:output message="tns:RunProcedure_SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDirectory">
+      <wsdl:input message="tns:CreateDirectorySoapIn" />
+      <wsdl:output message="tns:CreateDirectorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUploadInstance">
+      <wsdl:input message="tns:CreateUploadInstanceSoapIn" />
+      <wsdl:output message="tns:CreateUploadInstanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileData">
+      <wsdl:input message="tns:UploadFileDataSoapIn" />
+      <wsdl:output message="tns:UploadFileDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AbortUpload">
+      <wsdl:input message="tns:AbortUploadSoapIn" />
+      <wsdl:output message="tns:AbortUploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FileExists">
+      <wsdl:input message="tns:FileExistsSoapIn" />
+      <wsdl:output message="tns:FileExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileLength">
+      <wsdl:input message="tns:GetFileLengthSoapIn" />
+      <wsdl:output message="tns:GetFileLengthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileData">
+      <wsdl:input message="tns:DownloadFileDataSoapIn" />
+      <wsdl:output message="tns:DownloadFileDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateThumbnail">
+      <wsdl:input message="tns:GenerateThumbnailSoapIn" />
+      <wsdl:output message="tns:GenerateThumbnailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateThumbnails">
+      <wsdl:input message="tns:CreateThumbnailsSoapIn" />
+      <wsdl:output message="tns:CreateThumbnailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWechatUserInfo">
+      <wsdl:input message="tns:GetWechatUserInfoSoapIn" />
+      <wsdl:output message="tns:GetWechatUserInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QfDataServiceSoap" type="tns:QfDataServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetToken">
+      <soap:operation soapAction="http://qf.nolyoh.com/GetToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryToken">
+      <soap:operation soapAction="http://qf.nolyoh.com/QueryToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClientInfo">
+      <soap:operation soapAction="http://qf.nolyoh.com/UpdateClientInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientInfoByUserID">
+      <soap:operation soapAction="http://qf.nolyoh.com/GetClientInfoByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseToken">
+      <soap:operation soapAction="http://qf.nolyoh.com/CloseToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerDateTime">
+      <soap:operation soapAction="http://qf.nolyoh.com/GetServerDateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ColumnExists">
+      <soap:operation soapAction="http://qf.nolyoh.com/ColumnExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxID">
+      <soap:operation soapAction="http://qf.nolyoh.com/GetMaxID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Exists">
+      <soap:operation soapAction="http://qf.nolyoh.com/Exists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistsByParams">
+      <soap:operation soapAction="http://qf.nolyoh.com/ExistsByParams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TabExists">
+      <soap:operation soapAction="http://qf.nolyoh.com/TabExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSql">
+      <soap:operation soapAction="http://qf.nolyoh.com/ExecuteSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcuteSqlByNoTimeOut">
+      <soap:operation soapAction="http://qf.nolyoh.com/ExcuteSqlByNoTimeOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlByTime">
+      <soap:operation soapAction="http://qf.nolyoh.com/ExecuteSqlByTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlTran">
+      <soap:operation soapAction="http://qf.nolyoh.com/ExecuteSqlTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlByContent">
+      <soap:operation soapAction="http://qf.nolyoh.com/ExecuteSqlByContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlGetByContent">
+      <soap:operation soapAction="http://qf.nolyoh.com/ExecuteSqlGetByContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlInsertImg">
+      <soap:operation soapAction="http://qf.nolyoh.com/ExecuteSqlInsertImg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingle">
+      <soap:operation soapAction="http://qf.nolyoh.com/GetSingle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleByTimeOut">
+      <soap:operation soapAction="http://qf.nolyoh.com/GetSingleByTimeOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Query">
+      <soap:operation soapAction="http://qf.nolyoh.com/Query" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByTimeOut">
+      <soap:operation soapAction="http://qf.nolyoh.com/QueryByTimeOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlByParams">
+      <soap:operation soapAction="http://qf.nolyoh.com/ExecuteSqlByParams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlTranByHashtable">
+      <soap:operation soapAction="http://qf.nolyoh.com/ExecuteSqlTranByHashtable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlTranByCmdList">
+      <soap:operation soapAction="http://qf.nolyoh.com/ExecuteSqlTranByCmdList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlTranWithIndentity">
+      <soap:operation soapAction="http://qf.nolyoh.com/ExecuteSqlTranWithIndentity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlTranWithIndentityByHashtable">
+      <soap:operation soapAction="http://qf.nolyoh.com/ExecuteSqlTranWithIndentityByHashtable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleByParams">
+      <soap:operation soapAction="http://qf.nolyoh.com/GetSingleByParams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByParams">
+      <soap:operation soapAction="http://qf.nolyoh.com/QueryByParams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedureByDicParams">
+      <soap:operation soapAction="http://qf.nolyoh.com/RunProcedureByDicParams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedure">
+      <soap:operation soapAction="http://qf.nolyoh.com/RunProcedure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedureByTimeOut">
+      <soap:operation soapAction="http://qf.nolyoh.com/RunProcedureByTimeOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedureDataSet">
+      <soap:operation soapAction="http://qf.nolyoh.com/RunProcedureDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedureRetRowsAffected">
+      <soap:operation soapAction="http://qf.nolyoh.com/RunProcedureRetRowsAffected" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedureByDicParams_">
+      <soap:operation soapAction="http://qf.nolyoh.com/RunProcedureByDicParams_" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedure_">
+      <soap:operation soapAction="http://qf.nolyoh.com/RunProcedure_" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDirectory">
+      <soap:operation soapAction="http://qf.nolyoh.com/CreateDirectory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUploadInstance">
+      <soap:operation soapAction="http://qf.nolyoh.com/CreateUploadInstance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileData">
+      <soap:operation soapAction="http://qf.nolyoh.com/UploadFileData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbortUpload">
+      <soap:operation soapAction="http://qf.nolyoh.com/AbortUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileExists">
+      <soap:operation soapAction="http://qf.nolyoh.com/FileExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileLength">
+      <soap:operation soapAction="http://qf.nolyoh.com/GetFileLength" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileData">
+      <soap:operation soapAction="http://qf.nolyoh.com/DownloadFileData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateThumbnail">
+      <soap:operation soapAction="http://qf.nolyoh.com/GenerateThumbnail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateThumbnails">
+      <soap:operation soapAction="http://qf.nolyoh.com/CreateThumbnails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWechatUserInfo">
+      <soap:operation soapAction="http://qf.nolyoh.com/GetWechatUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="QfDataServiceSoap12" type="tns:QfDataServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetToken">
+      <soap12:operation soapAction="http://qf.nolyoh.com/GetToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryToken">
+      <soap12:operation soapAction="http://qf.nolyoh.com/QueryToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClientInfo">
+      <soap12:operation soapAction="http://qf.nolyoh.com/UpdateClientInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientInfoByUserID">
+      <soap12:operation soapAction="http://qf.nolyoh.com/GetClientInfoByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseToken">
+      <soap12:operation soapAction="http://qf.nolyoh.com/CloseToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerDateTime">
+      <soap12:operation soapAction="http://qf.nolyoh.com/GetServerDateTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ColumnExists">
+      <soap12:operation soapAction="http://qf.nolyoh.com/ColumnExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxID">
+      <soap12:operation soapAction="http://qf.nolyoh.com/GetMaxID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Exists">
+      <soap12:operation soapAction="http://qf.nolyoh.com/Exists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistsByParams">
+      <soap12:operation soapAction="http://qf.nolyoh.com/ExistsByParams" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TabExists">
+      <soap12:operation soapAction="http://qf.nolyoh.com/TabExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSql">
+      <soap12:operation soapAction="http://qf.nolyoh.com/ExecuteSql" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcuteSqlByNoTimeOut">
+      <soap12:operation soapAction="http://qf.nolyoh.com/ExcuteSqlByNoTimeOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlByTime">
+      <soap12:operation soapAction="http://qf.nolyoh.com/ExecuteSqlByTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlTran">
+      <soap12:operation soapAction="http://qf.nolyoh.com/ExecuteSqlTran" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlByContent">
+      <soap12:operation soapAction="http://qf.nolyoh.com/ExecuteSqlByContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlGetByContent">
+      <soap12:operation soapAction="http://qf.nolyoh.com/ExecuteSqlGetByContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlInsertImg">
+      <soap12:operation soapAction="http://qf.nolyoh.com/ExecuteSqlInsertImg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingle">
+      <soap12:operation soapAction="http://qf.nolyoh.com/GetSingle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleByTimeOut">
+      <soap12:operation soapAction="http://qf.nolyoh.com/GetSingleByTimeOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Query">
+      <soap12:operation soapAction="http://qf.nolyoh.com/Query" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByTimeOut">
+      <soap12:operation soapAction="http://qf.nolyoh.com/QueryByTimeOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlByParams">
+      <soap12:operation soapAction="http://qf.nolyoh.com/ExecuteSqlByParams" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlTranByHashtable">
+      <soap12:operation soapAction="http://qf.nolyoh.com/ExecuteSqlTranByHashtable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlTranByCmdList">
+      <soap12:operation soapAction="http://qf.nolyoh.com/ExecuteSqlTranByCmdList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlTranWithIndentity">
+      <soap12:operation soapAction="http://qf.nolyoh.com/ExecuteSqlTranWithIndentity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSqlTranWithIndentityByHashtable">
+      <soap12:operation soapAction="http://qf.nolyoh.com/ExecuteSqlTranWithIndentityByHashtable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleByParams">
+      <soap12:operation soapAction="http://qf.nolyoh.com/GetSingleByParams" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByParams">
+      <soap12:operation soapAction="http://qf.nolyoh.com/QueryByParams" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedureByDicParams">
+      <soap12:operation soapAction="http://qf.nolyoh.com/RunProcedureByDicParams" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedure">
+      <soap12:operation soapAction="http://qf.nolyoh.com/RunProcedure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedureByTimeOut">
+      <soap12:operation soapAction="http://qf.nolyoh.com/RunProcedureByTimeOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedureDataSet">
+      <soap12:operation soapAction="http://qf.nolyoh.com/RunProcedureDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedureRetRowsAffected">
+      <soap12:operation soapAction="http://qf.nolyoh.com/RunProcedureRetRowsAffected" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedureByDicParams_">
+      <soap12:operation soapAction="http://qf.nolyoh.com/RunProcedureByDicParams_" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunProcedure_">
+      <soap12:operation soapAction="http://qf.nolyoh.com/RunProcedure_" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDirectory">
+      <soap12:operation soapAction="http://qf.nolyoh.com/CreateDirectory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUploadInstance">
+      <soap12:operation soapAction="http://qf.nolyoh.com/CreateUploadInstance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileData">
+      <soap12:operation soapAction="http://qf.nolyoh.com/UploadFileData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbortUpload">
+      <soap12:operation soapAction="http://qf.nolyoh.com/AbortUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileExists">
+      <soap12:operation soapAction="http://qf.nolyoh.com/FileExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileLength">
+      <soap12:operation soapAction="http://qf.nolyoh.com/GetFileLength" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileData">
+      <soap12:operation soapAction="http://qf.nolyoh.com/DownloadFileData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateThumbnail">
+      <soap12:operation soapAction="http://qf.nolyoh.com/GenerateThumbnail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateThumbnails">
+      <soap12:operation soapAction="http://qf.nolyoh.com/CreateThumbnails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWechatUserInfo">
+      <soap12:operation soapAction="http://qf.nolyoh.com/GetWechatUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QfDataService">
+    <wsdl:port name="QfDataServiceSoap" binding="tns:QfDataServiceSoap">
+      <soap:address location="http://localhost:8069/QfDataService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="QfDataServiceSoap12" binding="tns:QfDataServiceSoap12">
+      <soap12:address location="http://localhost:8069/QfDataService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

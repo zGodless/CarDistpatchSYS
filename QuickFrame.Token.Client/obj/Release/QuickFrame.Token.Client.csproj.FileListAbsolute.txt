@@ -1,0 +1,17 @@
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Token.Client\bin\Release\QuickFrame.Token.Client.dll
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Token.Client\bin\Release\QuickFrame.Token.Client.pdb
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Token.Client\bin\Release\QuickFrame.Common.dll
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Token.Client\bin\Release\QuickFrame.Model.Token.dll
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Token.Client\bin\Release\QuickFrame.Common.pdb
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Token.Client\bin\Release\QuickFrame.Model.Token.pdb
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Token.Client\obj\Release\QuickFrame.Token.Client.dll
+D:\beifen\1实习\代码\DS\DriverSystemDotNet\QuickFrame.Token.Client\obj\Release\QuickFrame.Token.Client.pdb
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Token.Client\bin\Release\QuickFrame.Token.Client.dll
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Token.Client\bin\Release\QuickFrame.Token.Client.pdb
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Token.Client\bin\Release\QuickFrame.Common.dll
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Token.Client\bin\Release\QuickFrame.Model.Token.dll
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Token.Client\bin\Release\QuickFrame.Common.pdb
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Token.Client\bin\Release\QuickFrame.Model.Token.pdb
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Token.Client\obj\Release\QuickFrame.Token.Client.dll
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Token.Client\obj\Release\QuickFrame.Token.Client.pdb
+D:\beifen\1实习\代码\DS\DS\QuickFrame.Token.Client\obj\Release\QuickFrame.Token.Client.csprojResolveAssemblyReference.cache
