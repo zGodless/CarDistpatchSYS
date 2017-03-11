@@ -152,3 +152,6 @@ E:\毕设\程序\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.pdb
 E:\毕设\程序\CarDistpatchSYS\bin\Debug\CarDistpatchSYS.pdb
 E:\毕设\程序\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.MainDepartment.resources
 E:\毕设\程序\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.FormEditDepartment.resources
+E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\bin\Debug\CarDistpatchSYS.exe.config
+E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.exe
+E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.pdb
