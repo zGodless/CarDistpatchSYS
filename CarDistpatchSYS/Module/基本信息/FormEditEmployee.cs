@@ -12,6 +12,7 @@ using DevExpress.XtraEditors;
 using DS.Data;
 using DS.MSClient;
 using QuickFrame.Common.Converter;
+using QuickFrame.Common.Crypt;
 
 namespace CarDistpatchSYS
 {
@@ -118,6 +119,7 @@ namespace CarDistpatchSYS
             else
             {
                 model.EmployeeID = new CommonDAO().GetIntUniqueNumber("t_employee");
+                model.Password = Salt.Encrypt("123");
                 result = new EmployeeDao().Add(model);
             }
             if (result)

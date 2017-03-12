@@ -14,29 +14,29 @@ using DS.Common.Exception;
 
 namespace DS.Data
 {
-    /// <summary>
-    /// 模块：数据访问
-    /// 作用：数据访问类:DutyDao
+	/// <summary>
+	/// 模块：数据访问
+    /// 作用：数据访问类:DepartmentDao
     /// 作者：zyl
-    /// 代码生成日期：2017-03-12
+    /// 代码生成日期：2017-03-07
     /// 最后修改人：zyl
-    /// 最后修改日期：2017-03-12
+    /// 最后修改日期：2017-03-07
     /// 说明：
-    /// </summary>
-    public class DutyDao
-    {
+	/// </summary>
+	public class DepartmentDao
+	{
 
 
         /// <summary>
         /// 简单查询
         /// </summary>
         /// <param name="sql"></param>
-        public List<Duty> QueryGetList(string sql)
+        public List<Department> QueryGetList(string sql)
         {
             try
             {
                 DataTable dt = MysqlHelper.ExecuteDataTable(sql);
-                List<Duty> _list = ModelConvert.ToList<Duty>(dt);
+                List<Department> _list = ModelConvert.ToList<Department>(dt);
                 return _list;
             }
             catch (Exception ex)
@@ -45,18 +45,18 @@ namespace DS.Data
                 return null;
             }
         }
-
+        
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
         /// <param name="sql"></param>
-        public Duty GetModel(int DutyID)
+        public Department GetModel(int DepartmentID)
         {
             try
             {
-                string sql = string.Format("select * from t_duty where DutyID = {0} limit 1", DutyID);
+                string sql = string.Format("select * from t_department where DepartmentID = {0} limit 1", DepartmentID);
                 DataTable dt = MysqlHelper.ExecuteDataTable(sql);
-                Duty model = ModelConvert.ToModel<Duty>(dt);
+                Department model = ModelConvert.ToModel<Department>(dt);
                 return model;
             }
             catch (Exception ex)
@@ -69,26 +69,27 @@ namespace DS.Data
         /// 增加一条数据
         /// </summary>
         /// <param name="sql"></param>
-        public bool Add(Duty model)
+        public bool Add(Department model)
         {
             try
             {
                 var parameters = new List<QfParameter>();
-                parameters.Add(new QfParameter("DutyID", model.DutyID));
-                parameters.Add(new QfParameter("DutyCode", string.Format(@"'{0}'", model.DutyCode)));
-                parameters.Add(new QfParameter("DutyName", string.Format(@"'{0}'", model.DutyName)));
-                parameters.Add(new QfParameter("MnemonicCode", string.Format(@"'{0}'", model.MnemonicCode)));
-                parameters.Add(new QfParameter("Array", model.Array));
+                parameters.Add(new QfParameter("DepartmentID", model.DepartmentID));
+                parameters.Add(new QfParameter("DepartmentCode", string.Format(@"'{0}'", model.DepartmentCode)));
+                parameters.Add(new QfParameter("DepartmentName", string.Format(@"'{0}'", model.DepartmentName)));
+                parameters.Add(new QfParameter("ParentID", model.ParentID));
+                parameters.Add(new QfParameter("InChargeID", model.InChargeID));
+                parameters.Add(new QfParameter("EmployeeCount", model.EmployeeCount));
                 parameters.Add(new QfParameter("Note", string.Format(@"'{0}'", model.Note)));
                 parameters.Add(new QfParameter("OperateID", model.OperateID));
                 parameters.Add(new QfParameter("OperateTime", string.Format(@"'{0}'", model.OperateTime)));
-                string colStr = string.Join(",", parameters.FindAll(m => ValueConvert.ToString(m.Value) != null && ValueConvert.ToString(m.Value) != "''").Select(n => n.ParameterName));
+                            string colStr = string.Join(",", parameters.FindAll(m => ValueConvert.ToString(m.Value) != null && ValueConvert.ToString(m.Value) != "''").Select(n => n.ParameterName));
                 string atColStr = string.Join(",", parameters.FindAll(m => ValueConvert.ToString(m.Value) != null && ValueConvert.ToString(m.Value) != "''").Select(n => n.Value));
-                string sql = string.Format("insert into t_duty({0}) values ({1})", colStr, atColStr);
+                string sql = string.Format("insert into t_department({0}) values ({1})", colStr, atColStr);
                 int row = MysqlHelper.ExecuteNonQuery(sql);
                 return row == 1;
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
                 MessageBox.Show(ex.Message);
                 return false;
@@ -98,11 +99,11 @@ namespace DS.Data
         /// 删除一条数据
         /// </summary>
         /// <param name="sql"></param>
-        public bool Delete(Duty model)
+        public bool Delete(Department model)
         {
             try
             {
-                string sql = string.Format("delete from t_duty where DutyID = {0}", model.DutyID);
+                string sql = string.Format("delete from t_department where DepartmentID = {0}", model.DepartmentID);
                 int row = MysqlHelper.ExecuteNonQuery(sql);
                 return row == 1;
             }
@@ -116,16 +117,17 @@ namespace DS.Data
         /// 更新一条数据
         /// </summary>
         /// <param name="sql"></param>
-        public bool Update(Duty model)
+        public bool Update(Department model)
         {
             try
             {
                 var parameters = new List<QfParameter>();
-                parameters.Add(new QfParameter("DutyID", model.DutyID));
-                parameters.Add(new QfParameter("DutyCode", string.Format(@"'{0}'", model.DutyCode)));
-                parameters.Add(new QfParameter("DutyName", string.Format(@"'{0}'", model.DutyName)));
-                parameters.Add(new QfParameter("MnemonicCode", string.Format(@"'{0}'", model.MnemonicCode)));
-                parameters.Add(new QfParameter("Array", model.Array));
+                parameters.Add(new QfParameter("DepartmentID", model.DepartmentID));
+                parameters.Add(new QfParameter("DepartmentCode", string.Format(@"'{0}'", model.DepartmentCode)));
+                parameters.Add(new QfParameter("DepartmentName", string.Format(@"'{0}'", model.DepartmentName)));
+                parameters.Add(new QfParameter("ParentID", model.ParentID));
+                parameters.Add(new QfParameter("InChargeID", model.InChargeID));
+                parameters.Add(new QfParameter("EmployeeCount", model.EmployeeCount));
                 parameters.Add(new QfParameter("Note", string.Format(@"'{0}'", model.Note)));
                 parameters.Add(new QfParameter("OperateID", model.OperateID));
                 parameters.Add(new QfParameter("OperateTime", string.Format(@"'{0}'", model.OperateTime)));
@@ -138,7 +140,7 @@ namespace DS.Data
                     }
                 }
                 setStr = setStr.Substring(0, setStr.LastIndexOf(","));
-                string sql = string.Format("update t_duty set {0} where DutyID = {1}", setStr, model.DutyID);
+                string sql = string.Format("update t_department set {0} where DepartmentID = {1}", setStr,  model.DepartmentID);
                 int row = MysqlHelper.ExecuteNonQuery(sql);
                 return row == 1;
             }
@@ -152,19 +154,21 @@ namespace DS.Data
         /// 获得数据列表
         /// </summary>
         /// <param name="sql"></param>
-        public List<Duty> GetList()
+        public List<Department> GetList()
         {
             try
             {
-                string sql = string.Format("select * from t_duty");
+                string sql = string.Format(@"select a.*, b.DepartmentName ParentName, c.EmployeeName InChargeName
+                                                 from t_department a 
+                                                left join t_department b on a.ParentID = b.DepartmentID
+                                                left join t_employee c on a.InChargeID = c.EmployeeID");
                 DataTable dt = MysqlHelper.ExecuteDataTable(sql);
-                List<Duty> _list = ModelConvert.ToList<Duty>(dt);
+                List<Department> _list = ModelConvert.ToList<Department>(dt);
                 return _list;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                return null;
+                throw ex;
             }
         }
 

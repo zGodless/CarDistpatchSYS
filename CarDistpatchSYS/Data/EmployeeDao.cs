@@ -91,7 +91,7 @@ namespace DS.Data
                 parameters.Add(new QfParameter("EmployeeName", string.Format(@"'{0}'", model.EmployeeName)));
                 parameters.Add(new QfParameter("DepartmentID", model.DepartmentID));
                 parameters.Add(new QfParameter("DutyID", model.DutyID));
-                parameters.Add(new QfParameter("Sex", model.Sex));
+                parameters.Add(new QfParameter("Sex", string.Format(@"'{0}'", model.Sex)));
                 parameters.Add(new QfParameter("Birthday", string.Format(@"'{0}'", model.Birthday)));
                 parameters.Add(new QfParameter("Address", string.Format(@"'{0}'", model.Address)));
                 parameters.Add(new QfParameter("IdentityNo", string.Format(@"'{0}'", model.IdentityNo)));

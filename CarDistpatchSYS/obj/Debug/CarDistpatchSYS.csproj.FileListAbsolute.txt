@@ -211,3 +211,5 @@ E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\bin\Debug\QuickFrame.UI.Comm
 E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\bin\Debug\QuickFrame.UI.Forms.pdb
 E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\bin\Debug\Newtonsoft.Json.xml
 E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.FormChangePassword.resources
+E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.FormEditDuty.resources
+E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.MainDuty.resources

@@ -31,6 +31,7 @@ namespace CarDistpatchSYS
             btncar.ItemClick += btn_ItemClick;
             btnDepartment.ItemClick += btn_ItemClick;
             btnEmployee.ItemClick += btn_ItemClick;
+            btnDuty.ItemClick += btn_ItemClick;
 
             xtraTabControl2.ControlAdded += xtraTabControl2_ControlAdded;
         }
@@ -68,6 +69,12 @@ namespace CarDistpatchSYS
                     {
                         var form = new MainEmployee() { FormState = CarDistpatchSYS.FormState.New };
                         FormPageOperation.Add_TabPage("员工管理", form);
+                        break;
+                    }
+                case "职位":
+                    {
+                        var form = new MainDuty() { FormState = CarDistpatchSYS.FormState.New };
+                        FormPageOperation.Add_TabPage("职位", form);
                         break;
                     }
             }
