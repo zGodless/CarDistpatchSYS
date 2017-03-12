@@ -34,3 +34,12 @@ E:\毕设\程序\QuickFrame.Token.Client\bin\Debug\QuickFrame.Model.Token.pdb
 E:\毕设\程序\QuickFrame.Token.Client\obj\Debug\QuickFrame.Token.Client.csprojResolveAssemblyReference.cache
 E:\毕设\程序\QuickFrame.Token.Client\obj\Debug\QuickFrame.Token.Client.dll
 E:\毕设\程序\QuickFrame.Token.Client\obj\Debug\QuickFrame.Token.Client.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\bin\Debug\QuickFrame.Token.Client.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\bin\Debug\QuickFrame.Token.Client.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\bin\Debug\QuickFrame.Common.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\bin\Debug\QuickFrame.Model.Token.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\bin\Debug\QuickFrame.Common.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\bin\Debug\QuickFrame.Model.Token.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\obj\Debug\QuickFrame.Token.Client.csprojResolveAssemblyReference.cache
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\obj\Debug\QuickFrame.Token.Client.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\obj\Debug\QuickFrame.Token.Client.pdb

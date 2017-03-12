@@ -32,5 +32,10 @@ namespace CarDistpatchSYS
                 throw ex;
             }
         }
+
+        public void CheckRight(int employeeID)
+        {
+
+        }
     }
 }

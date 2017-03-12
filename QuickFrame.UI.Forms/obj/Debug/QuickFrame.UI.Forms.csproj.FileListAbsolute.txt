@@ -34,3 +34,12 @@ E:\毕设\程序\QuickFrame.UI.Forms\bin\Debug\QuickFrame.UI.Common.pdb
 E:\毕设\程序\QuickFrame.UI.Forms\obj\Debug\QuickFrame.UI.Forms.csprojResolveAssemblyReference.cache
 E:\毕设\程序\QuickFrame.UI.Forms\obj\Debug\QuickFrame.UI.Forms.dll
 E:\毕设\程序\QuickFrame.UI.Forms\obj\Debug\QuickFrame.UI.Forms.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.UI.Forms\bin\Debug\QuickFrame.UI.Forms.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.UI.Forms\bin\Debug\QuickFrame.UI.Forms.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.UI.Forms\bin\Debug\QuickFrame.Common.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.UI.Forms\bin\Debug\QuickFrame.UI.Common.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.UI.Forms\bin\Debug\QuickFrame.Common.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.UI.Forms\bin\Debug\QuickFrame.UI.Common.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.UI.Forms\obj\Debug\QuickFrame.UI.Forms.csprojResolveAssemblyReference.cache
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.UI.Forms\obj\Debug\QuickFrame.UI.Forms.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.UI.Forms\obj\Debug\QuickFrame.UI.Forms.pdb

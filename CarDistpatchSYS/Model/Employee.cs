@@ -11,9 +11,9 @@ namespace CarDistpatchSYS
     /// 模块：实体模型
     /// 作用：实体模型类:Employee
     /// 作者：zyl
-    /// 代码生成日期：2017-02-19
+    /// 代码生成日期：2017-03-12
     /// 最后修改人：zyl
-    /// 最后修改日期：2017-02-19
+    /// 最后修改日期：2017-03-12
     /// 说明：	/// </summary>
     [Serializable]
     public class Employee : ModelBase
@@ -127,6 +127,24 @@ namespace CarDistpatchSYS
         #endregion 基本模型
 
         #region 扩展模型
+
+        public string StatusStr
+        {
+            get
+            {
+                switch (Status)
+                {
+                    case 0:
+                        return "离职";
+                    case 2:
+                        return "实习";
+                    default:
+                        return "在职";
+                }
+            }
+        }
+        public string DepartmentName { get; set; }
+
 
         #endregion 扩展模型
     }

@@ -90,11 +90,29 @@
     <Compile Include="FormBase.designer.cs">
       <DependentUpon>FormBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Module\基本信息\FormChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\基本信息\FormChangePassword.Designer.cs">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\基本信息\FormEditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\基本信息\FormEditEmployee.Designer.cs">
+      <DependentUpon>FormEditEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Module\基本信息\FormEditDepartment.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module\基本信息\FormEditDepartment.Designer.cs">
       <DependentUpon>FormEditDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\基本信息\MainEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\基本信息\MainEmployee.Designer.cs">
+      <DependentUpon>MainEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Module\基本信息\MainDepartment.cs">
       <SubType>UserControl</SubType>
@@ -168,6 +186,12 @@
     <EmbeddedResource Include="FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Module\基本信息\FormChangePassword.resx">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\基本信息\FormEditEmployee.resx">
+      <DependentUpon>FormEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Module\基本信息\FormEditDepartment.resx">
       <DependentUpon>FormEditDepartment.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\基本信息\MainEmployee.resx">
+      <DependentUpon>MainEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Module\基本信息\MainDepartment.resx">
       <DependentUpon>MainDepartment.cs</DependentUpon>
