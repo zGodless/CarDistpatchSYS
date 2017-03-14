@@ -28,10 +28,18 @@ namespace CarDistpatchSYS
         private void InitEvent()
         {
             Load += FormMain_Load;
+            //基础信息
             btncar.ItemClick += btn_ItemClick;
             btnDepartment.ItemClick += btn_ItemClick;
             btnEmployee.ItemClick += btn_ItemClick;
             btnDuty.ItemClick += btn_ItemClick;
+
+            //调度
+            btnApply.ItemClick += btn_ItemClick;
+            banDispath.ItemClick += btn_ItemClick;
+            btnAudit.ItemClick += btn_ItemClick;
+            btnSend.ItemClick += btn_ItemClick;
+            btnReturn.ItemClick += btn_ItemClick;
 
             xtraTabControl2.ControlAdded += xtraTabControl2_ControlAdded;
         }
@@ -75,6 +83,12 @@ namespace CarDistpatchSYS
                     {
                         var form = new MainDuty() { FormState = CarDistpatchSYS.FormState.New };
                         FormPageOperation.Add_TabPage("职位", form);
+                        break;
+                    }
+                case "申请用车":
+                    {
+                        var form = new MainCarApply() { FormState = CarDistpatchSYS.FormState.New };
+                        FormPageOperation.Add_TabPage("申请用车", form);
                         break;
                     }
             }
