@@ -85,6 +85,13 @@
     <Compile Include="CommonDAO.cs" />
     <Compile Include="Data\DutyDao.cs" />
     <Compile Include="Data\DepartmentDao.cs" />
+    <Compile Include="Data\CarriageReturnDao.cs" />
+    <Compile Include="Data\CarDispatchDao.cs" />
+    <Compile Include="Data\CarDispatchApplyDao.cs" />
+    <Compile Include="Data\CarDispatchAuditDao.cs" />
+    <Compile Include="Data\CarOutRegistrationDao.cs" />
+    <Compile Include="Data\CarRepairItemDao.cs" />
+    <Compile Include="Data\CarRepairRecordDao.cs" />
     <Compile Include="FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +103,12 @@
     </Compile>
     <Compile Include="Module\基本信息\FormChangePassword.Designer.cs">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\基本信息\FormEditDispathApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\基本信息\FormEditDispathApply.Designer.cs">
+      <DependentUpon>FormEditDispathApply.cs</DependentUpon>
     </Compile>
     <Compile Include="Module\基本信息\FormEditDuty.cs">
       <SubType>Form</SubType>
@@ -138,6 +151,9 @@
     </Compile>
     <Compile Include="Module\基本信息\MainDepartment.Designer.cs">
       <DependentUpon>MainDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILookUp\CLookCar.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="UILookUp\CLookEmployee.cs">
       <SubType>Component</SubType>
@@ -207,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Module\基本信息\FormChangePassword.resx">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\基本信息\FormEditDispathApply.resx">
+      <DependentUpon>FormEditDispathApply.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Module\基本信息\FormEditDuty.resx">
       <DependentUpon>FormEditDuty.cs</DependentUpon>

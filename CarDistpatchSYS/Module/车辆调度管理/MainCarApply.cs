@@ -27,7 +27,7 @@ namespace CarDistpatchSYS
         /// </summary>
         private void InitEvent()
         {
-            Load += MainCar_Load;
+            Load += MainCarApply_Load;
             btnSearch.Click += btnSearch_Click;
             btnAdd.ItemClick += btnAdd_ItemClick;
             btnEdit.ItemClick += btnEdit_ItemClick;
@@ -37,15 +37,24 @@ namespace CarDistpatchSYS
             gvApply.RowClick += gvCar_RowClick;
         }
 
+        void MainCarApply_Load(object sender, EventArgs e)
+        {
+            _list = new CarDispatchApplyDao().GetList();
+            if (_list.Count > 0)
+            {
+                gcApply.DataSource = _list;
+                gcApply.RefreshDataSource();
+            }
+        }
+
         void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //TabRemove(this, Name);
             FormPageOperation.RemoveTabPage(this);
         }
 
         void gvCar_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            var detail = gvApply.GetFocusedRow() as Department;
+            var detail = gvApply.GetFocusedRow() as CarDispatchApply;
             if (detail == null)
             {
                 return;
@@ -68,27 +77,13 @@ namespace CarDistpatchSYS
 
         #region 属性
 
-        private List<Department> _list = new List<Department>();
+        private List<CarDispatchApply> _list = new List<CarDispatchApply>();
         private string sql;
 
         #endregion
 
         #region 事件
 
-        /// <summary>
-        /// 加载
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void MainCar_Load(object sender, EventArgs e)
-        {
-            _list = new DepartmentDao().GetList();
-            if (_list.Count > 0)
-            {
-                gcApply.DataSource = _list;
-                gcApply.RefreshDataSource();
-            }
-        }
 
         /// <summary>
         /// 删除
@@ -104,8 +99,14 @@ namespace CarDistpatchSYS
             }
             foreach (var detail in delList)
             {
-                if (new DepartmentDao().Delete(detail))
+                if (detail.Status > 1)
                 {
+                    MessageBox.Show("已进入审批，禁止删除！");
+                    return;
+                }
+                if (new CarDispatchDao().DeleteByID(ValueConvert.ToInt32(detail.DispatchID)))   //先删除总记录
+                {
+                    new CarDispatchApplyDao().Delete(detail);
                     _list.Remove(detail);
                 }
             }

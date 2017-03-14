@@ -67,6 +67,7 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.banDispath = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
@@ -136,9 +137,10 @@
             this.btnReportDepart,
             this.barButtonItem17,
             this.barButtonItem18,
-            this.barButtonItem1});
+            this.barButtonItem1,
+            this.banDispath});
             this.ribbonControl1.Location = new System.Drawing.Point(12, 12);
-            this.ribbonControl1.MaxItemId = 20;
+            this.ribbonControl1.MaxItemId = 21;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageHeaderItemLinks.Add(this.barButtonItem18);
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -308,6 +310,7 @@
             // 
             // ribbonPageGroup2
             // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.banDispath);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnApply);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnAudit);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnSend);
@@ -423,6 +426,13 @@
             this.layoutControlItem2.TextToControlDistance = 0;
             this.layoutControlItem2.TextVisible = false;
             // 
+            // banDispath
+            // 
+            this.banDispath.Caption = "调度记录";
+            this.banDispath.Id = 20;
+            this.banDispath.LargeGlyph = global::CarDistpatchSYS.Properties.Resources.report_540px_1192858_easyicon_net;
+            this.banDispath.Name = "banDispath";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -497,5 +507,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem18;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem banDispath;
     }
 }
