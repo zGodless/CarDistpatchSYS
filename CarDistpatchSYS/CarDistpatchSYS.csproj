@@ -115,6 +115,12 @@
     <Compile Include="Module\基本信息\FormEditDepartment.Designer.cs">
       <DependentUpon>FormEditDepartment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Module\车辆调度管理\MainCarApply.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\车辆调度管理\MainCarApply.Designer.cs">
+      <DependentUpon>MainCarApply.cs</DependentUpon>
+    </Compile>
     <Compile Include="Module\基本信息\MainDuty.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\车辆调度管理\MainCarApply.resx">
+      <DependentUpon>MainCarApply.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Module\基本信息\MainDuty.resx">
       <DependentUpon>MainDuty.cs</DependentUpon>
@@ -348,7 +357,6 @@
   <ItemGroup>
     <Folder Include="Module\统计报表\" />
     <Folder Include="Module\车辆维修管理\" />
-    <Folder Include="Module\车辆调度管理\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\error.ico" />

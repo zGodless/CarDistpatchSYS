@@ -213,3 +213,6 @@ E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\bin\Debug\Newtonsoft.Json.xm
 E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.FormChangePassword.resources
 E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.FormEditDuty.resources
 E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.MainDuty.resources
+C:\工作\test\车辆调度\CarDistpatchSYS\CarDistpatchSYS\bin\Debug\CarDistpatchSYS.exe.config
+C:\工作\test\车辆调度\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.exe
+C:\工作\test\车辆调度\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.pdb
