@@ -218,3 +218,5 @@ C:\工作\test\车辆调度\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpat
 C:\工作\test\车辆调度\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.pdb
 E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.MainCarApply.resources
 E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.FormEditDispathApply.resources
+E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.FormEditDispathAudit.resources
+E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.MainDispathAudit.resources

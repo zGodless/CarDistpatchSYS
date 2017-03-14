@@ -101,6 +101,7 @@ namespace CarDistpatchSYS
 
         public string EmployeeName { get; set; }
         public string OperatorName { get; set; }
+        public string CarNo { get; set; }
 
 	    #endregion 扩展模型
 	}

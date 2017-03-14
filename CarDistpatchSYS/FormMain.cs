@@ -91,6 +91,12 @@ namespace CarDistpatchSYS
                         FormPageOperation.Add_TabPage("申请用车", form);
                         break;
                     }
+                case "调度审批":
+                    {
+                        var form = new MainDispathAudit() { FormState = CarDistpatchSYS.FormState.New };
+                        FormPageOperation.Add_TabPage("调度审批", form);
+                        break;
+                    }
             }
         }   
 

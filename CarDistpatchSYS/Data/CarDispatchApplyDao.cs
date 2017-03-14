@@ -164,7 +164,10 @@ namespace DS.Data
         {
             try
             {
-                string sql = string.Format("select * from t_car_dispatch_apply");
+                string sql = string.Format(@"select a.*, b.EmployeeName, c.CarNo, d.EmployeeName OperatorName from t_car_dispatch_apply a 
+                                                left join t_employee b on a.EmployeeID = b.EmployeeID
+                                                left join t_car c on a.CarID = c.CarID 
+                                                left join t_employee d on a.OperatorID = d.EmployeeID");
                 DataTable dt = MysqlHelper.ExecuteDataTable(sql);
                 List<CarDispatchApply> _list = ModelConvert.ToList<CarDispatchApply>(dt);
                 return _list;
@@ -175,7 +178,30 @@ namespace DS.Data
                 return null;
             }
         }
-   
+
+        /// <summary>
+        /// 获得数据列表
+        /// </summary>
+        /// <param name="sql"></param>
+        public List<CarDispatchApply> GetNotAuditList()
+        {
+            try
+            {
+                string sql = string.Format(@"select a.*, b.EmployeeName, c.CarNo, d.EmployeeName OperatorName from t_car_dispatch_apply a 
+                                                left join t_employee b on a.EmployeeID = b.EmployeeID
+                                                left join t_car c on a.CarID = c.CarID 
+                                                left join t_employee d on a.OperatorID = d.EmployeeID
+                                                where a.Status = 1");
+                DataTable dt = MysqlHelper.ExecuteDataTable(sql);
+                List<CarDispatchApply> _list = ModelConvert.ToList<CarDispatchApply>(dt);
+                return _list;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
 	}
 }
 

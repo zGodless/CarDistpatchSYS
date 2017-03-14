@@ -170,7 +170,7 @@ namespace CarDistpatchSYS
                 sql += string.Format(" and a.ApplyDate between '{0}' and '{1}'", ValueConvert.ToDateTime(dateApplyBegin.EditValue).ToString("yyyy-MM-dd"), ValueConvert.ToDateTime(dateApplyEnd.EditValue).ToString("yyyy-MM-dd"));
             }
 
-            string _sql = string.Format(@"select * from t_car_dispatch_apply a 
+            string _sql = string.Format(@"select a.*, b.EmployeeName, c.CarNo, d.EmployeeName OperatorName from t_car_dispatch_apply a 
                                                 left join t_employee b on a.EmployeeID = b.EmployeeID
                                                 left join t_car c on a.CarID = c.CarID 
                                                 left join t_employee d on a.OperatorID = d.EmployeeID

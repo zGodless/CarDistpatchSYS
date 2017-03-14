@@ -169,6 +169,34 @@ namespace DS.Data
                 return null;
             }
         }
+
+        /// <summary>
+        /// 更新状态
+        /// </summary>
+        /// <param name="sql"></param>
+        public bool UpdateState(int DispatchID, string result)
+        {
+            try
+            {
+                if (result == "通过")
+                {
+                    string sql = string.Format("update t_car_dispatch_apply a left join t_car_dispatch b on a.DispatchID = b.DispatchID set a.Status = 2, b.Status = 1 where a.DispatchID = {0}",DispatchID);
+                    int row = MysqlHelper.ExecuteNonQuery(sql);
+                    return row == 1;
+                }
+                else
+                {
+                    string sql = string.Format("update t_car_dispatch_apply a left join t_car_dispatch b on a.DispatchID = b.DispatchID set a.Status = 3, b.Status = 2 where a.DispatchID = {0}",DispatchID);
+                    int row = MysqlHelper.ExecuteNonQuery(sql);
+                    return row == 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
    
 	}
 }

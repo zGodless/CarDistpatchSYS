@@ -140,6 +140,7 @@ namespace CarDistpatchSYS
                 };
                 if (new CarDispatchDao().Add(modelDis))
                 {
+                    model.ApplyID = new CommonDAO().GetIntUniqueNumber("t_car_dispatch_apply");
                     model.DispatchID = modelDis.DispatchID;
                     result = new CarDispatchApplyDao().Add(model);
                     
