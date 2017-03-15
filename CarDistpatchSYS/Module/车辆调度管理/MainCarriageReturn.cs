@@ -144,17 +144,17 @@ namespace CarDistpatchSYS
             {
                 sql += string.Format(" and a.EmployeeID = {0}", ValueConvert.ToInt32(cLEmployeeID.EditValue));
             }
-            if (dateApplyBegin.EditValue != null && dateApplyEnd.EditValue == null)
+            if (dateReturnBegin.EditValue != null && dateReturnEnd.EditValue == null)
             {
-                sql += string.Format(" and a.RegistraDate >= '{0}'", ValueConvert.ToDateTime(dateApplyBegin.EditValue).ToString("yyyy-MM-dd"));
+                sql += string.Format(" and a.RegistraDate >= '{0}'", ValueConvert.ToDateTime(dateReturnBegin.EditValue).ToString("yyyy-MM-dd"));
             }
-            if (dateApplyEnd.EditValue == null && dateApplyEnd.EditValue != null)
+            if (dateReturnEnd.EditValue == null && dateReturnEnd.EditValue != null)
             {
-                sql += string.Format(" and a.RegistraDate <= '{0}'", ValueConvert.ToDateTime(dateApplyEnd.EditValue).ToString("yyyy-MM-dd"));
+                sql += string.Format(" and a.RegistraDate <= '{0}'", ValueConvert.ToDateTime(dateReturnEnd.EditValue).ToString("yyyy-MM-dd"));
             }
-            if (dateApplyEnd.EditValue != null && dateApplyEnd.EditValue != null)
+            if (dateReturnEnd.EditValue != null && dateReturnEnd.EditValue != null)
             {
-                sql += string.Format(" and a.RegistraDate between '{0}' and '{1}'", ValueConvert.ToDateTime(dateApplyBegin.EditValue).ToString("yyyy-MM-dd"), ValueConvert.ToDateTime(dateApplyEnd.EditValue).ToString("yyyy-MM-dd"));
+                sql += string.Format(" and a.RegistraDate between '{0}' and '{1}'", ValueConvert.ToDateTime(dateReturnBegin.EditValue).ToString("yyyy-MM-dd"), ValueConvert.ToDateTime(dateReturnEnd.EditValue).ToString("yyyy-MM-dd"));
             }
 
             string _sql = string.Format(@"select a.*, b.EmployeeName, c.CarNo, d.EmployeeName OperatorName from t_car_out_registration a 

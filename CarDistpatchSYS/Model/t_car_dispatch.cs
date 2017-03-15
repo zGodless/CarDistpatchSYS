@@ -92,7 +92,31 @@ namespace CarDistpatchSYS
 		#endregion 基本模型
 
 		#region 扩展模型
-		
+
+        public string StatusStr
+        {
+            get
+            {
+                switch (Status)
+                {
+                    case 0:
+                        return "申请中";
+                    case 1:
+                        return "审批通过";
+                    case 2:
+                        return "审批不通过";
+                    case 3:
+                        return "使用中";
+                    default:
+                        return "审批不通过";
+                }
+            }
+        }
+
+        public string EmployeeName { get; set; }
+        public string OperatorName { get; set; }
+        public string CarNo { get; set; }
+
 		#endregion 扩展模型
 	}
 }

@@ -197,7 +197,100 @@ namespace DS.Data
                 return null;
             }
         }
-   
+        /// <summary>
+        /// 获得数据列表
+        /// </summary>
+        /// <param name="sql"></param>
+        public List<CarDispatch> GetListByState(int state)
+        {
+            try
+            {
+                string sql = string.Format(@"select a.*, b.EmployeeName, c.CarNo from t_car_dispatch a 
+                                                left join t_employee b on a.EmployeeID = b.EmployeeID
+                                                left join t_car c on a.CarID = c.CarID
+                                            where a.Status = {0}", state);
+                DataTable dt = MysqlHelper.ExecuteDataTable(sql);
+                List<CarDispatch> _list = ModelConvert.ToList<CarDispatch>(dt);
+                return _list;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+        /// <summary>
+        /// 更新一条数据
+        /// </summary>
+        /// <param name="sql"></param>
+        public bool UpdateApplyDate(CarDispatchApply model)
+        {
+            try
+            {
+                string sql = string.Format("update t_car_dispatch set ApplyDate = '{0}' where DispatchID = {1}", model.ApplyDate, model.DispatchID);
+                int row = MysqlHelper.ExecuteNonQuery(sql);
+                return row == 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+        /// <summary>
+        /// 更新一条数据
+        /// </summary>
+        /// <param name="sql"></param>
+        public bool UpdateAuditDate(CarDispatchAudit model)
+        {
+            try
+            {
+                string sql = string.Format("update t_car_dispatch set AuditDate = '{0}' where DispatchID = {1}", model.AuditDate, model.DispatchID);
+                int row = MysqlHelper.ExecuteNonQuery(sql);
+                return row == 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+        /// <summary>
+        /// 更新一条数据
+        /// </summary>
+        /// <param name="sql"></param>
+        public bool UpdateRegistraDate(CarOutRegistration model)
+        {
+            try
+            {
+                string sql = string.Format("update t_car_dispatch set RegistraDate = '{0}' where DispatchID = {1}", model.RegistraDate, model.DispatchID);
+                int row = MysqlHelper.ExecuteNonQuery(sql);
+                return row == 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+        /// <summary>
+        /// 更新一条数据
+        /// </summary>
+        /// <param name="sql"></param>
+        public bool UpdateReturnDate(CarriageReturn model)
+        {
+            try
+            {
+                string sql = string.Format("update t_car_dispatch set ReturnDate = '{0}' where DispatchID = {1}", model.ReturnDate, model.DispatchID);
+                int row = MysqlHelper.ExecuteNonQuery(sql);
+                return row == 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
 	}
 }
 

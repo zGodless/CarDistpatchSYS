@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainCarriageReturn));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.dateApplyEnd = new DevExpress.XtraEditors.DateEdit();
+            this.dateReturnEnd = new DevExpress.XtraEditors.DateEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnAdd = new DevExpress.XtraBars.BarButtonItem();
@@ -48,7 +48,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.dateApplyBegin = new DevExpress.XtraEditors.DateEdit();
+            this.dateReturnBegin = new DevExpress.XtraEditors.DateEdit();
             this.cLEmployeeID = new DS.MSClient.UIControl.CLookEmployee();
             this.cLCar = new DS.MSClient.UIControl.CLookCar();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
@@ -71,11 +71,11 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateApplyEnd.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateApplyEnd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateReturnEnd.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateReturnEnd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateApplyBegin.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateApplyBegin.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateReturnBegin.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateReturnBegin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLEmployeeID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLCar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcOut)).BeginInit();
@@ -93,8 +93,8 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.dateApplyEnd);
-            this.layoutControl1.Controls.Add(this.dateApplyBegin);
+            this.layoutControl1.Controls.Add(this.dateReturnEnd);
+            this.layoutControl1.Controls.Add(this.dateReturnBegin);
             this.layoutControl1.Controls.Add(this.cLEmployeeID);
             this.layoutControl1.Controls.Add(this.cLCar);
             this.layoutControl1.Controls.Add(this.btnSearch);
@@ -107,19 +107,19 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // dateApplyEnd
+            // dateReturnEnd
             // 
-            this.dateApplyEnd.EditValue = null;
-            this.dateApplyEnd.Location = new System.Drawing.Point(608, 44);
-            this.dateApplyEnd.MenuManager = this.barManager1;
-            this.dateApplyEnd.Name = "dateApplyEnd";
-            this.dateApplyEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateReturnEnd.EditValue = null;
+            this.dateReturnEnd.Location = new System.Drawing.Point(608, 44);
+            this.dateReturnEnd.MenuManager = this.barManager1;
+            this.dateReturnEnd.Name = "dateReturnEnd";
+            this.dateReturnEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateApplyEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateReturnEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateApplyEnd.Size = new System.Drawing.Size(105, 20);
-            this.dateApplyEnd.StyleController = this.layoutControl1;
-            this.dateApplyEnd.TabIndex = 10;
+            this.dateReturnEnd.Size = new System.Drawing.Size(105, 20);
+            this.dateReturnEnd.StyleController = this.layoutControl1;
+            this.dateReturnEnd.TabIndex = 10;
             // 
             // barManager1
             // 
@@ -217,19 +217,19 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1087, 31);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 583);
             // 
-            // dateApplyBegin
+            // dateReturnBegin
             // 
-            this.dateApplyBegin.EditValue = null;
-            this.dateApplyBegin.Location = new System.Drawing.Point(434, 44);
-            this.dateApplyBegin.MenuManager = this.barManager1;
-            this.dateApplyBegin.Name = "dateApplyBegin";
-            this.dateApplyBegin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateReturnBegin.EditValue = null;
+            this.dateReturnBegin.Location = new System.Drawing.Point(434, 44);
+            this.dateReturnBegin.MenuManager = this.barManager1;
+            this.dateReturnBegin.Name = "dateReturnBegin";
+            this.dateReturnBegin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateApplyBegin.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateReturnBegin.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateApplyBegin.Size = new System.Drawing.Size(107, 20);
-            this.dateApplyBegin.StyleController = this.layoutControl1;
-            this.dateApplyBegin.TabIndex = 9;
+            this.dateReturnBegin.Size = new System.Drawing.Size(107, 20);
+            this.dateReturnBegin.StyleController = this.layoutControl1;
+            this.dateReturnBegin.TabIndex = 9;
             // 
             // cLEmployeeID
             // 
@@ -245,10 +245,10 @@
             this.cLEmployeeID.Properties.AutoHeight = false;
             this.cLEmployeeID.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.cLEmployeeID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "刷新", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "新增", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "刷新", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "新增", null, null, true)});
             this.cLEmployeeID.Properties.CaseSensitiveSearch = true;
             this.cLEmployeeID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.cLEmployeeID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -277,10 +277,10 @@
             this.cLCar.Properties.AutoHeight = false;
             this.cLCar.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.cLCar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "刷新", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "新增", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "刷新", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "新增", null, null, true)});
             this.cLCar.Properties.CaseSensitiveSearch = true;
             this.cLCar.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.cLCar.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -349,7 +349,7 @@
             this.gridColumn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn1.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn1.Caption = "派车人";
+            this.gridColumn1.Caption = "登记人";
             this.gridColumn1.FieldName = "EmployeeName";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
@@ -363,7 +363,7 @@
             this.gridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn2.Caption = "派车日期";
+            this.gridColumn2.Caption = "回车日期";
             this.gridColumn2.FieldName = "RegistraDate";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
@@ -377,7 +377,7 @@
             this.gridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn3.Caption = "申派车辆";
+            this.gridColumn3.Caption = "登记车辆";
             this.gridColumn3.FieldName = "CarNo";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
@@ -478,7 +478,7 @@
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(171, 26);
             this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem2.Text = "申派车辆";
+            this.layoutControlItem2.Text = "车辆";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem4
@@ -491,12 +491,12 @@
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(176, 26);
             this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem4.Text = "派车人";
+            this.layoutControlItem4.Text = "登记人";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.dateApplyBegin;
+            this.layoutControlItem5.Control = this.dateReturnBegin;
             this.layoutControlItem5.CustomizationFormText = "申请时间从";
             this.layoutControlItem5.Location = new System.Drawing.Point(347, 0);
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(174, 26);
@@ -504,12 +504,12 @@
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(174, 26);
             this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem5.Text = "派车时间从";
+            this.layoutControlItem5.Text = "回车日期从";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem6
             // 
-            this.layoutControlItem6.Control = this.dateApplyEnd;
+            this.layoutControlItem6.Control = this.dateReturnEnd;
             this.layoutControlItem6.CustomizationFormText = "到";
             this.layoutControlItem6.Location = new System.Drawing.Point(521, 0);
             this.layoutControlItem6.MaxSize = new System.Drawing.Size(172, 26);
@@ -520,7 +520,7 @@
             this.layoutControlItem6.Text = "到";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(60, 14);
             // 
-            // MainCarOutRegistration
+            // MainCarriageReturn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -530,15 +530,15 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.LookAndFeel.SkinName = "Office 2010 Silver";
-            this.Name = "MainCarOutRegistration";
+            this.Name = "MainCarriageReturn";
             this.Size = new System.Drawing.Size(1087, 614);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dateApplyEnd.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateApplyEnd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateReturnEnd.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateReturnEnd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateApplyBegin.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateApplyBegin.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateReturnBegin.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateReturnBegin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLEmployeeID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLCar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcOut)).EndInit();
@@ -582,8 +582,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn Column_choose;
         private DevExpress.XtraBars.BarButtonItem btnClose;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private DevExpress.XtraEditors.DateEdit dateApplyEnd;
-        private DevExpress.XtraEditors.DateEdit dateApplyBegin;
+        private DevExpress.XtraEditors.DateEdit dateReturnEnd;
+        private DevExpress.XtraEditors.DateEdit dateReturnBegin;
         private DS.MSClient.UIControl.CLookEmployee cLEmployeeID;
         private DS.MSClient.UIControl.CLookCar cLCar;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;

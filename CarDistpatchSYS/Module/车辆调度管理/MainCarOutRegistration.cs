@@ -80,6 +80,7 @@ namespace CarDistpatchSYS
         #region 属性
 
         private List<CarOutRegistration> _list = new List<CarOutRegistration>();
+        private CarDispatch selectModel = new CarDispatch();
         private string sql;
 
         #endregion
@@ -175,13 +176,28 @@ namespace CarDistpatchSYS
         /// <param name="e"></param>
         void btnAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FormEditOutRegistration form = new FormEditOutRegistration();
-            form.curData = new CarOutRegistration();
-            form.FormState = DS.MSClient.FormState.New;
+            FormSelectDispath form = new FormSelectDispath();
+            form.state = 1;
+            form.ShowUpdate += form_ShowUpdate;
             if (form.ShowDialog(this) == DialogResult.OK)
             {
-                btnSearch.PerformClick();
+                FormEditOutRegistration formout = new FormEditOutRegistration();
+                formout.FormState = DS.MSClient.FormState.New;
+                formout.curData = new CarOutRegistration()
+                {
+                    DispatchID = selectModel.DispatchID,
+                    CarID = selectModel.CarID
+                };
+                if (formout.ShowDialog(this) == DialogResult.OK)
+                {
+                    btnSearch.PerformClick();
+                }
             }
+        }
+
+        void form_ShowUpdate(CarDispatch model)
+        {
+            selectModel = model;
         }
         #endregion
     }

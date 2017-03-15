@@ -101,6 +101,7 @@ namespace CarDistpatchSYS
                 if (model.Result == "通过")
                 {
                     new CarDispatchAuditDao().UpdateState(ValueConvert.ToInt32(curData.DispatchID), model.Result);
+                    new CarDispatchDao().UpdateAuditDate(model);
                 }
                 MessageBox.Show("保存成功");
                 this.DialogResult = DialogResult.OK;

@@ -49,6 +49,13 @@ namespace CarDistpatchSYS
                     BindDate();
                 }
             }
+            else
+            {
+                if (curData != null)
+                {
+                    BindDate();
+                }
+            }
         }
 
 
@@ -120,6 +127,7 @@ namespace CarDistpatchSYS
             }
             if (result)
             {
+                new CarDispatchDao().UpdateRegistraDate(model);
                 MessageBox.Show("保存成功");
                 this.DialogResult = DialogResult.OK;
             }

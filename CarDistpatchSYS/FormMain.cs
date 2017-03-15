@@ -103,6 +103,12 @@ namespace CarDistpatchSYS
                         FormPageOperation.Add_TabPage("派车登记", form);
                         break;
                     }
+                case "回车管理":
+                    {
+                        var form = new MainCarriageReturn() { FormState = CarDistpatchSYS.FormState.New };
+                        FormPageOperation.Add_TabPage("回车管理", form);
+                        break;
+                    }
             }
         }   
 

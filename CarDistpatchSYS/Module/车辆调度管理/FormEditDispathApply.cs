@@ -148,6 +148,7 @@ namespace CarDistpatchSYS
             }
             if (result)
             {
+                new CarDispatchDao().UpdateApplyDate(model);
                 MessageBox.Show("保存成功");
                 this.DialogResult = DialogResult.OK;
             }
