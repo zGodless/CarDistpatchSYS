@@ -97,6 +97,12 @@ namespace CarDistpatchSYS
                         FormPageOperation.Add_TabPage("调度审批", form);
                         break;
                     }
+                case "派车登记":
+                    {
+                        var form = new MainCarOutRegistration() { FormState = CarDistpatchSYS.FormState.New };
+                        FormPageOperation.Add_TabPage("派车登记", form);
+                        break;
+                    }
             }
         }   
 

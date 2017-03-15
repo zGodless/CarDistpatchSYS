@@ -81,7 +81,7 @@ namespace CarDistpatchSYS
                 ChassisNumber = textChassisNumber. Text.Trim(),
                 YearCheckExpDate = ValueConvert.ToNullableDateTime(dateYearCheckExpDate.EditValue),
                 OilExpenses = ValueConvert.ToNullableDecimal(textOilExpenses.EditValue),
-                Note = memoNote.EditValue.ToString(),
+                Note = ValueConvert.ToString(memoNote.EditValue),
                 OperateID = Program.CurrentEmployee.EmployeeID,
                 OperateTime = DateTime.Now
             };

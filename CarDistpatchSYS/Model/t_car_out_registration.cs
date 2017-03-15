@@ -62,6 +62,12 @@ namespace CarDistpatchSYS
 		#endregion 基本模型
 
 		#region 扩展模型
+
+        public string EmployeeName { get; set; }
+
+        public string OperatorName { get; set; }
+        public string CarNo { get; set; }
+
 		
 		#endregion 扩展模型
 	}
