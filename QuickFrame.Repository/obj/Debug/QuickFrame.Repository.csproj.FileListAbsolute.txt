@@ -43,7 +43,6 @@ E:\毕设\程序\QuickFrame.Repository\obj\Debug\QuickFrame.Repository.pdb
 E:\毕设\程序\QuickFrame.Repository\obj\Debug\QuickFrame.Repository.csprojResolveAssemblyReference.cache
 E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\bin\Debug\QuickFrame.Repository.dll
 E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\bin\Debug\QuickFrame.Repository.pdb
-E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\obj\Debug\QuickFrame.Repository.csprojResolveAssemblyReference.cache
 E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\obj\Debug\QuickFrame.Repository.General.TokenStore.resources
 E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\obj\Debug\QuickFrame.Repository.MySql.TokenStore.resources
 E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\obj\Debug\QuickFrame.Repository.PostgreSql.TokenStore.resources

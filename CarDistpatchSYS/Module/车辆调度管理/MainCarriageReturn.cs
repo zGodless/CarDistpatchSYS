@@ -34,18 +34,18 @@ namespace CarDistpatchSYS
             btnDel.ItemClick += btnDel_ItemClick;
             btnClose.ItemClick +=btnClose_ItemClick;
 
-            gvOut.RowClick += gvCar_RowClick;
+            gvReturn.RowClick += gvCar_RowClick;
         }
 
         void MainCarApply_Load(object sender, EventArgs e)
         {
             cLCar.BindList();
             cLEmployeeID.BindList();
-            _list = new CarOutRegistrationDao().GetList();
+            _list = new CarriageReturnDao().GetList();
             if (_list.Count > 0)
             {
-                gcOut.DataSource = _list;
-                gcOut.RefreshDataSource();
+                gcReturn.DataSource = _list;
+                gcReturn.RefreshDataSource();
             }
         }
 
@@ -56,19 +56,19 @@ namespace CarDistpatchSYS
 
         void gvCar_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            var detail = gvOut.GetFocusedRow() as CarOutRegistration;
+            var detail = gvReturn.GetFocusedRow() as CarriageReturn;
             if (detail == null)
             {
                 return;
             }
-            if (this.gvOut.FocusedColumn == Column_choose)
+            if (this.gvReturn.FocusedColumn == Column_choose)
             {
                 switch (e.Clicks)
                 {
                     case 1:
-                        _list[gvOut.FocusedRowHandle].Choose = !detail.Choose;
-                        gcOut.DataSource = _list;
-                        gcOut.RefreshDataSource();
+                        _list[gvReturn.FocusedRowHandle].Choose = !detail.Choose;
+                        gcReturn.DataSource = _list;
+                        gcReturn.RefreshDataSource();
                         break;
                 }
             }
@@ -79,7 +79,9 @@ namespace CarDistpatchSYS
 
         #region 属性
 
-        private List<CarOutRegistration> _list = new List<CarOutRegistration>();
+        private List<CarriageReturn> _list = new List<CarriageReturn>();
+        private CarDispatch selectModel = new CarDispatch();
+
         private string sql;
 
         #endregion
@@ -101,11 +103,11 @@ namespace CarDistpatchSYS
             }
             foreach (var detail in delList)
             {
-                new CarOutRegistrationDao().Delete(detail);
+                new CarriageReturnDao().Delete(detail);
                 _list.Remove(detail);
             }
-            gcOut.DataSource = _list;
-            gcOut.RefreshDataSource();
+            gcReturn.DataSource = _list;
+            gcReturn.RefreshDataSource();
         }
         /// <summary>
         /// 编辑
@@ -114,12 +116,12 @@ namespace CarDistpatchSYS
         /// <param name="e"></param>
         void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var detail = gvOut.GetFocusedRow() as CarOutRegistration;
+            var detail = gvReturn.GetFocusedRow() as CarriageReturn;
             if (detail == null)
             {
                 return;
             }
-            FormEditOutRegistration form = new FormEditOutRegistration();
+            FormEditCarriageReturn form = new FormEditCarriageReturn();
             form.curData = detail;
             form.FormState = DS.MSClient.FormState.Modify;
             if (form.ShowDialog(this) == DialogResult.OK)
@@ -146,26 +148,26 @@ namespace CarDistpatchSYS
             }
             if (dateReturnBegin.EditValue != null && dateReturnEnd.EditValue == null)
             {
-                sql += string.Format(" and a.RegistraDate >= '{0}'", ValueConvert.ToDateTime(dateReturnBegin.EditValue).ToString("yyyy-MM-dd"));
+                sql += string.Format(" and a.ReturnDate >= '{0}'", ValueConvert.ToDateTime(dateReturnBegin.EditValue).ToString("yyyy-MM-dd"));
             }
             if (dateReturnEnd.EditValue == null && dateReturnEnd.EditValue != null)
             {
-                sql += string.Format(" and a.RegistraDate <= '{0}'", ValueConvert.ToDateTime(dateReturnEnd.EditValue).ToString("yyyy-MM-dd"));
+                sql += string.Format(" and a.ReturnDate <= '{0}'", ValueConvert.ToDateTime(dateReturnEnd.EditValue).ToString("yyyy-MM-dd"));
             }
             if (dateReturnEnd.EditValue != null && dateReturnEnd.EditValue != null)
             {
-                sql += string.Format(" and a.RegistraDate between '{0}' and '{1}'", ValueConvert.ToDateTime(dateReturnBegin.EditValue).ToString("yyyy-MM-dd"), ValueConvert.ToDateTime(dateReturnEnd.EditValue).ToString("yyyy-MM-dd"));
+                sql += string.Format(" and a.ReturnDate between '{0}' and '{1}'", ValueConvert.ToDateTime(dateReturnBegin.EditValue).ToString("yyyy-MM-dd"), ValueConvert.ToDateTime(dateReturnEnd.EditValue).ToString("yyyy-MM-dd"));
             }
 
-            string _sql = string.Format(@"select a.*, b.EmployeeName, c.CarNo, d.EmployeeName OperatorName from t_car_out_registration a 
+            string _sql = string.Format(@"select a.*, b.EmployeeName, c.CarNo, d.EmployeeName OperatorName from t_carriage_return a 
                                                 left join t_employee b on a.EmployeeID = b.EmployeeID
                                                 left join t_car c on a.CarID = c.CarID 
                                                 left join t_employee d on a.OperatorID = d.EmployeeID
                                                 where {0}", sql);
-            _list = new CarOutRegistrationDao().QueryGetList(_sql);
+            _list = new CarriageReturnDao().QueryGetList(_sql);
 
-            gcOut.DataSource = _list;
-            gcOut.RefreshDataSource();
+            gcReturn.DataSource = _list;
+            gcReturn.RefreshDataSource();
         }
 
         /// <summary>
@@ -175,13 +177,28 @@ namespace CarDistpatchSYS
         /// <param name="e"></param>
         void btnAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FormEditOutRegistration form = new FormEditOutRegistration();
-            form.curData = new CarOutRegistration();
-            form.FormState = DS.MSClient.FormState.New;
+            FormSelectDispath form = new FormSelectDispath();
+            form.state = 3;
+            form.ShowUpdate += form_ShowUpdate;
             if (form.ShowDialog(this) == DialogResult.OK)
             {
-                btnSearch.PerformClick();
+                FormEditCarriageReturn formout = new FormEditCarriageReturn();
+                formout.FormState = DS.MSClient.FormState.New;
+                formout.curData = new CarriageReturn()
+                {
+                    DispatchID = selectModel.DispatchID,
+                    CarID = selectModel.CarID
+                };
+                if (formout.ShowDialog(this) == DialogResult.OK)
+                {
+                    btnSearch.PerformClick();
+                }
             }
+        }
+
+        void form_ShowUpdate(CarDispatch model)
+        {
+            selectModel = model;
         }
         #endregion
     }

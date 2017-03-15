@@ -263,7 +263,7 @@ namespace DS.Data
         {
             try
             {
-                string sql = string.Format("update t_car_dispatch set RegistraDate = '{0}' where DispatchID = {1}", model.RegistraDate, model.DispatchID);
+                string sql = string.Format("update t_car_dispatch set RegistraDate = '{0}', Status = 3 where DispatchID = {1}", model.RegistraDate, model.DispatchID);
                 int row = MysqlHelper.ExecuteNonQuery(sql);
                 return row == 1;
             }
@@ -281,7 +281,7 @@ namespace DS.Data
         {
             try
             {
-                string sql = string.Format("update t_car_dispatch set ReturnDate = '{0}' where DispatchID = {1}", model.ReturnDate, model.DispatchID);
+                string sql = string.Format("update t_car_dispatch set ReturnDate = '{0}', Status = 4 where DispatchID = {1}", model.ReturnDate, model.DispatchID);
                 int row = MysqlHelper.ExecuteNonQuery(sql);
                 return row == 1;
             }

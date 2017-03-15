@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainCarriageReturn));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.dateReturnEnd = new DevExpress.XtraEditors.DateEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -52,8 +52,8 @@
             this.cLEmployeeID = new DS.MSClient.UIControl.CLookEmployee();
             this.cLCar = new DS.MSClient.UIControl.CLookCar();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
-            this.gcOut = new DevExpress.XtraGrid.GridControl();
-            this.gvOut = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcReturn = new DevExpress.XtraGrid.GridControl();
+            this.gvReturn = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Column_choose = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -78,8 +78,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateReturnBegin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLEmployeeID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLCar.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcOut)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvOut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcReturn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvReturn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
@@ -98,7 +98,7 @@
             this.layoutControl1.Controls.Add(this.cLEmployeeID);
             this.layoutControl1.Controls.Add(this.cLCar);
             this.layoutControl1.Controls.Add(this.btnSearch);
-            this.layoutControl1.Controls.Add(this.gcOut);
+            this.layoutControl1.Controls.Add(this.gcReturn);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 31);
             this.layoutControl1.Name = "layoutControl1";
@@ -245,10 +245,10 @@
             this.cLEmployeeID.Properties.AutoHeight = false;
             this.cLEmployeeID.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.cLEmployeeID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "刷新", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "新增", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "刷新", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "新增", null, null, true)});
             this.cLEmployeeID.Properties.CaseSensitiveSearch = true;
             this.cLEmployeeID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.cLEmployeeID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -277,10 +277,10 @@
             this.cLCar.Properties.AutoHeight = false;
             this.cLCar.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.cLCar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "刷新", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "新增", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "刷新", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "新增", null, null, true)});
             this.cLCar.Properties.CaseSensitiveSearch = true;
             this.cLCar.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.cLCar.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -304,29 +304,29 @@
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "查询";
             // 
-            // gcOut
+            // gcReturn
             // 
-            this.gcOut.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gcOut.Location = new System.Drawing.Point(12, 82);
-            this.gcOut.MainView = this.gvOut;
-            this.gcOut.MenuManager = this.barManager1;
-            this.gcOut.Name = "gcOut";
-            this.gcOut.Size = new System.Drawing.Size(1063, 489);
-            this.gcOut.TabIndex = 4;
-            this.gcOut.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvOut});
+            this.gcReturn.Cursor = System.Windows.Forms.Cursors.Default;
+            this.gcReturn.Location = new System.Drawing.Point(12, 82);
+            this.gcReturn.MainView = this.gvReturn;
+            this.gcReturn.MenuManager = this.barManager1;
+            this.gcReturn.Name = "gcReturn";
+            this.gcReturn.Size = new System.Drawing.Size(1063, 489);
+            this.gcReturn.TabIndex = 4;
+            this.gcReturn.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvReturn});
             // 
-            // gvOut
+            // gvReturn
             // 
-            this.gvOut.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvReturn.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.Column_choose,
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn8});
-            this.gvOut.GridControl = this.gcOut;
-            this.gvOut.Name = "gvOut";
-            this.gvOut.OptionsView.ShowGroupPanel = false;
+            this.gvReturn.GridControl = this.gcReturn;
+            this.gvReturn.Name = "gvReturn";
+            this.gvReturn.OptionsView.ShowGroupPanel = false;
             // 
             // Column_choose
             // 
@@ -364,7 +364,7 @@
             this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn2.Caption = "回车日期";
-            this.gridColumn2.FieldName = "RegistraDate";
+            this.gridColumn2.FieldName = "ReturnDate";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.OptionsColumn.ReadOnly = true;
@@ -415,7 +415,7 @@
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.gcOut;
+            this.layoutControlItem1.Control = this.gcReturn;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 70);
             this.layoutControlItem1.Name = "layoutControlItem1";
@@ -541,8 +541,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateReturnBegin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLEmployeeID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLCar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcOut)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvOut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcReturn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvReturn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
@@ -560,8 +560,8 @@
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraGrid.GridControl gcOut;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvOut;
+        private DevExpress.XtraGrid.GridControl gcReturn;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvReturn;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar1;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;

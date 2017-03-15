@@ -104,6 +104,12 @@
     <Compile Include="Module\基本信息\FormChangePassword.Designer.cs">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Module\车辆调度管理\FormEditCarriageReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\车辆调度管理\FormEditCarriageReturn.Designer.cs">
+      <DependentUpon>FormEditCarriageReturn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Module\车辆调度管理\FormSelectDispath.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Module\基本信息\FormChangePassword.resx">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\车辆调度管理\FormEditCarriageReturn.resx">
+      <DependentUpon>FormEditCarriageReturn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Module\车辆调度管理\FormSelectDispath.resx">
       <DependentUpon>FormSelectDispath.cs</DependentUpon>

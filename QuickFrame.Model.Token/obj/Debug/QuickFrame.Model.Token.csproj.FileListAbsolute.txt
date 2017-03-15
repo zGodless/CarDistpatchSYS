@@ -19,6 +19,5 @@ E:\毕设\程序\QuickFrame.Model.Token\obj\Debug\QuickFrame.Model.Token.pdb
 E:\毕设\程序\QuickFrame.Model.Token\obj\Debug\QuickFrame.Model.Token.csprojResolveAssemblyReference.cache
 E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Model.Token\bin\Debug\QuickFrame.Model.Token.dll
 E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Model.Token\bin\Debug\QuickFrame.Model.Token.pdb
-E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Model.Token\obj\Debug\QuickFrame.Model.Token.csprojResolveAssemblyReference.cache
 E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Model.Token\obj\Debug\QuickFrame.Model.Token.dll
 E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Model.Token\obj\Debug\QuickFrame.Model.Token.pdb

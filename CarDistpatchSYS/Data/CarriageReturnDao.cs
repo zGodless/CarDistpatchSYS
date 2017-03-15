@@ -156,7 +156,10 @@ namespace DS.Data
         {
             try
             {
-                string sql = string.Format("select * from t_carriage_return");
+                string sql = string.Format(@"select a.*, b.EmployeeName, c.CarNo, d.EmployeeName OperatorName from t_carriage_return a 
+                                                left join t_employee b on a.EmployeeID = b.EmployeeID
+                                                left join t_car c on a.CarID = c.CarID 
+                                                left join t_employee d on a.OperatorID = d.EmployeeID");
                 DataTable dt = MysqlHelper.ExecuteDataTable(sql);
                 List<CarriageReturn> _list = ModelConvert.ToList<CarriageReturn>(dt);
                 return _list;

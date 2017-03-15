@@ -220,3 +220,8 @@ E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.Ma
 E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.FormEditDispathApply.resources
 E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.FormEditDispathAudit.resources
 E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.MainDispathAudit.resources
+E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.FormEditOutRegistration.resources
+E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.MainCarOutRegistration.resources
+E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.MainCarriageReturn.resources
+E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.FormSelectDispath.resources
+E:\毕设\代码仓\CarDistpatchSYS\CarDistpatchSYS\obj\Debug\CarDistpatchSYS.FormEditCarriageReturn.resources
