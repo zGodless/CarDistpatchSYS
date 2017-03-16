@@ -21,3 +21,4 @@ E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Model\bin\Debug\QuickFrame.Model.
 E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Model\bin\Debug\QuickFrame.Model.pdb
 E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Model\obj\Debug\QuickFrame.Model.dll
 E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Model\obj\Debug\QuickFrame.Model.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Model\obj\Debug\QuickFrame.Model.csprojResolveAssemblyReference.cache

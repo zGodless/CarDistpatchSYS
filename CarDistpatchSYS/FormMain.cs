@@ -119,6 +119,12 @@ namespace CarDistpatchSYS
                         FormPageOperation.Add_TabPage("维修项目", form);
                         break;
                     }
+                case "车辆维修登记":
+                    {
+                        var form = new MainRepairRecord() { FormState = CarDistpatchSYS.FormState.New };
+                        FormPageOperation.Add_TabPage("车辆维修登记", form);
+                        break;
+                    }
             }
         }   
 

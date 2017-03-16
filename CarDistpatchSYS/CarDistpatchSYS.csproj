@@ -122,6 +122,12 @@
     <Compile Include="Module\车辆调度管理\FormEditCarriageReturn.Designer.cs">
       <DependentUpon>FormEditCarriageReturn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Module\车辆维修管理\FormEditRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\车辆维修管理\FormEditRepair.Designer.cs">
+      <DependentUpon>FormEditRepair.cs</DependentUpon>
+    </Compile>
     <Compile Include="Module\车辆调度管理\FormSelectDispath.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +169,12 @@
     </Compile>
     <Compile Include="Module\基本信息\FormEditDepartment.Designer.cs">
       <DependentUpon>FormEditDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\车辆维修管理\MainRepairRecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\车辆维修管理\MainRepairRecord.Designer.cs">
+      <DependentUpon>MainRepairRecord.cs</DependentUpon>
     </Compile>
     <Compile Include="Module\车辆调度管理\MainCarriageReturn.cs">
       <SubType>UserControl</SubType>
@@ -207,6 +219,9 @@
       <DependentUpon>MainDepartment.cs</DependentUpon>
     </Compile>
     <Compile Include="UILookUp\CLookCar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UILookUp\CLookRepairItem.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UILookUp\CLookEmployee.cs">
@@ -287,6 +302,9 @@
     <EmbeddedResource Include="Module\车辆调度管理\FormEditCarriageReturn.resx">
       <DependentUpon>FormEditCarriageReturn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Module\车辆维修管理\FormEditRepair.resx">
+      <DependentUpon>FormEditRepair.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Module\车辆调度管理\FormSelectDispath.resx">
       <DependentUpon>FormSelectDispath.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\车辆维修管理\MainRepairRecord.resx">
+      <DependentUpon>MainRepairRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Module\车辆调度管理\MainCarriageReturn.resx">
       <DependentUpon>MainCarriageReturn.cs</DependentUpon>

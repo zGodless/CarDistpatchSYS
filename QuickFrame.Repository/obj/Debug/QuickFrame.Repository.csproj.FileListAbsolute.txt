@@ -51,3 +51,4 @@ E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\obj\Debug\QuickFrame.R
 E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\obj\Debug\QuickFrame.Repository.csproj.GenerateResource.Cache
 E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\obj\Debug\QuickFrame.Repository.dll
 E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\obj\Debug\QuickFrame.Repository.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\obj\Debug\QuickFrame.Repository.csprojResolveAssemblyReference.cache

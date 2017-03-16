@@ -42,7 +42,7 @@ namespace CarDistpatchSYS
 		/// <summary>
 		/// ItemStr
 		/// </summary>	
-		public string ItemStr { get; set; }
+		public int? ItemStr { get; set; }
 
 		/// <summary>
 		/// RepairKil
@@ -82,6 +82,10 @@ namespace CarDistpatchSYS
 		#endregion 基本模型
 
 		#region 扩展模型
+        public string CarNo { get; set; }
+        public string OperateName { get; set; }
+        public string CreatName { get; set; }
+        public string RepairName { get; set; }
 		
 		#endregion 扩展模型
 	}

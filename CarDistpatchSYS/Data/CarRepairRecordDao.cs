@@ -164,7 +164,10 @@ namespace DS.Data
         {
             try
             {
-                string sql = string.Format("select * from t_car_repair_record");
+                string sql = string.Format(@"select a.*, b.EmployeeName CreatName, c.CarNo, d.RepairName from t_car_repair_record a 
+					            left join t_employee b on a.CreatID = b.EmployeeID 
+					            left join t_car c on a.CarID = c.CarID
+					            left join t_car_repair_item d on a.ItemStr = d.ItemID");
                 DataTable dt = MysqlHelper.ExecuteDataTable(sql);
                 List<CarRepairRecord> _list = ModelConvert.ToList<CarRepairRecord>(dt);
                 return _list;
