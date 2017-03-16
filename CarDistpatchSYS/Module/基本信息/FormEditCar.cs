@@ -71,7 +71,7 @@ namespace CarDistpatchSYS
                 CarNo = textCarNo.Text.Trim(),
                 CarModel = textCarModel.Text.Trim(),
                 CurrentKil = ValueConvert.ToNullableDecimal(textCurrentKil.EditValue),
-                DepartmentID = ValueConvert.ToNullableInt32(clDepartmentID.EditValue),
+                DepartmentID = ValueConvert.ToNullableInt32(cLookDepartment1.EditValue),
                 BuyTime = ValueConvert.ToNullableDateTime(dateBuyTime.EditValue),
                 LicenseCode = textLicenseCode.Text.Trim(),
                 LicenseExpireDate = ValueConvert.ToNullableDateTime(dateLicenseExpireDate.EditValue),
@@ -112,7 +112,7 @@ namespace CarDistpatchSYS
         {
             cLookEmployeeID.BindList();
             cLookOwnerID.BindList();
-            clDepartmentID.BindList();
+            cLookDepartment1.BindList();
             if (FormState == DS.MSClient.FormState.Modify) //编辑
             {
                 if (curCar == null)
@@ -153,7 +153,7 @@ namespace CarDistpatchSYS
 
             cLookEmployeeID.EditValue = ValueConvert.ToNullableInt32(curCar.EmployeeID);
             cLookOwnerID.EditValue = ValueConvert.ToNullableInt32(curCar.OwnerID);
-            clDepartmentID.EditValue = ValueConvert.ToNullableInt32(curCar.DepartmentID);
+            cLookDepartment1.EditValue = ValueConvert.ToNullableInt32(curCar.DepartmentID);
 
             if (curCar.Status != null)
             {

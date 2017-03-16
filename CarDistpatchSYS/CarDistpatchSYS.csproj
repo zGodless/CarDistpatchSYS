@@ -104,6 +104,12 @@
     <Compile Include="Module\基本信息\FormChangePassword.Designer.cs">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Module\统计报表\MainRepairReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\统计报表\MainRepairReport.Designer.cs">
+      <DependentUpon>MainRepairReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Module\车辆维修管理\FormEditRepairItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,12 @@
     </Compile>
     <Compile Include="Module\车辆维修管理\MainRepairRecord.Designer.cs">
       <DependentUpon>MainRepairRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\统计报表\MainCarReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\统计报表\MainCarReport.Designer.cs">
+      <DependentUpon>MainCarReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Module\车辆调度管理\MainCarriageReturn.cs">
       <SubType>UserControl</SubType>
@@ -293,6 +305,9 @@
     <EmbeddedResource Include="Module\基本信息\FormChangePassword.resx">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Module\统计报表\MainRepairReport.resx">
+      <DependentUpon>MainRepairReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Module\车辆维修管理\FormEditRepairItem.resx">
       <DependentUpon>FormEditRepairItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -337,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Module\车辆维修管理\MainRepairRecord.resx">
       <DependentUpon>MainRepairRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\统计报表\MainCarReport.resx">
+      <DependentUpon>MainCarReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Module\车辆调度管理\MainCarriageReturn.resx">
       <DependentUpon>MainCarriageReturn.cs</DependentUpon>
@@ -475,9 +493,7 @@
   <ItemGroup>
     <None Include="Resources\report_540px_1192858_easyicon.net.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Module\统计报表\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Resources\error.ico" />
     <Content Include="Resources\sign-error-icon.png" />

@@ -45,6 +45,11 @@ namespace CarDistpatchSYS
             btnRepair.ItemClick += btn_ItemClick;
             btnRepairItem.ItemClick += btn_ItemClick;
 
+            //统计
+            btnReportSend.ItemClick += btn_ItemClick;
+            btnReportRepair.ItemClick += btn_ItemClick;
+
+
             xtraTabControl2.ControlAdded += xtraTabControl2_ControlAdded;
         }
 
@@ -123,6 +128,18 @@ namespace CarDistpatchSYS
                     {
                         var form = new MainRepairRecord() { FormState = CarDistpatchSYS.FormState.New };
                         FormPageOperation.Add_TabPage("车辆维修登记", form);
+                        break;
+                    }
+                case "车辆调度统计":
+                    {
+                        var form = new MainCarReport() { FormState = CarDistpatchSYS.FormState.New };
+                        FormPageOperation.Add_TabPage("车辆调度统计", form);
+                        break;
+                    }
+                case "车辆维修统计":
+                    {
+                        var form = new MainRepairReport() { FormState = CarDistpatchSYS.FormState.New };
+                        FormPageOperation.Add_TabPage("车辆维修统计", form);
                         break;
                     }
             }

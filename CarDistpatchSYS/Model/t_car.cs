@@ -161,6 +161,15 @@ namespace CarDistpatchSYS
 	    }
         public string OwnerName { get; set; }
 
+        public int? SendCount { get; set; }
+        public decimal? AvgAudit { get; set; }
+        public decimal? AvgReturn { get; set; }
+
+
+        public int? RepairCount { get; set; }
+        public decimal? SumCost { get; set; }
+
+
 	    #endregion 扩展模型
 	}
 }

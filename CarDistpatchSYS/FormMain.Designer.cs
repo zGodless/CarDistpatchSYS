@@ -52,6 +52,7 @@
             this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.banDispath = new DevExpress.XtraBars.BarButtonItem();
             this.ribBaseMessage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribDispath = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -67,7 +68,6 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.banDispath = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
@@ -232,14 +232,14 @@
             // 
             // btnReportSend
             // 
-            this.btnReportSend.Caption = "  派车统计  ";
+            this.btnReportSend.Caption = "车辆调度统计";
             this.btnReportSend.Id = 12;
             this.btnReportSend.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnReportSend.LargeGlyph")));
             this.btnReportSend.Name = "btnReportSend";
             // 
             // btnReportRepair
             // 
-            this.btnReportRepair.Caption = "  维修统计   ";
+            this.btnReportRepair.Caption = "车辆维修统计   ";
             this.btnReportRepair.Id = 13;
             this.btnReportRepair.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnReportRepair.LargeGlyph")));
             this.btnReportRepair.Name = "btnReportRepair";
@@ -280,6 +280,13 @@
             this.barButtonItem1.Caption = "barButtonItem1";
             this.barButtonItem1.Id = 19;
             this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // banDispath
+            // 
+            this.banDispath.Caption = "调度记录";
+            this.banDispath.Id = 20;
+            this.banDispath.LargeGlyph = global::CarDistpatchSYS.Properties.Resources.report_540px_1192858_easyicon_net;
+            this.banDispath.Name = "banDispath";
             // 
             // ribBaseMessage
             // 
@@ -345,8 +352,6 @@
             this.ribbonPageGroup4.AllowTextClipping = false;
             this.ribbonPageGroup4.ItemLinks.Add(this.btnReportSend);
             this.ribbonPageGroup4.ItemLinks.Add(this.btnReportRepair);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnRepairEmployee);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnReportDepart);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.ShowCaptionButton = false;
             // 
@@ -425,13 +430,6 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextToControlDistance = 0;
             this.layoutControlItem2.TextVisible = false;
-            // 
-            // banDispath
-            // 
-            this.banDispath.Caption = "调度记录";
-            this.banDispath.Id = 20;
-            this.banDispath.LargeGlyph = global::CarDistpatchSYS.Properties.Resources.report_540px_1192858_easyicon_net;
-            this.banDispath.Name = "banDispath";
             // 
             // FormMain
             // 

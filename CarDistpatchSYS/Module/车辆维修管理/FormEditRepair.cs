@@ -112,6 +112,7 @@ namespace CarDistpatchSYS
                 RepairKil = ValueConvert.ToDecimal(textRepairKil.EditValue),
                 PartsCost = ValueConvert.ToDecimal(textPartsCost.EditValue),
                 RepairPlace = textRepairPlace.Text,
+                Result = comResult.Text,
                 Note = memoNote.Text,
                 OperateID = Program.CurrentEmployee.EmployeeID,
                 OperateTime = DateTime.Now

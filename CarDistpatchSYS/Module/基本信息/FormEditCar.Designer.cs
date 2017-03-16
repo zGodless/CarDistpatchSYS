@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.memoNote = new DevExpress.XtraEditors.MemoEdit();
             this.textMaintenanceExp = new DevExpress.XtraEditors.TextEdit();
@@ -50,7 +50,6 @@
             this.cLookOwnerID = new DS.MSClient.UIControl.CLookEmployee();
             this.cLookEmployeeID = new DS.MSClient.UIControl.CLookEmployee();
             this.comStatus = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.clDepartmentID = new DS.MSClient.UIControl.CLookDepartment();
             this.textChassisNumber = new DevExpress.XtraEditors.TextEdit();
             this.textEngineNumber = new DevExpress.XtraEditors.TextEdit();
             this.textCarModel = new DevExpress.XtraEditors.TextEdit();
@@ -65,7 +64,6 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -78,6 +76,8 @@
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.cLookDepartment1 = new DS.MSClient.UIControl.CLookDepartment();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoNote.Properties)).BeginInit();
@@ -95,7 +95,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cLookOwnerID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLookEmployeeID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comStatus.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clDepartmentID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textChassisNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEngineNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCarModel.Properties)).BeginInit();
@@ -108,7 +107,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
@@ -121,10 +119,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cLookDepartment1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.cLookDepartment1);
             this.layoutControl1.Controls.Add(this.memoNote);
             this.layoutControl1.Controls.Add(this.textMaintenanceExp);
             this.layoutControl1.Controls.Add(this.textRepairExpenses);
@@ -137,7 +138,6 @@
             this.layoutControl1.Controls.Add(this.cLookOwnerID);
             this.layoutControl1.Controls.Add(this.cLookEmployeeID);
             this.layoutControl1.Controls.Add(this.comStatus);
-            this.layoutControl1.Controls.Add(this.clDepartmentID);
             this.layoutControl1.Controls.Add(this.textChassisNumber);
             this.layoutControl1.Controls.Add(this.textEngineNumber);
             this.layoutControl1.Controls.Add(this.textCarModel);
@@ -253,10 +253,10 @@
             this.cLookOwnerID.Properties.AutoHeight = false;
             this.cLookOwnerID.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.cLookOwnerID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "刷新", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "新增", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "刷新", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "新增", null, null, true)});
             this.cLookOwnerID.Properties.CaseSensitiveSearch = true;
             this.cLookOwnerID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.cLookOwnerID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -284,10 +284,10 @@
             this.cLookEmployeeID.Properties.AutoHeight = false;
             this.cLookEmployeeID.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.cLookEmployeeID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "刷新", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "新增", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "刷新", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "新增", null, null, true)});
             this.cLookEmployeeID.Properties.CaseSensitiveSearch = true;
             this.cLookEmployeeID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.cLookEmployeeID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -316,35 +316,6 @@
             this.comStatus.Size = new System.Drawing.Size(185, 20);
             this.comStatus.StyleController = this.layoutControl1;
             this.comStatus.TabIndex = 11;
-            // 
-            // clDepartmentID
-            // 
-            this.clDepartmentID.ClearButton = false;
-            this.clDepartmentID.Currentduty = null;
-            this.clDepartmentID.ListIsValid = null;
-            this.clDepartmentID.Location = new System.Drawing.Point(87, 36);
-            this.clDepartmentID.MaximumSize = new System.Drawing.Size(0, 20);
-            this.clDepartmentID.Name = "clDepartmentID";
-            this.clDepartmentID.Properties.ActionButtonIndex = 1;
-            this.clDepartmentID.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.clDepartmentID.Properties.AutoHeight = false;
-            this.clDepartmentID.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
-            this.clDepartmentID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "刷新", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "新增", null, null, true)});
-            this.clDepartmentID.Properties.CaseSensitiveSearch = true;
-            this.clDepartmentID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.clDepartmentID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("BankName", "银行名称")});
-            this.clDepartmentID.Properties.NullText = "";
-            this.clDepartmentID.Properties.NullValuePromptShowForEmptyValue = true;
-            this.clDepartmentID.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.clDepartmentID.Size = new System.Drawing.Size(185, 20);
-            this.clDepartmentID.StyleController = this.layoutControl1;
-            this.clDepartmentID.TabIndex = 10;
-            this.clDepartmentID.ToolTip = "清除选择:[CTRL + 0]";
             // 
             // textChassisNumber
             // 
@@ -409,7 +380,6 @@
             this.layoutControlItem4,
             this.layoutControlItem5,
             this.layoutControlItem6,
-            this.layoutControlItem7,
             this.layoutControlItem8,
             this.layoutControlItem9,
             this.layoutControlItem10,
@@ -421,7 +391,8 @@
             this.layoutControlItem16,
             this.layoutControlItem17,
             this.layoutControlItem18,
-            this.layoutControlItem19});
+            this.layoutControlItem19,
+            this.layoutControlItem7});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(548, 346);
@@ -501,16 +472,6 @@
             this.layoutControlItem6.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem6.Text = "车架号";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(72, 14);
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.clDepartmentID;
-            this.layoutControlItem7.CustomizationFormText = "部门";
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 24);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(264, 24);
-            this.layoutControlItem7.Text = "部门";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem8
             // 
@@ -633,6 +594,47 @@
             this.layoutControlItem19.TextLocation = DevExpress.Utils.Locations.Default;
             this.layoutControlItem19.TextSize = new System.Drawing.Size(72, 14);
             // 
+            // cLookDepartment1
+            // 
+            this.cLookDepartment1.ClearButton = false;
+            this.cLookDepartment1.Currentduty = null;
+            this.cLookDepartment1.ListIsValid = null;
+            this.cLookDepartment1.Location = new System.Drawing.Point(87, 36);
+            this.cLookDepartment1.MaximumSize = new System.Drawing.Size(0, 20);
+            this.cLookDepartment1.Name = "cLookDepartment1";
+            this.cLookDepartment1.Properties.ActionButtonIndex = 1;
+            this.cLookDepartment1.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.cLookDepartment1.Properties.AutoHeight = false;
+            this.cLookDepartment1.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
+            this.cLookDepartment1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "刷新", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "新增", null, null, true)});
+            this.cLookDepartment1.Properties.CaseSensitiveSearch = true;
+            this.cLookDepartment1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.cLookDepartment1.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DepartmentName", "部门名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ParentName", "上级部门"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("InChargeName", "负责人")});
+            this.cLookDepartment1.Properties.NullText = "";
+            this.cLookDepartment1.Properties.NullValuePromptShowForEmptyValue = true;
+            this.cLookDepartment1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cLookDepartment1.Size = new System.Drawing.Size(185, 20);
+            this.cLookDepartment1.StyleController = this.layoutControl1;
+            this.cLookDepartment1.TabIndex = 23;
+            this.cLookDepartment1.ToolTip = "清除选择:[CTRL + 0]";
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.cLookDepartment1;
+            this.layoutControlItem7.CustomizationFormText = "部门";
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(264, 24);
+            this.layoutControlItem7.Text = "部门";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(72, 14);
+            // 
             // FormEditCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -659,7 +661,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cLookOwnerID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLookEmployeeID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comStatus.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clDepartmentID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textChassisNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEngineNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCarModel.Properties)).EndInit();
@@ -672,7 +673,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
@@ -685,6 +685,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cLookDepartment1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -707,8 +709,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.ComboBoxEdit comStatus;
-        private DS.MSClient.UIControl.CLookDepartment clDepartmentID;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraEditors.MemoEdit memoNote;
         private DevExpress.XtraEditors.TextEdit textMaintenanceExp;
@@ -732,5 +732,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
+        private DS.MSClient.UIControl.CLookDepartment cLookDepartment1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
     }
 }
