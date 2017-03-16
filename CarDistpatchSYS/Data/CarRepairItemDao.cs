@@ -150,7 +150,8 @@ namespace DS.Data
         {
             try
             {
-                string sql = string.Format("select * from t_car_repair_item");
+                string sql = string.Format(@"select a.*, b.EmployeeName from t_car_repair_item a 
+                                                left join t_employee b on a.OperateID = b.EmployeeID ");
                 DataTable dt = MysqlHelper.ExecuteDataTable(sql);
                 List<CarRepairItem> _list = ModelConvert.ToList<CarRepairItem>(dt);
                 return _list;

@@ -41,6 +41,10 @@ namespace CarDistpatchSYS
             btnSend.ItemClick += btn_ItemClick;
             btnReturn.ItemClick += btn_ItemClick;
 
+            //维修
+            btnRepair.ItemClick += btn_ItemClick;
+            btnRepairItem.ItemClick += btn_ItemClick;
+
             xtraTabControl2.ControlAdded += xtraTabControl2_ControlAdded;
         }
 
@@ -107,6 +111,12 @@ namespace CarDistpatchSYS
                     {
                         var form = new MainCarriageReturn() { FormState = CarDistpatchSYS.FormState.New };
                         FormPageOperation.Add_TabPage("回车管理", form);
+                        break;
+                    }
+                case "维修项目":
+                    {
+                        var form = new MainRepairItem() { FormState = CarDistpatchSYS.FormState.New };
+                        FormPageOperation.Add_TabPage("维修项目", form);
                         break;
                     }
             }
