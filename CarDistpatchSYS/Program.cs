@@ -17,6 +17,7 @@ namespace CarDistpatchSYS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            MFormMain = new FormMain();
             Application.Run(new FormLogin());
         }
 

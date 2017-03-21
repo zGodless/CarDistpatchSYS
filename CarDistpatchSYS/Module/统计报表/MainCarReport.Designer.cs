@@ -34,6 +34,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.dateReturnEnd = new DevExpress.XtraEditors.DateEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnClose = new DevExpress.XtraBars.BarButtonItem();
@@ -44,7 +45,6 @@
             this.btnAdd = new DevExpress.XtraBars.BarButtonItem();
             this.btnEdit = new DevExpress.XtraBars.BarButtonItem();
             this.btnDel = new DevExpress.XtraBars.BarButtonItem();
-            this.dateReturnEnd = new DevExpress.XtraEditors.DateEdit();
             this.dateReturnBegin = new DevExpress.XtraEditors.DateEdit();
             this.dateSendEnd = new DevExpress.XtraEditors.DateEdit();
             this.dateSendBegin = new DevExpress.XtraEditors.DateEdit();
@@ -74,13 +74,13 @@
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateReturnEnd.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateReturnEnd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateReturnBegin.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateReturnBegin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateSendEnd.Properties.CalendarTimeProperties)).BeginInit();
@@ -129,13 +129,27 @@
             this.layoutControl1.Controls.Add(this.btnSearch);
             this.layoutControl1.Controls.Add(this.gcCarReport);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 31);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 29);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(833, 412, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1087, 583);
+            this.layoutControl1.Size = new System.Drawing.Size(1087, 585);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // dateReturnEnd
+            // 
+            this.dateReturnEnd.EditValue = null;
+            this.dateReturnEnd.Location = new System.Drawing.Point(349, 145);
+            this.dateReturnEnd.MenuManager = this.barManager1;
+            this.dateReturnEnd.Name = "dateReturnEnd";
+            this.dateReturnEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateReturnEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateReturnEnd.Size = new System.Drawing.Size(195, 20);
+            this.dateReturnEnd.StyleController = this.layoutControl1;
+            this.dateReturnEnd.TabIndex = 17;
             // 
             // barManager1
             // 
@@ -180,7 +194,7 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1087, 31);
+            this.barDockControlTop.Size = new System.Drawing.Size(1087, 29);
             // 
             // barDockControlBottom
             // 
@@ -193,15 +207,15 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 31);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 583);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 29);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 585);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1087, 31);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 583);
+            this.barDockControlRight.Location = new System.Drawing.Point(1087, 29);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 585);
             // 
             // btnAdd
             // 
@@ -230,24 +244,10 @@
             this.btnDel.Name = "btnDel";
             this.btnDel.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
-            // dateReturnEnd
-            // 
-            this.dateReturnEnd.EditValue = null;
-            this.dateReturnEnd.Location = new System.Drawing.Point(349, 140);
-            this.dateReturnEnd.MenuManager = this.barManager1;
-            this.dateReturnEnd.Name = "dateReturnEnd";
-            this.dateReturnEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateReturnEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateReturnEnd.Size = new System.Drawing.Size(195, 20);
-            this.dateReturnEnd.StyleController = this.layoutControl1;
-            this.dateReturnEnd.TabIndex = 17;
-            // 
             // dateReturnBegin
             // 
             this.dateReturnBegin.EditValue = null;
-            this.dateReturnBegin.Location = new System.Drawing.Point(87, 140);
+            this.dateReturnBegin.Location = new System.Drawing.Point(87, 145);
             this.dateReturnBegin.MenuManager = this.barManager1;
             this.dateReturnBegin.Name = "dateReturnBegin";
             this.dateReturnBegin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -261,7 +261,7 @@
             // dateSendEnd
             // 
             this.dateSendEnd.EditValue = null;
-            this.dateSendEnd.Location = new System.Drawing.Point(349, 116);
+            this.dateSendEnd.Location = new System.Drawing.Point(349, 121);
             this.dateSendEnd.MenuManager = this.barManager1;
             this.dateSendEnd.Name = "dateSendEnd";
             this.dateSendEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -275,7 +275,7 @@
             // dateSendBegin
             // 
             this.dateSendBegin.EditValue = null;
-            this.dateSendBegin.Location = new System.Drawing.Point(87, 116);
+            this.dateSendBegin.Location = new System.Drawing.Point(87, 121);
             this.dateSendBegin.MenuManager = this.barManager1;
             this.dateSendBegin.Name = "dateSendBegin";
             this.dateSendBegin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -289,7 +289,7 @@
             // dateAuditEnd
             // 
             this.dateAuditEnd.EditValue = null;
-            this.dateAuditEnd.Location = new System.Drawing.Point(349, 92);
+            this.dateAuditEnd.Location = new System.Drawing.Point(349, 97);
             this.dateAuditEnd.MenuManager = this.barManager1;
             this.dateAuditEnd.Name = "dateAuditEnd";
             this.dateAuditEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -303,7 +303,7 @@
             // dateAuditBegin
             // 
             this.dateAuditBegin.EditValue = null;
-            this.dateAuditBegin.Location = new System.Drawing.Point(87, 92);
+            this.dateAuditBegin.Location = new System.Drawing.Point(87, 97);
             this.dateAuditBegin.MenuManager = this.barManager1;
             this.dateAuditBegin.Name = "dateAuditBegin";
             this.dateAuditBegin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -319,7 +319,7 @@
             this.cLookDepartment1.ClearButton = false;
             this.cLookDepartment1.Currentduty = null;
             this.cLookDepartment1.ListIsValid = null;
-            this.cLookDepartment1.Location = new System.Drawing.Point(87, 44);
+            this.cLookDepartment1.Location = new System.Drawing.Point(87, 49);
             this.cLookDepartment1.MaximumSize = new System.Drawing.Size(0, 20);
             this.cLookDepartment1.MenuManager = this.barManager1;
             this.cLookDepartment1.Name = "cLookDepartment1";
@@ -349,7 +349,7 @@
             // dateApplyEnd
             // 
             this.dateApplyEnd.EditValue = null;
-            this.dateApplyEnd.Location = new System.Drawing.Point(349, 68);
+            this.dateApplyEnd.Location = new System.Drawing.Point(349, 73);
             this.dateApplyEnd.MenuManager = this.barManager1;
             this.dateApplyEnd.Name = "dateApplyEnd";
             this.dateApplyEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -363,7 +363,7 @@
             // dateApplyBegin
             // 
             this.dateApplyBegin.EditValue = null;
-            this.dateApplyBegin.Location = new System.Drawing.Point(87, 68);
+            this.dateApplyBegin.Location = new System.Drawing.Point(87, 73);
             this.dateApplyBegin.MenuManager = this.barManager1;
             this.dateApplyBegin.Name = "dateApplyBegin";
             this.dateApplyBegin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -376,7 +376,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(548, 44);
+            this.btnSearch.Location = new System.Drawing.Point(548, 49);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(92, 22);
             this.btnSearch.StyleController = this.layoutControl1;
@@ -390,7 +390,7 @@
             this.gcCarReport.MainView = this.gvCarReport;
             this.gcCarReport.MenuManager = this.barManager1;
             this.gcCarReport.Name = "gcCarReport";
-            this.gcCarReport.Size = new System.Drawing.Size(1063, 395);
+            this.gcCarReport.Size = new System.Drawing.Size(1063, 397);
             this.gcCarReport.TabIndex = 4;
             this.gcCarReport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCarReport});
@@ -472,7 +472,7 @@
             this.layoutControlGroup2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1087, 583);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1087, 585);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -482,7 +482,7 @@
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 164);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1067, 399);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1067, 401);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
@@ -678,9 +678,9 @@
             this.Size = new System.Drawing.Size(1087, 614);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateReturnEnd.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateReturnEnd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateReturnBegin.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateReturnBegin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateSendEnd.Properties.CalendarTimeProperties)).EndInit();

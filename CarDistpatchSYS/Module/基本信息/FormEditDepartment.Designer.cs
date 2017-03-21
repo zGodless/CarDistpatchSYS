@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.clParentID = new DS.MSClient.UIControl.CLookDepartment();
             this.memoNote = new DevExpress.XtraEditors.MemoEdit();
             this.cLInChargeID = new DS.MSClient.UIControl.CLookEmployee();
             this.textEmployeeCount = new DevExpress.XtraEditors.TextEdit();
@@ -52,10 +53,10 @@
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.clParentID = new DS.MSClient.UIControl.CLookDepartment();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clParentID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoNote.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLInChargeID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEmployeeCount.Properties)).BeginInit();
@@ -71,7 +72,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clParentID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,6 +92,37 @@
             this.layoutControl1.Size = new System.Drawing.Size(548, 242);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // clParentID
+            // 
+            this.clParentID.ClearButton = false;
+            this.clParentID.Currentduty = null;
+            this.clParentID.ListIsValid = null;
+            this.clParentID.Location = new System.Drawing.Point(63, 36);
+            this.clParentID.MaximumSize = new System.Drawing.Size(0, 20);
+            this.clParentID.Name = "clParentID";
+            this.clParentID.Properties.ActionButtonIndex = 1;
+            this.clParentID.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.clParentID.Properties.AutoHeight = false;
+            this.clParentID.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
+            this.clParentID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "刷新", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "新增", null, null, true)});
+            this.clParentID.Properties.CaseSensitiveSearch = true;
+            this.clParentID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.clParentID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DepartmentName", "部门名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ParentName", "上级部门"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("InChargeName", "负责人")});
+            this.clParentID.Properties.NullText = "";
+            this.clParentID.Properties.NullValuePromptShowForEmptyValue = true;
+            this.clParentID.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.clParentID.Size = new System.Drawing.Size(209, 20);
+            this.clParentID.StyleController = this.layoutControl1;
+            this.clParentID.TabIndex = 23;
+            this.clParentID.ToolTip = "清除选择:[CTRL + 0]";
             // 
             // memoNote
             // 
@@ -115,10 +146,10 @@
             this.cLInChargeID.Properties.AutoHeight = false;
             this.cLInChargeID.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.cLInChargeID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "刷新", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "新增", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "刷新", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "新增", null, null, true)});
             this.cLInChargeID.Properties.CaseSensitiveSearch = true;
             this.cLInChargeID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.cLInChargeID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -292,37 +323,6 @@
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // clParentID
-            // 
-            this.clParentID.ClearButton = false;
-            this.clParentID.Currentduty = null;
-            this.clParentID.ListIsValid = null;
-            this.clParentID.Location = new System.Drawing.Point(63, 36);
-            this.clParentID.MaximumSize = new System.Drawing.Size(0, 20);
-            this.clParentID.Name = "clParentID";
-            this.clParentID.Properties.ActionButtonIndex = 1;
-            this.clParentID.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.clParentID.Properties.AutoHeight = false;
-            this.clParentID.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
-            this.clParentID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "刷新", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "新增", null, null, true)});
-            this.clParentID.Properties.CaseSensitiveSearch = true;
-            this.clParentID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.clParentID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DepartmentName", "部门名称"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ParentName", "上级部门"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("InChargeName", "负责人")});
-            this.clParentID.Properties.NullText = "";
-            this.clParentID.Properties.NullValuePromptShowForEmptyValue = true;
-            this.clParentID.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.clParentID.Size = new System.Drawing.Size(209, 20);
-            this.clParentID.StyleController = this.layoutControl1;
-            this.clParentID.TabIndex = 23;
-            this.clParentID.ToolTip = "清除选择:[CTRL + 0]";
-            // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.clParentID;
@@ -344,6 +344,7 @@
             this.Text = "编辑部门";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.clParentID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoNote.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLInChargeID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEmployeeCount.Properties)).EndInit();
@@ -359,7 +360,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clParentID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 

@@ -496,6 +496,8 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Resources\error.ico" />
+    <None Include="Resources\QQ截图20170322003557.png" />
+    <None Include="Resources\Minimize_Window_48px_1178220_easyicon.net.png" />
     <Content Include="Resources\sign-error-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

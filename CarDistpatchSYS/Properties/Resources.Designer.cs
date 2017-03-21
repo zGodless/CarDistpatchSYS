@@ -153,6 +153,26 @@ namespace CarDistpatchSYS.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap Minimize_Window_48px_1178220_easyicon_net {
+            get {
+                object obj = ResourceManager.GetObject("Minimize_Window_48px_1178220_easyicon.net", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap QQ截图20170322003557 {
+            get {
+                object obj = ResourceManager.GetObject("QQ截图20170322003557", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap Repair_574px_1183572_easyicon_net {
             get {
                 object obj = ResourceManager.GetObject("Repair_574px_1183572_easyicon.net", resourceCulture);
@@ -166,6 +186,16 @@ namespace CarDistpatchSYS.Properties {
         internal static System.Drawing.Bitmap report_540px_1192858_easyicon_net {
             get {
                 object obj = ResourceManager.GetObject("report_540px_1192858_easyicon.net", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap sign_error_icon {
+            get {
+                object obj = ResourceManager.GetObject("sign-error-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

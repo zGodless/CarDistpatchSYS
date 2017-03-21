@@ -39,11 +39,11 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.datePlaceBackDate = new DevExpress.XtraEditors.DateEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.btnSendAudit = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.btnSendAudit = new DevExpress.XtraBars.BarButtonItem();
             this.dateApplyDate = new DevExpress.XtraEditors.DateEdit();
             this.cLCarID = new DS.MSClient.UIControl.CLookCar();
             this.cLookEmployee = new DS.MSClient.UIControl.CLookEmployee();
@@ -122,15 +122,6 @@
             this.btnSendAudit});
             this.barManager1.MaxItemId = 1;
             // 
-            // btnSendAudit
-            // 
-            this.btnSendAudit.Caption = "推送审核";
-            this.btnSendAudit.Glyph = ((System.Drawing.Image)(resources.GetObject("btnSendAudit.Glyph")));
-            this.btnSendAudit.Id = 0;
-            this.btnSendAudit.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnSendAudit.LargeGlyph")));
-            this.btnSendAudit.Name = "btnSendAudit";
-            this.btnSendAudit.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
@@ -158,6 +149,15 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(589, 0);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 399);
+            // 
+            // btnSendAudit
+            // 
+            this.btnSendAudit.Caption = "推送审核";
+            this.btnSendAudit.Glyph = ((System.Drawing.Image)(resources.GetObject("btnSendAudit.Glyph")));
+            this.btnSendAudit.Id = 0;
+            this.btnSendAudit.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnSendAudit.LargeGlyph")));
+            this.btnSendAudit.Name = "btnSendAudit";
+            this.btnSendAudit.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // dateApplyDate
             // 

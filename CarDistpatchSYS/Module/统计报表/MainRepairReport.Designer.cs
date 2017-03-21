@@ -117,17 +117,17 @@
             this.layoutControl1.Controls.Add(this.btnSearch);
             this.layoutControl1.Controls.Add(this.gcCarReport);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 31);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 29);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(833, 412, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1087, 583);
+            this.layoutControl1.Size = new System.Drawing.Size(1087, 585);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // comResult
             // 
-            this.comResult.Location = new System.Drawing.Point(87, 116);
+            this.comResult.Location = new System.Drawing.Point(87, 121);
             this.comResult.MenuManager = this.barManager1;
             this.comResult.Name = "comResult";
             this.comResult.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -183,7 +183,7 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1087, 31);
+            this.barDockControlTop.Size = new System.Drawing.Size(1087, 29);
             // 
             // barDockControlBottom
             // 
@@ -196,15 +196,15 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 31);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 583);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 29);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 585);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1087, 31);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 583);
+            this.barDockControlRight.Location = new System.Drawing.Point(1087, 29);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 585);
             // 
             // btnAdd
             // 
@@ -238,7 +238,7 @@
             this.cLItemStr.ClearButton = false;
             this.cLItemStr.Currentduty = null;
             this.cLItemStr.ListIsValid = null;
-            this.cLItemStr.Location = new System.Drawing.Point(349, 92);
+            this.cLItemStr.Location = new System.Drawing.Point(349, 97);
             this.cLItemStr.MaximumSize = new System.Drawing.Size(0, 20);
             this.cLItemStr.MenuManager = this.barManager1;
             this.cLItemStr.Name = "cLItemStr";
@@ -265,7 +265,7 @@
             // 
             // textRepairPlace
             // 
-            this.textRepairPlace.Location = new System.Drawing.Point(87, 92);
+            this.textRepairPlace.Location = new System.Drawing.Point(87, 97);
             this.textRepairPlace.MenuManager = this.barManager1;
             this.textRepairPlace.Name = "textRepairPlace";
             this.textRepairPlace.Size = new System.Drawing.Size(195, 20);
@@ -277,7 +277,7 @@
             this.cLOwnerID.ClearButton = false;
             this.cLOwnerID.Currentduty = null;
             this.cLOwnerID.ListIsValid = null;
-            this.cLOwnerID.Location = new System.Drawing.Point(349, 44);
+            this.cLOwnerID.Location = new System.Drawing.Point(349, 49);
             this.cLOwnerID.MaximumSize = new System.Drawing.Size(0, 20);
             this.cLOwnerID.MenuManager = this.barManager1;
             this.cLOwnerID.Name = "cLOwnerID";
@@ -309,7 +309,7 @@
             this.cLookDepartment1.ClearButton = false;
             this.cLookDepartment1.Currentduty = null;
             this.cLookDepartment1.ListIsValid = null;
-            this.cLookDepartment1.Location = new System.Drawing.Point(87, 44);
+            this.cLookDepartment1.Location = new System.Drawing.Point(87, 49);
             this.cLookDepartment1.MaximumSize = new System.Drawing.Size(0, 20);
             this.cLookDepartment1.MenuManager = this.barManager1;
             this.cLookDepartment1.Name = "cLookDepartment1";
@@ -339,7 +339,7 @@
             // dateRepairEnd
             // 
             this.dateRepairEnd.EditValue = null;
-            this.dateRepairEnd.Location = new System.Drawing.Point(349, 68);
+            this.dateRepairEnd.Location = new System.Drawing.Point(349, 73);
             this.dateRepairEnd.MenuManager = this.barManager1;
             this.dateRepairEnd.Name = "dateRepairEnd";
             this.dateRepairEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -353,7 +353,7 @@
             // dateRepairBegin
             // 
             this.dateRepairBegin.EditValue = null;
-            this.dateRepairBegin.Location = new System.Drawing.Point(87, 68);
+            this.dateRepairBegin.Location = new System.Drawing.Point(87, 73);
             this.dateRepairBegin.MenuManager = this.barManager1;
             this.dateRepairBegin.Name = "dateRepairBegin";
             this.dateRepairBegin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -366,7 +366,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(548, 44);
+            this.btnSearch.Location = new System.Drawing.Point(548, 49);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(92, 22);
             this.btnSearch.StyleController = this.layoutControl1;
@@ -380,7 +380,7 @@
             this.gcCarReport.MainView = this.gvCarReport;
             this.gcCarReport.MenuManager = this.barManager1;
             this.gcCarReport.Name = "gcCarReport";
-            this.gcCarReport.Size = new System.Drawing.Size(1063, 419);
+            this.gcCarReport.Size = new System.Drawing.Size(1063, 421);
             this.gcCarReport.TabIndex = 4;
             this.gcCarReport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCarReport});
@@ -462,7 +462,7 @@
             this.layoutControlGroup2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1087, 583);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1087, 585);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -472,7 +472,7 @@
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 140);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1067, 423);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1067, 425);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;

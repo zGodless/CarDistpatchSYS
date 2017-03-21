@@ -130,8 +130,9 @@ namespace CarDistpatchSYS
                             Program.CurrentEmployee = model;    //当前用户
 
                             Ini.WriteItem("Login", "UserName", textUserName.Text.Trim());
-                            FormMain form = new FormMain();
-                            form.Show();
+                            Program.MFormMain.Init();
+                            Hide();
+                            Program.MFormMain.Show();
                         }
                         else
                         {
