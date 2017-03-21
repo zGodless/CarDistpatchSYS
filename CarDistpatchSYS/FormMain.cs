@@ -57,6 +57,18 @@ namespace CarDistpatchSYS
 
             xtraTabControl2.ControlAdded += xtraTabControl2_ControlAdded;
         }
+        public void Init()
+        {
+            var screenArea = Screen.GetWorkingArea(this);
+            MaximumSize = screenArea.Size; //防止遮住任务栏 
+            MinimumSize = new Size(500, 400); //最小尺寸
+            _normalLocation = new Point((screenArea.Width - Width) / 2, (screenArea.Height - Height) / 2);
+            WindowState = FormWindowState.Normal;
+
+            Program.TabcMain = xtraTabControl2;
+        }
+
+        #endregion
 
         #region 属性
 
@@ -64,6 +76,10 @@ namespace CarDistpatchSYS
 
         #endregion
 
+        #region 事件
+        void FormMain_Load(object sender, EventArgs e)
+        {
+        }
         void pictureMax_Click(object sender, EventArgs e)
         {
             WindowStateMaximized();
@@ -79,45 +95,12 @@ namespace CarDistpatchSYS
             //退出系统 
             Close();
         }
-
-
-        /// <summary>
-        ///     窗体最大化
-        /// </summary>
-        private void WindowStateMaximized()
-        {
-            if (WindowState == FormWindowState.Maximized)
-            {
-                WindowState = FormWindowState.Normal;
-                Location = _normalLocation;
-            }
-            else
-            {
-                _normalLocation = Location;
-                var screenArea = Screen.GetWorkingArea(this);
-                MaximumSize = screenArea.Size; //防止遮住任务栏 
-                WindowState = FormWindowState.Maximized;
-            }
-        }
-
         void xtraTabControl2_ControlAdded(object sender, ControlEventArgs e)
         {
 
         }
 
-        public void Init()
-        {
-            var screenArea = Screen.GetWorkingArea(this);
-            MaximumSize = screenArea.Size; //防止遮住任务栏 
-            MinimumSize = new Size(500, 400); //最小尺寸
-            _normalLocation = new Point((screenArea.Width - Width) / 2, (screenArea.Height - Height) / 2);
-            WindowState = FormWindowState.Maximized;
-
-            Program.TabcMain = xtraTabControl2;
-        }
         
-        
-
         void btn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             switch (e.Item.Caption.Trim())
@@ -196,12 +179,31 @@ namespace CarDistpatchSYS
                     }
             }
         }   
+
+
         #endregion
 
-        #region 事件
-        void FormMain_Load(object sender, EventArgs e)
+        #region 方法
+        /// <summary>
+        ///     窗体最大化
+        /// </summary>
+        private void WindowStateMaximized()
         {
+            if (WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Normal;
+                Location = _normalLocation;
+            }
+            else
+            {
+                _normalLocation = Location;
+                var screenArea = Screen.GetWorkingArea(this);
+                MaximumSize = screenArea.Size; //防止遮住任务栏 
+                WindowState = FormWindowState.Maximized;
+            }
         }
         #endregion
+
+
     }
 }
