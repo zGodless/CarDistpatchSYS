@@ -92,16 +92,16 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1315, 785);
+            this.layoutControl1.Size = new System.Drawing.Size(1212, 785);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // xtraTabControl2
             // 
-            this.xtraTabControl2.Location = new System.Drawing.Point(267, 126);
+            this.xtraTabControl2.Location = new System.Drawing.Point(220, 126);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl2.Size = new System.Drawing.Size(1036, 647);
+            this.xtraTabControl2.Size = new System.Drawing.Size(980, 647);
             this.xtraTabControl2.TabIndex = 5;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1});
@@ -109,7 +109,7 @@
             // xtraTabPage1
             // 
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1030, 618);
+            this.xtraTabPage1.Size = new System.Drawing.Size(974, 618);
             this.xtraTabPage1.Text = "主窗口";
             // 
             // ribbonControl1
@@ -148,7 +148,7 @@
             this.ribDispath,
             this.ribRepair,
             this.ribReport});
-            this.ribbonControl1.Size = new System.Drawing.Size(1291, 124);
+            this.ribbonControl1.Size = new System.Drawing.Size(1188, 124);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Above;
             // 
             // btncar
@@ -360,7 +360,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(12, 126);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.tabMain;
-            this.xtraTabControl1.Size = new System.Drawing.Size(251, 647);
+            this.xtraTabControl1.Size = new System.Drawing.Size(204, 647);
             this.xtraTabControl1.TabIndex = 4;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabMain});
@@ -369,7 +369,7 @@
             // 
             this.tabMain.Controls.Add(this.treeMain);
             this.tabMain.Name = "tabMain";
-            this.tabMain.Size = new System.Drawing.Size(245, 618);
+            this.tabMain.Size = new System.Drawing.Size(198, 618);
             this.tabMain.Text = "目录";
             // 
             // treeMain
@@ -377,7 +377,7 @@
             this.treeMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeMain.Location = new System.Drawing.Point(0, 0);
             this.treeMain.Name = "treeMain";
-            this.treeMain.Size = new System.Drawing.Size(245, 618);
+            this.treeMain.Size = new System.Drawing.Size(198, 618);
             this.treeMain.TabIndex = 0;
             // 
             // layoutControlGroup1
@@ -391,7 +391,7 @@
             this.layoutControlItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1315, 785);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1212, 785);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -401,7 +401,7 @@
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 114);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(255, 651);
+            this.layoutControlItem1.Size = new System.Drawing.Size(208, 651);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
@@ -413,7 +413,7 @@
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(1295, 114);
+            this.layoutControlItem3.Size = new System.Drawing.Size(1192, 114);
             this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextToControlDistance = 0;
@@ -423,9 +423,9 @@
             // 
             this.layoutControlItem2.Control = this.xtraTabControl2;
             this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem2.Location = new System.Drawing.Point(255, 114);
+            this.layoutControlItem2.Location = new System.Drawing.Point(208, 114);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1040, 651);
+            this.layoutControlItem2.Size = new System.Drawing.Size(984, 651);
             this.layoutControlItem2.Text = "layoutControlItem2";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextToControlDistance = 0;
@@ -435,7 +435,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1315, 785);
+            this.ClientSize = new System.Drawing.Size(1212, 785);
             this.Controls.Add(this.layoutControl1);
             this.DoubleBuffered = true;
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
