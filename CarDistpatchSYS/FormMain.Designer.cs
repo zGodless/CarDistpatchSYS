@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation1 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
+            DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation2 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pictureMin = new DevExpress.XtraEditors.PictureEdit();
@@ -69,11 +69,7 @@
             this.pictureClose = new DevExpress.XtraEditors.PictureEdit();
             this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.tabMain = new DevExpress.XtraTab.XtraTabPage();
-            this.treeMain = new DevExpress.XtraTreeList.TreeList();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -89,12 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureClose.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
             this.xtraTabControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
-            this.xtraTabControl1.SuspendLayout();
-            this.tabMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.treeMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
@@ -105,7 +96,6 @@
             this.layoutControl1.Controls.Add(this.panelControl1);
             this.layoutControl1.Controls.Add(this.xtraTabControl2);
             this.layoutControl1.Controls.Add(this.ribbonControl1);
-            this.layoutControl1.Controls.Add(this.xtraTabControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -337,12 +327,12 @@
             this.ribBaseMessage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1});
             this.ribBaseMessage.Name = "ribBaseMessage";
-            reduceOperation1.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.Single;
-            reduceOperation1.Group = null;
-            reduceOperation1.ItemLinkIndex = 0;
-            reduceOperation1.ItemLinksCount = 0;
-            reduceOperation1.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.LargeButtons;
-            this.ribBaseMessage.ReduceOperations.Add(reduceOperation1);
+            reduceOperation2.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.Single;
+            reduceOperation2.Group = null;
+            reduceOperation2.ItemLinkIndex = 0;
+            reduceOperation2.ItemLinksCount = 0;
+            reduceOperation2.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.LargeButtons;
+            this.ribBaseMessage.ReduceOperations.Add(reduceOperation2);
             this.ribBaseMessage.Text = "基本信息";
             // 
             // ribbonPageGroup1
@@ -439,10 +429,10 @@
             // 
             // xtraTabControl2
             // 
-            this.xtraTabControl2.Location = new System.Drawing.Point(220, 122);
+            this.xtraTabControl2.Location = new System.Drawing.Point(12, 122);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl2.Size = new System.Drawing.Size(980, 651);
+            this.xtraTabControl2.Size = new System.Drawing.Size(1188, 651);
             this.xtraTabControl2.TabIndex = 5;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1});
@@ -450,33 +440,8 @@
             // xtraTabPage1
             // 
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(974, 622);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1182, 622);
             this.xtraTabPage1.Text = "主窗口";
-            // 
-            // xtraTabControl1
-            // 
-            this.xtraTabControl1.Location = new System.Drawing.Point(12, 122);
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.tabMain;
-            this.xtraTabControl1.Size = new System.Drawing.Size(204, 651);
-            this.xtraTabControl1.TabIndex = 4;
-            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.tabMain});
-            // 
-            // tabMain
-            // 
-            this.tabMain.Controls.Add(this.treeMain);
-            this.tabMain.Name = "tabMain";
-            this.tabMain.Size = new System.Drawing.Size(198, 622);
-            this.tabMain.Text = "目录";
-            // 
-            // treeMain
-            // 
-            this.treeMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeMain.Location = new System.Drawing.Point(0, 0);
-            this.treeMain.Name = "treeMain";
-            this.treeMain.Size = new System.Drawing.Size(198, 622);
-            this.treeMain.TabIndex = 0;
             // 
             // layoutControlGroup1
             // 
@@ -484,7 +449,6 @@
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
             this.layoutControlItem3,
             this.layoutControlItem2,
             this.layoutControlItem4});
@@ -493,18 +457,6 @@
             this.layoutControlGroup1.Size = new System.Drawing.Size(1212, 785);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.xtraTabControl1;
-            this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 110);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(208, 655);
-            this.layoutControlItem1.Text = "layoutControlItem1";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextToControlDistance = 0;
-            this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem3
             // 
@@ -522,9 +474,9 @@
             // 
             this.layoutControlItem2.Control = this.xtraTabControl2;
             this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem2.Location = new System.Drawing.Point(208, 110);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 110);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(984, 655);
+            this.layoutControlItem2.Size = new System.Drawing.Size(1192, 655);
             this.layoutControlItem2.Text = "layoutControlItem2";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextToControlDistance = 0;
@@ -574,12 +526,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureClose.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).EndInit();
             this.xtraTabControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            this.xtraTabControl1.ResumeLayout(false);
-            this.tabMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.treeMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
@@ -591,10 +538,6 @@
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
-        private DevExpress.XtraTab.XtraTabPage tabMain;
-        private DevExpress.XtraTreeList.TreeList treeMain;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribBaseMessage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
