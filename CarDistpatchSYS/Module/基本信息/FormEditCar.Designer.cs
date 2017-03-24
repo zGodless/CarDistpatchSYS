@@ -1,4 +1,6 @@
-﻿namespace CarDistpatchSYS
+﻿using CarDistpatchSYS.UILookUp;
+
+namespace CarDistpatchSYS
 {
     partial class FormEditCar
     {
@@ -47,8 +49,8 @@
             this.dateLicenseExpireDate = new DevExpress.XtraEditors.DateEdit();
             this.dateYearCheckExpDate = new DevExpress.XtraEditors.DateEdit();
             this.dateBuyTime = new DevExpress.XtraEditors.DateEdit();
-            this.cLookOwnerID = new DS.MSClient.UIControl.CLookEmployee();
-            this.cLookEmployeeID = new DS.MSClient.UIControl.CLookEmployee();
+            this.cLookOwnerID = new CLookEmployee();
+            this.cLookEmployeeID = new CLookEmployee();
             this.comStatus = new DevExpress.XtraEditors.ComboBoxEdit();
             this.textChassisNumber = new DevExpress.XtraEditors.TextEdit();
             this.textEngineNumber = new DevExpress.XtraEditors.TextEdit();
@@ -76,7 +78,7 @@
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cLookDepartment1 = new DS.MSClient.UIControl.CLookDepartment();
+            this.cLookDepartment1 = new CLookDepartment();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -719,8 +721,8 @@
         private DevExpress.XtraEditors.DateEdit dateLicenseExpireDate;
         private DevExpress.XtraEditors.DateEdit dateYearCheckExpDate;
         private DevExpress.XtraEditors.DateEdit dateBuyTime;
-        private DS.MSClient.UIControl.CLookEmployee cLookOwnerID;
-        private DS.MSClient.UIControl.CLookEmployee cLookEmployeeID;
+        private CLookEmployee cLookOwnerID;
+        private CLookEmployee cLookEmployeeID;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
@@ -732,7 +734,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
-        private DS.MSClient.UIControl.CLookDepartment cLookDepartment1;
+        private CLookDepartment cLookDepartment1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
     }
 }

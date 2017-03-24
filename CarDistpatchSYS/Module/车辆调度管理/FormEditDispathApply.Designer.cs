@@ -1,4 +1,6 @@
-﻿namespace CarDistpatchSYS
+﻿using CarDistpatchSYS.UILookUp;
+
+namespace CarDistpatchSYS
 {
     partial class FormEditDispathApply
     {
@@ -45,8 +47,8 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnSendAudit = new DevExpress.XtraBars.BarButtonItem();
             this.dateApplyDate = new DevExpress.XtraEditors.DateEdit();
-            this.cLCarID = new DS.MSClient.UIControl.CLookCar();
-            this.cLookEmployee = new DS.MSClient.UIControl.CLookEmployee();
+            this.cLCarID = new CarDistpatchSYS.UILookUp.CLookCar();
+            this.cLookEmployee = new CLookEmployee();
             this.memoDispatchReason = new DevExpress.XtraEditors.MemoEdit();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnOK = new DevExpress.XtraEditors.SimpleButton();
@@ -421,8 +423,8 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraEditors.DateEdit dateApplyDate;
-        private DS.MSClient.UIControl.CLookCar cLCarID;
-        private DS.MSClient.UIControl.CLookEmployee cLookEmployee;
+        private CarDistpatchSYS.UILookUp.CLookCar cLCarID;
+        private CLookEmployee cLookEmployee;
         private DevExpress.XtraEditors.MemoEdit memoDispatchReason;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;

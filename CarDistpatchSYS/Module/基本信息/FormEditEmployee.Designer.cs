@@ -1,4 +1,6 @@
-﻿namespace CarDistpatchSYS
+﻿using CarDistpatchSYS.UILookUp;
+
+namespace CarDistpatchSYS
 {
     partial class FormEditEmployee
     {
@@ -66,7 +68,7 @@
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.clDepartmentID = new DS.MSClient.UIControl.CLookDepartment();
+            this.clDepartmentID = new CLookDepartment();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -635,7 +637,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraEditors.DateEdit dateBirthday;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
-        private DS.MSClient.UIControl.CLookDepartment clDepartmentID;
+        private CLookDepartment clDepartmentID;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace CarDistpatchSYS
+﻿using CarDistpatchSYS.UILookUp;
+
+namespace CarDistpatchSYS
 {
     partial class MainCarReport
     {
@@ -50,7 +52,7 @@
             this.dateSendBegin = new DevExpress.XtraEditors.DateEdit();
             this.dateAuditEnd = new DevExpress.XtraEditors.DateEdit();
             this.dateAuditBegin = new DevExpress.XtraEditors.DateEdit();
-            this.cLookDepartment1 = new DS.MSClient.UIControl.CLookDepartment();
+            this.cLookDepartment1 = new CLookDepartment();
             this.dateApplyEnd = new DevExpress.XtraEditors.DateEdit();
             this.dateApplyBegin = new DevExpress.XtraEditors.DateEdit();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
@@ -753,7 +755,7 @@
         private DevExpress.XtraEditors.DateEdit dateSendBegin;
         private DevExpress.XtraEditors.DateEdit dateAuditEnd;
         private DevExpress.XtraEditors.DateEdit dateAuditBegin;
-        private DS.MSClient.UIControl.CLookDepartment cLookDepartment1;
+        private CLookDepartment cLookDepartment1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;

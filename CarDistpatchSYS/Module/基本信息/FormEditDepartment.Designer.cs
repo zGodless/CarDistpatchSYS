@@ -1,4 +1,6 @@
-﻿namespace CarDistpatchSYS
+﻿using CarDistpatchSYS.UILookUp;
+
+namespace CarDistpatchSYS
 {
     partial class FormEditDepartment
     {
@@ -35,9 +37,9 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.clParentID = new DS.MSClient.UIControl.CLookDepartment();
+            this.clParentID = new CLookDepartment();
             this.memoNote = new DevExpress.XtraEditors.MemoEdit();
-            this.cLInChargeID = new DS.MSClient.UIControl.CLookEmployee();
+            this.cLInChargeID = new CLookEmployee();
             this.textEmployeeCount = new DevExpress.XtraEditors.TextEdit();
             this.textDepartmentCode = new DevExpress.XtraEditors.TextEdit();
             this.textDepartmentName = new DevExpress.XtraEditors.TextEdit();
@@ -381,11 +383,11 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraEditors.MemoEdit memoNote;
-        private DS.MSClient.UIControl.CLookEmployee cLInChargeID;
+        private CLookEmployee cLInChargeID;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DS.MSClient.UIControl.CLookDepartment clParentID;
+        private CLookDepartment clParentID;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
     }
 }

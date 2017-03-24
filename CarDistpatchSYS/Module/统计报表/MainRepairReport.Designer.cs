@@ -1,4 +1,6 @@
-﻿namespace CarDistpatchSYS
+﻿using CarDistpatchSYS.UILookUp;
+
+namespace CarDistpatchSYS
 {
     partial class MainRepairReport
     {
@@ -51,10 +53,10 @@
             this.btnAdd = new DevExpress.XtraBars.BarButtonItem();
             this.btnEdit = new DevExpress.XtraBars.BarButtonItem();
             this.btnDel = new DevExpress.XtraBars.BarButtonItem();
-            this.cLItemStr = new DS.MSClient.UIControl.CLookRepairItem();
+            this.cLItemStr = new CLookRepairItem();
             this.textRepairPlace = new DevExpress.XtraEditors.TextEdit();
-            this.cLOwnerID = new DS.MSClient.UIControl.CLookEmployee();
-            this.cLookDepartment1 = new DS.MSClient.UIControl.CLookDepartment();
+            this.cLOwnerID = new CLookEmployee();
+            this.cLookDepartment1 = new CLookDepartment();
             this.dateRepairEnd = new DevExpress.XtraEditors.DateEdit();
             this.dateRepairBegin = new DevExpress.XtraEditors.DateEdit();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
@@ -675,12 +677,12 @@
         private DevExpress.XtraEditors.DateEdit dateRepairBegin;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DS.MSClient.UIControl.CLookDepartment cLookDepartment1;
+        private CLookDepartment cLookDepartment1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DS.MSClient.UIControl.CLookEmployee cLOwnerID;
+        private CLookEmployee cLOwnerID;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraEditors.ComboBoxEdit comResult;
-        private DS.MSClient.UIControl.CLookRepairItem cLItemStr;
+        private CLookRepairItem cLItemStr;
         private DevExpress.XtraEditors.TextEdit textRepairPlace;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;

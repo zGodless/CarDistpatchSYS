@@ -1,20 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Linq;
 using System.Windows.Forms;
-using CarDistpatchSYS;
-using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
-using DevExpress.XtraEditors.Repository;
-using DS.MSClient.UIControl;
-using DS.Model;
 using DS.Data;
+using DS.MSClient.UIControl;
 
-namespace DS.MSClient.UIControl
+namespace CarDistpatchSYS.UILookUp
 {
     [ToolboxItem(true)]
     public class CLookEmployee : CSmartLookUpEditBase

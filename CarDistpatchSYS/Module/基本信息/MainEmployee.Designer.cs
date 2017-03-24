@@ -1,4 +1,6 @@
-﻿namespace CarDistpatchSYS
+﻿using CarDistpatchSYS.UILookUp;
+
+namespace CarDistpatchSYS
 {
     partial class MainEmployee
     {
@@ -34,13 +36,14 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainEmployee));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.cLDepartmentID = new DS.MSClient.UIControl.CLookDepartment();
+            this.cLDepartmentID = new CLookDepartment();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnAdd = new DevExpress.XtraBars.BarButtonItem();
             this.btnEdit = new DevExpress.XtraBars.BarButtonItem();
             this.btnDel = new DevExpress.XtraBars.BarButtonItem();
             this.btnClose = new DevExpress.XtraBars.BarButtonItem();
+            this.btnChangePassword = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -70,7 +73,6 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnChangePassword = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cLDepartmentID.Properties)).BeginInit();
@@ -206,6 +208,15 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.Caption = "修改员工密码";
+            this.btnChangePassword.Glyph = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.Glyph")));
+            this.btnChangePassword.Id = 4;
+            this.btnChangePassword.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.LargeGlyph")));
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
@@ -264,11 +275,11 @@
             // gcEmployee
             // 
             this.gcEmployee.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gcEmployee.Location = new System.Drawing.Point(12, 82);
+            this.gcEmployee.Location = new System.Drawing.Point(12, 87);
             this.gcEmployee.MainView = this.gvEmployee;
             this.gcEmployee.MenuManager = this.barManager1;
             this.gcEmployee.Name = "gcEmployee";
-            this.gcEmployee.Size = new System.Drawing.Size(894, 494);
+            this.gcEmployee.Size = new System.Drawing.Size(894, 489);
             this.gcEmployee.TabIndex = 4;
             this.gcEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvEmployee});
@@ -480,9 +491,9 @@
             // 
             this.layoutControlItem1.Control = this.gcEmployee;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 70);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 75);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(898, 498);
+            this.layoutControlItem1.Size = new System.Drawing.Size(898, 493);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
@@ -499,7 +510,7 @@
             this.layoutControlItem5});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(898, 70);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(898, 75);
             this.layoutControlGroup2.Text = "简单查询";
             // 
             // layoutControlItem2
@@ -510,7 +521,7 @@
             this.layoutControlItem2.MaxSize = new System.Drawing.Size(141, 26);
             this.layoutControlItem2.MinSize = new System.Drawing.Size(141, 26);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(141, 26);
+            this.layoutControlItem2.Size = new System.Drawing.Size(141, 31);
             this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem2.Text = "工号";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(24, 14);
@@ -523,7 +534,7 @@
             this.layoutControlItem3.MaxSize = new System.Drawing.Size(85, 26);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(85, 26);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(85, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(85, 31);
             this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -538,7 +549,7 @@
             this.emptySpaceItem1.MaxSize = new System.Drawing.Size(352, 26);
             this.emptySpaceItem1.MinSize = new System.Drawing.Size(352, 26);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(352, 26);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(352, 31);
             this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
@@ -551,7 +562,7 @@
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(149, 26);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(149, 26);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(149, 26);
+            this.layoutControlItem4.Size = new System.Drawing.Size(149, 31);
             this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem4.Text = "姓名";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(24, 14);
@@ -564,19 +575,10 @@
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(147, 26);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(147, 26);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(147, 26);
+            this.layoutControlItem5.Size = new System.Drawing.Size(147, 31);
             this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem5.Text = "部门";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(24, 14);
-            // 
-            // btnChangePassword
-            // 
-            this.btnChangePassword.Caption = "修改员工密码";
-            this.btnChangePassword.Glyph = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.Glyph")));
-            this.btnChangePassword.Id = 4;
-            this.btnChangePassword.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.LargeGlyph")));
-            this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // MainEmployee
             // 
@@ -645,7 +647,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraGrid.Columns.GridColumn Column_choose;
         private DevExpress.XtraBars.BarButtonItem btnClose;
-        private DS.MSClient.UIControl.CLookDepartment cLDepartmentID;
+        private CLookDepartment cLDepartmentID;
         private DevExpress.XtraEditors.TextEdit textEmployeeName;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;

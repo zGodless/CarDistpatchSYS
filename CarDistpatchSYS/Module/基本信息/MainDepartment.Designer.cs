@@ -1,4 +1,6 @@
-﻿namespace CarDistpatchSYS
+﻿using CarDistpatchSYS.UILookUp;
+
+namespace CarDistpatchSYS
 {
     partial class MainDepartment
     {
@@ -34,7 +36,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainDepartment));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.cLInChargeID = new DS.MSClient.UIControl.CLookEmployee();
+            this.cLInChargeID = new CLookEmployee();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnAdd = new DevExpress.XtraBars.BarButtonItem();
@@ -517,7 +519,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraGrid.Columns.GridColumn Column_choose;
         private DevExpress.XtraBars.BarButtonItem btnClose;
-        private DS.MSClient.UIControl.CLookEmployee cLInChargeID;
+        private CLookEmployee cLInChargeID;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
     }
 }

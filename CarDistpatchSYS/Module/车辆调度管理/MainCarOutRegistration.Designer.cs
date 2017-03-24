@@ -1,4 +1,6 @@
-﻿namespace CarDistpatchSYS
+﻿using CarDistpatchSYS.UILookUp;
+
+namespace CarDistpatchSYS
 {
     partial class MainCarOutRegistration
     {
@@ -49,8 +51,8 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.dateApplyBegin = new DevExpress.XtraEditors.DateEdit();
-            this.cLEmployeeID = new DS.MSClient.UIControl.CLookEmployee();
-            this.cLCar = new DS.MSClient.UIControl.CLookCar();
+            this.cLEmployeeID = new CLookEmployee();
+            this.cLCar = new CarDistpatchSYS.UILookUp.CLookCar();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.gcOut = new DevExpress.XtraGrid.GridControl();
             this.gvOut = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -584,8 +586,8 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private DevExpress.XtraEditors.DateEdit dateApplyEnd;
         private DevExpress.XtraEditors.DateEdit dateApplyBegin;
-        private DS.MSClient.UIControl.CLookEmployee cLEmployeeID;
-        private DS.MSClient.UIControl.CLookCar cLCar;
+        private CLookEmployee cLEmployeeID;
+        private CarDistpatchSYS.UILookUp.CLookCar cLCar;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;

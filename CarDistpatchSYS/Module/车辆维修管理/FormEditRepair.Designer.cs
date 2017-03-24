@@ -1,4 +1,6 @@
-﻿namespace CarDistpatchSYS
+﻿using CarDistpatchSYS.UILookUp;
+
+namespace CarDistpatchSYS
 {
     partial class FormEditRepair
     {
@@ -50,10 +52,10 @@
             this.textRepairPlace = new DevExpress.XtraEditors.TextEdit();
             this.textPartsCost = new DevExpress.XtraEditors.TextEdit();
             this.comResult = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cLookRepairItem1 = new DS.MSClient.UIControl.CLookRepairItem();
+            this.cLookRepairItem1 = new CLookRepairItem();
             this.dateRepairDate = new DevExpress.XtraEditors.DateEdit();
-            this.cLCarID = new DS.MSClient.UIControl.CLookCar();
-            this.cLookEmployee = new DS.MSClient.UIControl.CLookEmployee();
+            this.cLCarID = new CarDistpatchSYS.UILookUp.CLookCar();
+            this.cLookEmployee = new CLookEmployee();
             this.memoNote = new DevExpress.XtraEditors.MemoEdit();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnOK = new DevExpress.XtraEditors.SimpleButton();
@@ -551,8 +553,8 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraEditors.DateEdit dateRepairDate;
-        private DS.MSClient.UIControl.CLookCar cLCarID;
-        private DS.MSClient.UIControl.CLookEmployee cLookEmployee;
+        private CarDistpatchSYS.UILookUp.CLookCar cLCarID;
+        private CLookEmployee cLookEmployee;
         private DevExpress.XtraEditors.MemoEdit memoNote;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
@@ -562,7 +564,7 @@
         private DevExpress.XtraEditors.TextEdit textRepairPlace;
         private DevExpress.XtraEditors.TextEdit textPartsCost;
         private DevExpress.XtraEditors.ComboBoxEdit comResult;
-        private DS.MSClient.UIControl.CLookRepairItem cLookRepairItem1;
+        private CLookRepairItem cLookRepairItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
