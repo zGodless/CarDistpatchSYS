@@ -185,7 +185,7 @@
             this.ribRepair,
             this.ribReport});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.ribbonControl1.Size = new System.Drawing.Size(977, 134);
+            this.ribbonControl1.Size = new System.Drawing.Size(977, 124);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Above;
             // 
             // applicationMenu1
@@ -450,7 +450,7 @@
             // xtraTabPage1
             // 
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(977, 625);
+            this.xtraTabPage1.Size = new System.Drawing.Size(974, 622);
             this.xtraTabPage1.Text = "主窗口";
             // 
             // xtraTabControl1
@@ -467,7 +467,7 @@
             // 
             this.tabMain.Controls.Add(this.treeMain);
             this.tabMain.Name = "tabMain";
-            this.tabMain.Size = new System.Drawing.Size(201, 625);
+            this.tabMain.Size = new System.Drawing.Size(198, 622);
             this.tabMain.Text = "目录";
             // 
             // treeMain
@@ -475,7 +475,7 @@
             this.treeMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeMain.Location = new System.Drawing.Point(0, 0);
             this.treeMain.Name = "treeMain";
-            this.treeMain.Size = new System.Drawing.Size(201, 625);
+            this.treeMain.Size = new System.Drawing.Size(198, 622);
             this.treeMain.TabIndex = 0;
             // 
             // layoutControlGroup1
@@ -544,7 +544,7 @@
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Seven Classic";
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2010 Blue";
             // 
             // FormMain
             // 
