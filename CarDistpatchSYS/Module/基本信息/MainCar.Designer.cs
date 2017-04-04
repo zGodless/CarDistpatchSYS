@@ -83,18 +83,18 @@
             this.layoutControl1.Controls.Add(this.textCarNo);
             this.layoutControl1.Controls.Add(this.gcCar);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 31);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 29);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(918, 588);
+            this.layoutControl1.Size = new System.Drawing.Size(918, 590);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(166, 44);
+            this.btnSearch.Location = new System.Drawing.Point(186, 44);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(87, 22);
+            this.btnSearch.Size = new System.Drawing.Size(85, 22);
             this.btnSearch.StyleController = this.layoutControl1;
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "查询";
@@ -104,7 +104,7 @@
             this.textCarNo.Location = new System.Drawing.Point(63, 44);
             this.textCarNo.MenuManager = this.barManager1;
             this.textCarNo.Name = "textCarNo";
-            this.textCarNo.Size = new System.Drawing.Size(99, 20);
+            this.textCarNo.Size = new System.Drawing.Size(119, 20);
             this.textCarNo.StyleController = this.layoutControl1;
             this.textCarNo.TabIndex = 5;
             // 
@@ -181,7 +181,7 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(918, 31);
+            this.barDockControlTop.Size = new System.Drawing.Size(918, 29);
             // 
             // barDockControlBottom
             // 
@@ -194,15 +194,15 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 31);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 588);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 29);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 590);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(918, 31);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 588);
+            this.barDockControlRight.Location = new System.Drawing.Point(918, 29);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 590);
             // 
             // gcCar
             // 
@@ -211,7 +211,7 @@
             this.gcCar.MainView = this.gvCar;
             this.gcCar.MenuManager = this.barManager1;
             this.gcCar.Name = "gcCar";
-            this.gcCar.Size = new System.Drawing.Size(894, 494);
+            this.gcCar.Size = new System.Drawing.Size(894, 496);
             this.gcCar.TabIndex = 4;
             this.gcCar.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCar});
@@ -415,7 +415,7 @@
             this.layoutControlGroup2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(918, 588);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(918, 590);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -425,7 +425,7 @@
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 70);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(898, 498);
+            this.layoutControlItem1.Size = new System.Drawing.Size(898, 500);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
@@ -449,7 +449,7 @@
             this.layoutControlItem2.CustomizationFormText = "车牌号";
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(142, 26);
+            this.layoutControlItem2.Size = new System.Drawing.Size(162, 26);
             this.layoutControlItem2.Text = "车牌号";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(36, 14);
             // 
@@ -457,9 +457,9 @@
             // 
             this.layoutControlItem3.Control = this.btnSearch;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(142, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(162, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(91, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(89, 26);
             this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextToControlDistance = 0;
@@ -469,9 +469,9 @@
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(233, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(251, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(641, 26);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(623, 26);
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 

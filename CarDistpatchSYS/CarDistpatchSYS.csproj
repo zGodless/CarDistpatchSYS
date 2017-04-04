@@ -36,6 +36,7 @@
     <Reference Include="DevExpress.CodeConverter.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Images.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v14.1.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.SpellChecker.v14.1.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Spreadsheet.v14.1.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -230,6 +231,7 @@
     <Compile Include="Module\基本信息\MainDepartment.Designer.cs">
       <DependentUpon>MainDepartment.cs</DependentUpon>
     </Compile>
+    <Compile Include="SpreadsheetHelper.cs" />
     <Compile Include="UILookUp\CLookCar.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -493,7 +495,9 @@
   <ItemGroup>
     <None Include="Resources\report_540px_1192858_easyicon.net.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UIControl\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\error.ico" />
     <None Include="Resources\QQ截图20170322003557.png" />

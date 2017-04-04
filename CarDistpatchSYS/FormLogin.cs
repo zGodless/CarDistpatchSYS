@@ -69,6 +69,7 @@ namespace CarDistpatchSYS
         void FormLogin_Load(object sender, EventArgs e)
         {
             textUserName.Text = Ini.ReadItem("Login", "UserName");
+            textPassWord.Properties.PasswordChar = '*';
         }
         /// <summary>
         ///     窗体移动事件

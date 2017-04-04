@@ -53,10 +53,10 @@ namespace CarDistpatchSYS
             this.btnAdd = new DevExpress.XtraBars.BarButtonItem();
             this.btnEdit = new DevExpress.XtraBars.BarButtonItem();
             this.btnDel = new DevExpress.XtraBars.BarButtonItem();
-            this.cLItemStr = new CLookRepairItem();
+            this.cLItemStr = new CarDistpatchSYS.UILookUp.CLookRepairItem();
             this.textRepairPlace = new DevExpress.XtraEditors.TextEdit();
-            this.cLOwnerID = new CLookEmployee();
-            this.cLookDepartment1 = new CLookDepartment();
+            this.cLOwnerID = new CarDistpatchSYS.UILookUp.CLookEmployee();
+            this.cLookDepartment1 = new CarDistpatchSYS.UILookUp.CLookDepartment();
             this.dateRepairEnd = new DevExpress.XtraEditors.DateEdit();
             this.dateRepairBegin = new DevExpress.XtraEditors.DateEdit();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
@@ -79,6 +79,7 @@ namespace CarDistpatchSYS
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnExport = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comResult.Properties)).BeginInit();
@@ -129,7 +130,7 @@ namespace CarDistpatchSYS
             // 
             // comResult
             // 
-            this.comResult.Location = new System.Drawing.Point(87, 121);
+            this.comResult.Location = new System.Drawing.Point(87, 116);
             this.comResult.MenuManager = this.barManager1;
             this.comResult.Name = "comResult";
             this.comResult.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -155,8 +156,9 @@ namespace CarDistpatchSYS
             this.btnAdd,
             this.btnEdit,
             this.btnDel,
-            this.btnClose});
-            this.barManager1.MaxItemId = 4;
+            this.btnClose,
+            this.btnExport});
+            this.barManager1.MaxItemId = 5;
             // 
             // bar1
             // 
@@ -165,7 +167,8 @@ namespace CarDistpatchSYS
             this.bar1.DockRow = 0;
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnClose)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnClose),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnExport)});
             this.bar1.OptionsBar.AllowQuickCustomization = false;
             this.bar1.OptionsBar.DrawDragBorder = false;
             this.bar1.OptionsBar.UseWholeRow = true;
@@ -240,7 +243,7 @@ namespace CarDistpatchSYS
             this.cLItemStr.ClearButton = false;
             this.cLItemStr.Currentduty = null;
             this.cLItemStr.ListIsValid = null;
-            this.cLItemStr.Location = new System.Drawing.Point(349, 97);
+            this.cLItemStr.Location = new System.Drawing.Point(349, 92);
             this.cLItemStr.MaximumSize = new System.Drawing.Size(0, 20);
             this.cLItemStr.MenuManager = this.barManager1;
             this.cLItemStr.Name = "cLItemStr";
@@ -267,7 +270,7 @@ namespace CarDistpatchSYS
             // 
             // textRepairPlace
             // 
-            this.textRepairPlace.Location = new System.Drawing.Point(87, 97);
+            this.textRepairPlace.Location = new System.Drawing.Point(87, 92);
             this.textRepairPlace.MenuManager = this.barManager1;
             this.textRepairPlace.Name = "textRepairPlace";
             this.textRepairPlace.Size = new System.Drawing.Size(195, 20);
@@ -279,7 +282,7 @@ namespace CarDistpatchSYS
             this.cLOwnerID.ClearButton = false;
             this.cLOwnerID.Currentduty = null;
             this.cLOwnerID.ListIsValid = null;
-            this.cLOwnerID.Location = new System.Drawing.Point(349, 49);
+            this.cLOwnerID.Location = new System.Drawing.Point(349, 44);
             this.cLOwnerID.MaximumSize = new System.Drawing.Size(0, 20);
             this.cLOwnerID.MenuManager = this.barManager1;
             this.cLOwnerID.Name = "cLOwnerID";
@@ -311,7 +314,7 @@ namespace CarDistpatchSYS
             this.cLookDepartment1.ClearButton = false;
             this.cLookDepartment1.Currentduty = null;
             this.cLookDepartment1.ListIsValid = null;
-            this.cLookDepartment1.Location = new System.Drawing.Point(87, 49);
+            this.cLookDepartment1.Location = new System.Drawing.Point(87, 44);
             this.cLookDepartment1.MaximumSize = new System.Drawing.Size(0, 20);
             this.cLookDepartment1.MenuManager = this.barManager1;
             this.cLookDepartment1.Name = "cLookDepartment1";
@@ -341,7 +344,7 @@ namespace CarDistpatchSYS
             // dateRepairEnd
             // 
             this.dateRepairEnd.EditValue = null;
-            this.dateRepairEnd.Location = new System.Drawing.Point(349, 73);
+            this.dateRepairEnd.Location = new System.Drawing.Point(349, 68);
             this.dateRepairEnd.MenuManager = this.barManager1;
             this.dateRepairEnd.Name = "dateRepairEnd";
             this.dateRepairEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -355,7 +358,7 @@ namespace CarDistpatchSYS
             // dateRepairBegin
             // 
             this.dateRepairBegin.EditValue = null;
-            this.dateRepairBegin.Location = new System.Drawing.Point(87, 73);
+            this.dateRepairBegin.Location = new System.Drawing.Point(87, 68);
             this.dateRepairBegin.MenuManager = this.barManager1;
             this.dateRepairBegin.Name = "dateRepairBegin";
             this.dateRepairBegin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -368,7 +371,7 @@ namespace CarDistpatchSYS
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(548, 49);
+            this.btnSearch.Location = new System.Drawing.Point(548, 44);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(92, 22);
             this.btnSearch.StyleController = this.layoutControl1;
@@ -605,6 +608,15 @@ namespace CarDistpatchSYS
             this.layoutControlItem8.Text = "维修结果";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(60, 14);
             // 
+            // btnExport
+            // 
+            this.btnExport.Caption = "导出Excel";
+            this.btnExport.Glyph = ((System.Drawing.Image)(resources.GetObject("btnExport.Glyph")));
+            this.btnExport.Id = 4;
+            this.btnExport.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnExport.LargeGlyph")));
+            this.btnExport.Name = "btnExport";
+            this.btnExport.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
             // MainRepairReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -687,5 +699,6 @@ namespace CarDistpatchSYS
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraBars.BarButtonItem btnExport;
     }
 }

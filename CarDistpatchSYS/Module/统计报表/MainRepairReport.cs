@@ -7,8 +7,11 @@ using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.Spreadsheet;
 using DevExpress.XtraEditors;
+using DevExpress.XtraSpreadsheet;
 using DevExpress.XtraTab;
+using DS.Common;
 using DS.Data;
 using QuickFrame.Common.Converter;
 
@@ -30,7 +33,12 @@ namespace CarDistpatchSYS
             Load += MainCarApply_Load;
             btnSearch.Click += btnSearch_Click;
             btnClose.ItemClick +=btnClose_ItemClick;
+            btnExport.ItemClick += btnExport_ItemClick;
+        }
 
+        void btnExport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            GetData();
         }
 
         void MainCarApply_Load(object sender, EventArgs e)
@@ -118,5 +126,65 @@ namespace CarDistpatchSYS
         }
 
         #endregion
+
+
+        private void GetData()
+        {
+            SpreadsheetControl spreadsheetControl1 = new SpreadsheetControl();
+            try
+            {
+                spreadsheetControl1.CreateNewDocument();
+                spreadsheetControl1.BeginUpdate();
+                Worksheet worksheet = spreadsheetControl1.Document.Worksheets.ActiveWorksheet;
+                Range range = worksheet.Range["A1:D1"];
+                range.Merge();
+                range.Alignment.Vertical = DevExpress.Spreadsheet.SpreadsheetVerticalAlignment.Center;
+                range.Alignment.Horizontal = DevExpress.Spreadsheet.SpreadsheetHorizontalAlignment.Center;
+                range.Borders.SetAllBorders(Color.Black, BorderLineStyle.Thin);
+                worksheet.Cells["A1"].Value = "维修统计导出";
+                worksheet.Cells["A1"].RowHeight = 10 * 15;
+                worksheet.Cells["A1"].ColumnWidth = 600;
+
+                SpreadsheetHelper.SetSheetColumn(worksheet.Cells["A2"], "车牌号");
+                SpreadsheetHelper.SetSheetColumn(worksheet.Cells["B2"], "所属部门");
+                SpreadsheetHelper.SetSheetColumn(worksheet.Cells["C2"], "维修次数");
+                SpreadsheetHelper.SetSheetColumn(worksheet.Cells["D2"], "维修费用");
+
+                for(int i = 0; i < _list.Count; i++)
+                {
+                    SpreadsheetHelper.SetSheetColumn(worksheet.Cells["A" + (i + 2)], _list[i].CarNo);
+                    SpreadsheetHelper.SetSheetColumn(worksheet.Cells["B" + (i + 2)], _list[i].DepartmentName);
+                    SpreadsheetHelper.SetSheetColumn(worksheet.Cells["C" + (i + 2)], ValueConvert.ToString(_list[i].RepairCount));
+                    SpreadsheetHelper.SetSheetColumn(worksheet.Cells["D" + (i + 2)], ValueConvert.ToString(_list[i].RepairExpenses));
+                    
+                }
+
+                string dir = System.Environment.CurrentDirectory;
+                string filePath = FileDialogHelper.SaveExcel("", dir);
+                if (!string.IsNullOrEmpty(filePath))
+                {
+                    try
+                    {
+                        IWorkbook workbook = spreadsheetControl1.Document;
+                        if (!filePath.Contains(".xls"))
+                        {
+                            filePath += ".xls";
+                        }
+                        workbook.SaveDocument(filePath);
+                    }
+                    catch (Exception ex)
+                    {
+                    }
+                }  
+
+                spreadsheetControl1.EndUpdate();
+            }
+            catch
+            {
+            }
+            finally
+            {
+            }
+        }
     }
 }

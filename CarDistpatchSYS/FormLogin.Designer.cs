@@ -124,7 +124,7 @@
             this.textUserName.Location = new System.Drawing.Point(189, 202);
             this.textUserName.MinimumSize = new System.Drawing.Size(0, 30);
             this.textUserName.Name = "textUserName";
-            this.textUserName.Size = new System.Drawing.Size(167, 30);
+            this.textUserName.Size = new System.Drawing.Size(167, 20);
             this.textUserName.StyleController = this.layoutControl1;
             this.textUserName.TabIndex = 5;
             // 
