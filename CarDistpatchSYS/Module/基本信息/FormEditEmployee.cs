@@ -103,6 +103,9 @@ namespace CarDistpatchSYS
                 Degree = comDegree.Text.Trim(),
                 Cellphone = ValueConvert.ToString(textCellphone.EditValue),
                 Note = ValueConvert.ToString(memoNote.EditValue),
+                DriverLicense = ValueConvert.ToString(textDriverLicense.EditValue),
+                FileNumber = ValueConvert.ToString(textFileNumber.EditValue),
+                DriverLicenseType = comDriverLicenseType.Text.Trim(),
                 OperateID = Program.CurrentEmployee.EmployeeID,
                 OperateTime = DateTime.Now
             };
@@ -145,7 +148,24 @@ namespace CarDistpatchSYS
             textCellphone.EditValue = ValueConvert.ToString(curData.Cellphone);
             comSex.EditValue = curData.Sex == "男" ? 0 : 1;
             comDegree.EditValue = curData.Degree;
-
+            if (curData.DriverLicenseType == "B1")
+            {
+                comDriverLicenseType.SelectedIndex = 0;
+            }
+            else if (curData.DriverLicenseType == "B2")
+            {
+                comDriverLicenseType.SelectedIndex = 1;
+            }
+            else if (curData.DriverLicenseType == "C1")
+            {
+                comDriverLicenseType.SelectedIndex = 2;
+            }
+            else if (curData.DriverLicenseType == "C2")
+            {
+                comDriverLicenseType.SelectedIndex = 3;
+            }
+            textDriverLicense.EditValue = ValueConvert.ToString(curData.DriverLicenseType);
+            textFileNumber.EditValue = ValueConvert.ToString(curData.FileNumber);
             dateBirthday.EditValue = ValueConvert.ToNullableDateTime(curData.Birthday);
             dateEntryDate.EditValue = ValueConvert.ToNullableDateTime(curData.EntryDate);
             dateDimissionDate.EditValue = ValueConvert.ToNullableDateTime(curData.DimissionDate);

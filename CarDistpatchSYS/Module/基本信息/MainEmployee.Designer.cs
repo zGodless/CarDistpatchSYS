@@ -36,7 +36,7 @@ namespace CarDistpatchSYS
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainEmployee));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.cLDepartmentID = new CLookDepartment();
+            this.cLDepartmentID = new CarDistpatchSYS.UILookUp.CLookDepartment();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnAdd = new DevExpress.XtraBars.BarButtonItem();
@@ -73,6 +73,9 @@ namespace CarDistpatchSYS
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cLDepartmentID.Properties)).BeginInit();
@@ -99,10 +102,10 @@ namespace CarDistpatchSYS
             this.layoutControl1.Controls.Add(this.textEmployeeCode);
             this.layoutControl1.Controls.Add(this.gcEmployee);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 31);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 29);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(918, 588);
+            this.layoutControl1.Size = new System.Drawing.Size(918, 590);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -222,7 +225,7 @@ namespace CarDistpatchSYS
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(918, 31);
+            this.barDockControlTop.Size = new System.Drawing.Size(918, 29);
             // 
             // barDockControlBottom
             // 
@@ -235,15 +238,15 @@ namespace CarDistpatchSYS
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 31);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 588);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 29);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 590);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(918, 31);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 588);
+            this.barDockControlRight.Location = new System.Drawing.Point(918, 29);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 590);
             // 
             // textEmployeeName
             // 
@@ -275,11 +278,11 @@ namespace CarDistpatchSYS
             // gcEmployee
             // 
             this.gcEmployee.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gcEmployee.Location = new System.Drawing.Point(12, 87);
+            this.gcEmployee.Location = new System.Drawing.Point(12, 82);
             this.gcEmployee.MainView = this.gvEmployee;
             this.gcEmployee.MenuManager = this.barManager1;
             this.gcEmployee.Name = "gcEmployee";
-            this.gcEmployee.Size = new System.Drawing.Size(894, 489);
+            this.gcEmployee.Size = new System.Drawing.Size(894, 496);
             this.gcEmployee.TabIndex = 4;
             this.gcEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvEmployee});
@@ -292,6 +295,9 @@ namespace CarDistpatchSYS
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
+            this.gridColumn14,
+            this.gridColumn13,
+            this.gridColumn12,
             this.gridColumn5,
             this.gridColumn6,
             this.gridColumn7,
@@ -386,7 +392,7 @@ namespace CarDistpatchSYS
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 5;
+            this.gridColumn5.VisibleIndex = 8;
             // 
             // gridColumn6
             // 
@@ -400,7 +406,7 @@ namespace CarDistpatchSYS
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.OptionsColumn.ReadOnly = true;
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 6;
+            this.gridColumn6.VisibleIndex = 9;
             // 
             // gridColumn7
             // 
@@ -414,7 +420,7 @@ namespace CarDistpatchSYS
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.OptionsColumn.ReadOnly = true;
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 7;
+            this.gridColumn7.VisibleIndex = 10;
             // 
             // gridColumn8
             // 
@@ -428,7 +434,7 @@ namespace CarDistpatchSYS
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.OptionsColumn.ReadOnly = true;
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 8;
+            this.gridColumn8.VisibleIndex = 11;
             // 
             // gridColumn9
             // 
@@ -442,7 +448,7 @@ namespace CarDistpatchSYS
             this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.OptionsColumn.ReadOnly = true;
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 9;
+            this.gridColumn9.VisibleIndex = 12;
             // 
             // gridColumn10
             // 
@@ -456,7 +462,7 @@ namespace CarDistpatchSYS
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.OptionsColumn.ReadOnly = true;
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 10;
+            this.gridColumn10.VisibleIndex = 13;
             // 
             // gridColumn11
             // 
@@ -470,7 +476,7 @@ namespace CarDistpatchSYS
             this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.OptionsColumn.ReadOnly = true;
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 11;
+            this.gridColumn11.VisibleIndex = 14;
             this.gridColumn11.Width = 79;
             // 
             // layoutControlGroup1
@@ -483,7 +489,7 @@ namespace CarDistpatchSYS
             this.layoutControlGroup2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(918, 588);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(918, 590);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -491,9 +497,9 @@ namespace CarDistpatchSYS
             // 
             this.layoutControlItem1.Control = this.gcEmployee;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 75);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 70);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(898, 493);
+            this.layoutControlItem1.Size = new System.Drawing.Size(898, 500);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
@@ -510,7 +516,7 @@ namespace CarDistpatchSYS
             this.layoutControlItem5});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(898, 75);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(898, 70);
             this.layoutControlGroup2.Text = "简单查询";
             // 
             // layoutControlItem2
@@ -521,7 +527,7 @@ namespace CarDistpatchSYS
             this.layoutControlItem2.MaxSize = new System.Drawing.Size(141, 26);
             this.layoutControlItem2.MinSize = new System.Drawing.Size(141, 26);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(141, 31);
+            this.layoutControlItem2.Size = new System.Drawing.Size(141, 26);
             this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem2.Text = "工号";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(24, 14);
@@ -534,7 +540,7 @@ namespace CarDistpatchSYS
             this.layoutControlItem3.MaxSize = new System.Drawing.Size(85, 26);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(85, 26);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(85, 31);
+            this.layoutControlItem3.Size = new System.Drawing.Size(85, 26);
             this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -549,7 +555,7 @@ namespace CarDistpatchSYS
             this.emptySpaceItem1.MaxSize = new System.Drawing.Size(352, 26);
             this.emptySpaceItem1.MinSize = new System.Drawing.Size(352, 26);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(352, 31);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(352, 26);
             this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
@@ -562,7 +568,7 @@ namespace CarDistpatchSYS
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(149, 26);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(149, 26);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(149, 31);
+            this.layoutControlItem4.Size = new System.Drawing.Size(149, 26);
             this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem4.Text = "姓名";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(24, 14);
@@ -575,10 +581,52 @@ namespace CarDistpatchSYS
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(147, 26);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(147, 26);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(147, 31);
+            this.layoutControlItem5.Size = new System.Drawing.Size(147, 26);
             this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem5.Text = "部门";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(24, 14);
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn12.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn12.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn12.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn12.Caption = "驾驶证档案号";
+            this.gridColumn12.FieldName = "FileNumber";
+            this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.OptionsColumn.AllowEdit = false;
+            this.gridColumn12.OptionsColumn.ReadOnly = true;
+            this.gridColumn12.Visible = true;
+            this.gridColumn12.VisibleIndex = 7;
+            // 
+            // gridColumn13
+            // 
+            this.gridColumn13.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn13.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn13.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn13.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn13.Caption = "驾驶证类型";
+            this.gridColumn13.FieldName = "DriverLicenseType";
+            this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.OptionsColumn.AllowEdit = false;
+            this.gridColumn13.OptionsColumn.ReadOnly = true;
+            this.gridColumn13.Visible = true;
+            this.gridColumn13.VisibleIndex = 6;
+            // 
+            // gridColumn14
+            // 
+            this.gridColumn14.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn14.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn14.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn14.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn14.Caption = "驾驶证号";
+            this.gridColumn14.FieldName = "DriverLicense";
+            this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.OptionsColumn.AllowEdit = false;
+            this.gridColumn14.OptionsColumn.ReadOnly = true;
+            this.gridColumn14.Visible = true;
+            this.gridColumn14.VisibleIndex = 5;
             // 
             // MainEmployee
             // 
@@ -652,5 +700,8 @@ namespace CarDistpatchSYS
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraBars.BarButtonItem btnChangePassword;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
     }
 }

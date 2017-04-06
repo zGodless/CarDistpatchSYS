@@ -124,6 +124,21 @@ namespace CarDistpatchSYS
         /// </summary>	
         public DateTime? OperateTime { get; set; }
 
+        /// <summary>
+        /// DriverLicense
+        /// </summary>	
+        public string DriverLicense { get; set; }
+
+        /// <summary>
+        /// DriverLicenseType
+        /// </summary>	
+        public string DriverLicenseType { get; set; }
+
+        /// <summary>
+        /// FileNumber
+        /// </summary>	
+        public string FileNumber { get; set; }
+
         #endregion 基本模型
 
         #region 扩展模型

@@ -32,23 +32,24 @@ namespace CarDistpatchSYS
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditDispathApply));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.datePlaceBackDate = new DevExpress.XtraEditors.DateEdit();
+            this.dateApply = new DevExpress.XtraEditors.DateEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnSendAudit = new DevExpress.XtraBars.BarButtonItem();
-            this.dateApplyDate = new DevExpress.XtraEditors.DateEdit();
+            this.datePlaceBackDate = new DevExpress.XtraEditors.DateEdit();
+            this.dateOperateTime = new DevExpress.XtraEditors.DateEdit();
             this.cLCarID = new CarDistpatchSYS.UILookUp.CLookCar();
-            this.cLookEmployee = new CLookEmployee();
+            this.cLookEmployee = new CarDistpatchSYS.UILookUp.CLookEmployee();
             this.memoDispatchReason = new DevExpress.XtraEditors.MemoEdit();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnOK = new DevExpress.XtraEditors.SimpleButton();
@@ -58,16 +59,20 @@ namespace CarDistpatchSYS
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateApply.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateApply.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePlaceBackDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePlaceBackDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateApplyDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateApplyDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateOperateTime.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateOperateTime.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLCarID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLookEmployee.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoDispatchReason.Properties)).BeginInit();
@@ -77,15 +82,18 @@ namespace CarDistpatchSYS
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.dateApply);
             this.layoutControl1.Controls.Add(this.datePlaceBackDate);
-            this.layoutControl1.Controls.Add(this.dateApplyDate);
+            this.layoutControl1.Controls.Add(this.dateOperateTime);
             this.layoutControl1.Controls.Add(this.cLCarID);
             this.layoutControl1.Controls.Add(this.cLookEmployee);
             this.layoutControl1.Controls.Add(this.memoDispatchReason);
@@ -99,19 +107,26 @@ namespace CarDistpatchSYS
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // datePlaceBackDate
+            // dateApply
             // 
-            this.datePlaceBackDate.EditValue = null;
-            this.datePlaceBackDate.Location = new System.Drawing.Point(371, 36);
-            this.datePlaceBackDate.MenuManager = this.barManager1;
-            this.datePlaceBackDate.Name = "datePlaceBackDate";
-            this.datePlaceBackDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateApply.EditValue = null;
+            this.dateApply.Location = new System.Drawing.Point(87, 60);
+            this.dateApply.MenuManager = this.barManager1;
+            this.dateApply.Name = "dateApply";
+            this.dateApply.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.datePlaceBackDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateApply.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.datePlaceBackDate.Size = new System.Drawing.Size(206, 20);
-            this.datePlaceBackDate.StyleController = this.layoutControl1;
-            this.datePlaceBackDate.TabIndex = 30;
+            this.dateApply.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
+            this.dateApply.Properties.DisplayFormat.FormatString = "yyyy-MM-dd tt.hh";
+            this.dateApply.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dateApply.Properties.EditFormat.FormatString = "yyyy-MM-dd tt.hh";
+            this.dateApply.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dateApply.Properties.Mask.EditMask = "yyyy-MM-dd tt.hh";
+            this.dateApply.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.True;
+            this.dateApply.Size = new System.Drawing.Size(205, 20);
+            this.dateApply.StyleController = this.layoutControl1;
+            this.dateApply.TabIndex = 31;
             // 
             // barManager1
             // 
@@ -161,26 +176,47 @@ namespace CarDistpatchSYS
             this.btnSendAudit.Name = "btnSendAudit";
             this.btnSendAudit.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
-            // dateApplyDate
+            // datePlaceBackDate
             // 
-            this.dateApplyDate.EditValue = null;
-            this.dateApplyDate.Location = new System.Drawing.Point(87, 36);
-            this.dateApplyDate.MenuManager = this.barManager1;
-            this.dateApplyDate.Name = "dateApplyDate";
-            this.dateApplyDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.datePlaceBackDate.EditValue = null;
+            this.datePlaceBackDate.Location = new System.Drawing.Point(371, 60);
+            this.datePlaceBackDate.MenuManager = this.barManager1;
+            this.datePlaceBackDate.Name = "datePlaceBackDate";
+            this.datePlaceBackDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateApplyDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.datePlaceBackDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateApplyDate.Size = new System.Drawing.Size(205, 20);
-            this.dateApplyDate.StyleController = this.layoutControl1;
-            this.dateApplyDate.TabIndex = 29;
+            this.datePlaceBackDate.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
+            this.datePlaceBackDate.Properties.DisplayFormat.FormatString = "yyyy-MM-dd tt.hh";
+            this.datePlaceBackDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.datePlaceBackDate.Properties.EditFormat.FormatString = "yyyy-MM-dd tt.hh";
+            this.datePlaceBackDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.datePlaceBackDate.Properties.Mask.EditMask = "yyyy-MM-dd tt.hh";
+            this.datePlaceBackDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.True;
+            this.datePlaceBackDate.Size = new System.Drawing.Size(206, 20);
+            this.datePlaceBackDate.StyleController = this.layoutControl1;
+            this.datePlaceBackDate.TabIndex = 30;
+            // 
+            // dateOperateTime
+            // 
+            this.dateOperateTime.EditValue = null;
+            this.dateOperateTime.Location = new System.Drawing.Point(87, 36);
+            this.dateOperateTime.MenuManager = this.barManager1;
+            this.dateOperateTime.Name = "dateOperateTime";
+            this.dateOperateTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateOperateTime.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateOperateTime.Size = new System.Drawing.Size(205, 20);
+            this.dateOperateTime.StyleController = this.layoutControl1;
+            this.dateOperateTime.TabIndex = 29;
             // 
             // cLCarID
             // 
             this.cLCarID.ClearButton = false;
             this.cLCarID.Currentduty = null;
             this.cLCarID.ListIsValid = null;
-            this.cLCarID.Location = new System.Drawing.Point(371, 12);
+            this.cLCarID.Location = new System.Drawing.Point(371, 36);
             this.cLCarID.MaximumSize = new System.Drawing.Size(0, 20);
             this.cLCarID.MenuManager = this.barManager1;
             this.cLCarID.Name = "cLCarID";
@@ -189,10 +225,10 @@ namespace CarDistpatchSYS
             this.cLCarID.Properties.AutoHeight = false;
             this.cLCarID.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.cLCarID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "刷新", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "新增", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "刷新", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "新增", null, null, true)});
             this.cLCarID.Properties.CaseSensitiveSearch = true;
             this.cLCarID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.cLCarID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -221,10 +257,10 @@ namespace CarDistpatchSYS
             this.cLookEmployee.Properties.AutoHeight = false;
             this.cLookEmployee.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.cLookEmployee.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "刷新", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "新增", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "刷新", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "新增", null, null, true)});
             this.cLookEmployee.Properties.CaseSensitiveSearch = true;
             this.cLookEmployee.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.cLookEmployee.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -241,9 +277,9 @@ namespace CarDistpatchSYS
             // 
             // memoDispatchReason
             // 
-            this.memoDispatchReason.Location = new System.Drawing.Point(87, 60);
+            this.memoDispatchReason.Location = new System.Drawing.Point(87, 84);
             this.memoDispatchReason.Name = "memoDispatchReason";
-            this.memoDispatchReason.Size = new System.Drawing.Size(490, 301);
+            this.memoDispatchReason.Size = new System.Drawing.Size(490, 277);
             this.memoDispatchReason.StyleController = this.layoutControl1;
             this.memoDispatchReason.TabIndex = 26;
             this.memoDispatchReason.UseOptimizedRendering = true;
@@ -277,9 +313,11 @@ namespace CarDistpatchSYS
             this.layoutControlItem2,
             this.layoutControlItem10,
             this.layoutControlItem7,
-            this.layoutControlItem3,
             this.layoutControlItem4,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.layoutControlItem3,
+            this.emptySpaceItem1,
+            this.layoutControlItem6});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(589, 399);
@@ -324,9 +362,9 @@ namespace CarDistpatchSYS
             // 
             this.layoutControlItem10.Control = this.memoDispatchReason;
             this.layoutControlItem10.CustomizationFormText = "申请调度原因";
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(569, 305);
+            this.layoutControlItem10.Size = new System.Drawing.Size(569, 281);
             this.layoutControlItem10.Text = "申请调度原因";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(72, 14);
             // 
@@ -340,19 +378,9 @@ namespace CarDistpatchSYS
             this.layoutControlItem7.Text = "申请人";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(72, 14);
             // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.cLCarID;
-            this.layoutControlItem3.CustomizationFormText = "申请车辆";
-            this.layoutControlItem3.Location = new System.Drawing.Point(284, 0);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(285, 24);
-            this.layoutControlItem3.Text = "申请车辆";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(72, 14);
-            // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.dateApplyDate;
+            this.layoutControlItem4.Control = this.dateOperateTime;
             this.layoutControlItem4.CustomizationFormText = "申请日期";
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem4.Name = "layoutControlItem4";
@@ -364,11 +392,41 @@ namespace CarDistpatchSYS
             // 
             this.layoutControlItem5.Control = this.datePlaceBackDate;
             this.layoutControlItem5.CustomizationFormText = "预计还车日期";
-            this.layoutControlItem5.Location = new System.Drawing.Point(284, 24);
+            this.layoutControlItem5.Location = new System.Drawing.Point(284, 48);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(285, 24);
-            this.layoutControlItem5.Text = "预计还车日期";
+            this.layoutControlItem5.Text = "预计还车时间";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(72, 14);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.cLCarID;
+            this.layoutControlItem3.CustomizationFormText = "申请车辆";
+            this.layoutControlItem3.Location = new System.Drawing.Point(284, 24);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(285, 24);
+            this.layoutControlItem3.Text = "申请车辆";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(72, 14);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
+            this.emptySpaceItem1.Location = new System.Drawing.Point(284, 0);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(285, 24);
+            this.emptySpaceItem1.Text = "emptySpaceItem1";
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.dateApply;
+            this.layoutControlItem6.CustomizationFormText = "申请用车时间";
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(284, 24);
+            this.layoutControlItem6.Text = "申请用车时间";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(72, 14);
             // 
             // FormEditDispathApply
             // 
@@ -385,11 +443,13 @@ namespace CarDistpatchSYS
             this.Text = "编辑调度申请";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dateApply.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateApply.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePlaceBackDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePlaceBackDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateApplyDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateApplyDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateOperateTime.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateOperateTime.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLCarID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLookEmployee.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoDispatchReason.Properties)).EndInit();
@@ -399,9 +459,11 @@ namespace CarDistpatchSYS
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -422,7 +484,7 @@ namespace CarDistpatchSYS
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private DevExpress.XtraEditors.DateEdit dateApplyDate;
+        private DevExpress.XtraEditors.DateEdit dateOperateTime;
         private CarDistpatchSYS.UILookUp.CLookCar cLCarID;
         private CLookEmployee cLookEmployee;
         private DevExpress.XtraEditors.MemoEdit memoDispatchReason;
@@ -431,5 +493,8 @@ namespace CarDistpatchSYS
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraEditors.DateEdit dateApply;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
     }
 }

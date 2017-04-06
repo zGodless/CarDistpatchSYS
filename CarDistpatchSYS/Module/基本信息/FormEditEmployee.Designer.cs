@@ -30,10 +30,11 @@ namespace CarDistpatchSYS
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.clDepartmentID = new CarDistpatchSYS.UILookUp.CLookDepartment();
             this.dateBirthday = new DevExpress.XtraEditors.DateEdit();
             this.textEmployeeName = new DevExpress.XtraEditors.TextEdit();
             this.textCellphone = new DevExpress.XtraEditors.TextEdit();
@@ -68,10 +69,17 @@ namespace CarDistpatchSYS
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.clDepartmentID = new CLookDepartment();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.textDriverLicense = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.textFileNumber = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.comDriverLicenseType = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clDepartmentID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBirthday.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBirthday.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEmployeeName.Properties)).BeginInit();
@@ -107,12 +115,21 @@ namespace CarDistpatchSYS
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clDepartmentID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textDriverLicense.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textFileNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comDriverLicenseType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.comDriverLicenseType);
+            this.layoutControl1.Controls.Add(this.textFileNumber);
+            this.layoutControl1.Controls.Add(this.textDriverLicense);
             this.layoutControl1.Controls.Add(this.clDepartmentID);
             this.layoutControl1.Controls.Add(this.dateBirthday);
             this.layoutControl1.Controls.Add(this.textEmployeeName);
@@ -138,38 +155,69 @@ namespace CarDistpatchSYS
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // clDepartmentID
+            // 
+            this.clDepartmentID.ClearButton = false;
+            this.clDepartmentID.Currentduty = null;
+            this.clDepartmentID.ListIsValid = null;
+            this.clDepartmentID.Location = new System.Drawing.Point(87, 36);
+            this.clDepartmentID.MaximumSize = new System.Drawing.Size(0, 20);
+            this.clDepartmentID.Name = "clDepartmentID";
+            this.clDepartmentID.Properties.ActionButtonIndex = 1;
+            this.clDepartmentID.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.clDepartmentID.Properties.AutoHeight = false;
+            this.clDepartmentID.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
+            this.clDepartmentID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "刷新", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "新增", null, null, true)});
+            this.clDepartmentID.Properties.CaseSensitiveSearch = true;
+            this.clDepartmentID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.clDepartmentID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DepartmentName", "部门名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ParentName", "上级部门"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("InChargeName", "负责人")});
+            this.clDepartmentID.Properties.NullText = "";
+            this.clDepartmentID.Properties.NullValuePromptShowForEmptyValue = true;
+            this.clDepartmentID.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.clDepartmentID.Size = new System.Drawing.Size(185, 20);
+            this.clDepartmentID.StyleController = this.layoutControl1;
+            this.clDepartmentID.TabIndex = 29;
+            this.clDepartmentID.ToolTip = "清除选择:[CTRL + 0]";
+            // 
             // dateBirthday
             // 
             this.dateBirthday.EditValue = null;
-            this.dateBirthday.Location = new System.Drawing.Point(327, 60);
+            this.dateBirthday.Location = new System.Drawing.Point(351, 60);
             this.dateBirthday.Name = "dateBirthday";
             this.dateBirthday.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateBirthday.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateBirthday.Size = new System.Drawing.Size(209, 20);
+            this.dateBirthday.Size = new System.Drawing.Size(185, 20);
             this.dateBirthday.StyleController = this.layoutControl1;
             this.dateBirthday.TabIndex = 28;
             // 
             // textEmployeeName
             // 
-            this.textEmployeeName.Location = new System.Drawing.Point(327, 12);
+            this.textEmployeeName.Location = new System.Drawing.Point(351, 12);
             this.textEmployeeName.Name = "textEmployeeName";
-            this.textEmployeeName.Size = new System.Drawing.Size(209, 20);
+            this.textEmployeeName.Size = new System.Drawing.Size(185, 20);
             this.textEmployeeName.StyleController = this.layoutControl1;
             this.textEmployeeName.TabIndex = 27;
             // 
             // textCellphone
             // 
-            this.textCellphone.Location = new System.Drawing.Point(327, 108);
+            this.textCellphone.Location = new System.Drawing.Point(351, 156);
             this.textCellphone.Name = "textCellphone";
-            this.textCellphone.Size = new System.Drawing.Size(209, 20);
+            this.textCellphone.Size = new System.Drawing.Size(185, 20);
             this.textCellphone.StyleController = this.layoutControl1;
             this.textCellphone.TabIndex = 26;
             // 
             // comDegree
             // 
-            this.comDegree.Location = new System.Drawing.Point(63, 108);
+            this.comDegree.Location = new System.Drawing.Point(87, 156);
             this.comDegree.Name = "comDegree";
             this.comDegree.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -178,77 +226,77 @@ namespace CarDistpatchSYS
             "初中",
             "高中",
             "中专"});
-            this.comDegree.Size = new System.Drawing.Size(209, 20);
+            this.comDegree.Size = new System.Drawing.Size(185, 20);
             this.comDegree.StyleController = this.layoutControl1;
             this.comDegree.TabIndex = 25;
             // 
             // comSex
             // 
-            this.comSex.Location = new System.Drawing.Point(63, 60);
+            this.comSex.Location = new System.Drawing.Point(87, 60);
             this.comSex.Name = "comSex";
             this.comSex.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.comSex.Properties.Items.AddRange(new object[] {
             "男",
             "女"});
-            this.comSex.Size = new System.Drawing.Size(209, 20);
+            this.comSex.Size = new System.Drawing.Size(185, 20);
             this.comSex.StyleController = this.layoutControl1;
             this.comSex.TabIndex = 23;
             // 
             // memoNote
             // 
-            this.memoNote.Location = new System.Drawing.Point(63, 180);
+            this.memoNote.Location = new System.Drawing.Point(87, 228);
             this.memoNote.Name = "memoNote";
-            this.memoNote.Size = new System.Drawing.Size(473, 128);
+            this.memoNote.Size = new System.Drawing.Size(449, 80);
             this.memoNote.StyleController = this.layoutControl1;
             this.memoNote.TabIndex = 22;
             this.memoNote.UseOptimizedRendering = true;
             // 
             // textQQ
             // 
-            this.textQQ.Location = new System.Drawing.Point(327, 132);
+            this.textQQ.Location = new System.Drawing.Point(351, 180);
             this.textQQ.Name = "textQQ";
-            this.textQQ.Size = new System.Drawing.Size(209, 20);
+            this.textQQ.Size = new System.Drawing.Size(185, 20);
             this.textQQ.StyleController = this.layoutControl1;
             this.textQQ.TabIndex = 19;
             // 
             // textEmail
             // 
-            this.textEmail.Location = new System.Drawing.Point(63, 132);
+            this.textEmail.Location = new System.Drawing.Point(87, 180);
             this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(209, 20);
+            this.textEmail.Size = new System.Drawing.Size(185, 20);
             this.textEmail.StyleController = this.layoutControl1;
             this.textEmail.TabIndex = 17;
             // 
             // dateDimissionDate
             // 
             this.dateDimissionDate.EditValue = null;
-            this.dateDimissionDate.Location = new System.Drawing.Point(327, 156);
+            this.dateDimissionDate.Location = new System.Drawing.Point(351, 204);
             this.dateDimissionDate.Name = "dateDimissionDate";
             this.dateDimissionDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateDimissionDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateDimissionDate.Size = new System.Drawing.Size(209, 20);
+            this.dateDimissionDate.Size = new System.Drawing.Size(185, 20);
             this.dateDimissionDate.StyleController = this.layoutControl1;
             this.dateDimissionDate.TabIndex = 15;
             // 
             // dateEntryDate
             // 
             this.dateEntryDate.EditValue = null;
-            this.dateEntryDate.Location = new System.Drawing.Point(63, 156);
+            this.dateEntryDate.Location = new System.Drawing.Point(87, 204);
             this.dateEntryDate.Name = "dateEntryDate";
             this.dateEntryDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEntryDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEntryDate.Size = new System.Drawing.Size(209, 20);
+            this.dateEntryDate.Size = new System.Drawing.Size(185, 20);
             this.dateEntryDate.StyleController = this.layoutControl1;
             this.dateEntryDate.TabIndex = 14;
             // 
             // comStatus
             // 
-            this.comStatus.Location = new System.Drawing.Point(327, 36);
+            this.comStatus.Location = new System.Drawing.Point(351, 36);
             this.comStatus.Name = "comStatus";
             this.comStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -256,31 +304,31 @@ namespace CarDistpatchSYS
             "离职",
             "在职",
             "实习"});
-            this.comStatus.Size = new System.Drawing.Size(209, 20);
+            this.comStatus.Size = new System.Drawing.Size(185, 20);
             this.comStatus.StyleController = this.layoutControl1;
             this.comStatus.TabIndex = 11;
             // 
             // textIdentityNo
             // 
-            this.textIdentityNo.Location = new System.Drawing.Point(327, 84);
+            this.textIdentityNo.Location = new System.Drawing.Point(351, 132);
             this.textIdentityNo.Name = "textIdentityNo";
-            this.textIdentityNo.Size = new System.Drawing.Size(209, 20);
+            this.textIdentityNo.Size = new System.Drawing.Size(185, 20);
             this.textIdentityNo.StyleController = this.layoutControl1;
             this.textIdentityNo.TabIndex = 9;
             // 
             // textAddress
             // 
-            this.textAddress.Location = new System.Drawing.Point(63, 84);
+            this.textAddress.Location = new System.Drawing.Point(87, 132);
             this.textAddress.Name = "textAddress";
-            this.textAddress.Size = new System.Drawing.Size(209, 20);
+            this.textAddress.Size = new System.Drawing.Size(185, 20);
             this.textAddress.StyleController = this.layoutControl1;
             this.textAddress.TabIndex = 8;
             // 
             // textEmployeeCode
             // 
-            this.textEmployeeCode.Location = new System.Drawing.Point(63, 12);
+            this.textEmployeeCode.Location = new System.Drawing.Point(87, 12);
             this.textEmployeeCode.Name = "textEmployeeCode";
-            this.textEmployeeCode.Size = new System.Drawing.Size(209, 20);
+            this.textEmployeeCode.Size = new System.Drawing.Size(185, 20);
             this.textEmployeeCode.StyleController = this.layoutControl1;
             this.textEmployeeCode.TabIndex = 6;
             // 
@@ -318,14 +366,18 @@ namespace CarDistpatchSYS
             this.layoutControlItem11,
             this.layoutControlItem12,
             this.layoutControlItem19,
-            this.layoutControlItem9,
             this.layoutControlItem20,
             this.layoutControlItem21,
             this.layoutControlItem14,
             this.layoutControlItem16,
             this.layoutControlItem4,
             this.layoutControlItem10,
-            this.layoutControlItem7});
+            this.layoutControlItem7,
+            this.layoutControlItem15,
+            this.layoutControlItem17,
+            this.emptySpaceItem1,
+            this.layoutControlItem13,
+            this.layoutControlItem9});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(548, 346);
@@ -374,27 +426,27 @@ namespace CarDistpatchSYS
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem3.Text = "工号";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(48, 14);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.textAddress;
             this.layoutControlItem5.CustomizationFormText = "发动机号";
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem5.Text = "住址";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(48, 14);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.textIdentityNo;
             this.layoutControlItem6.CustomizationFormText = "车架号";
-            this.layoutControlItem6.Location = new System.Drawing.Point(264, 72);
+            this.layoutControlItem6.Location = new System.Drawing.Point(264, 120);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem6.Text = "身份证";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(48, 14);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem8
             // 
@@ -404,38 +456,38 @@ namespace CarDistpatchSYS
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem8.Text = "状态";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(48, 14);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.dateEntryDate;
             this.layoutControlItem11.CustomizationFormText = "购买时间";
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 144);
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 192);
             this.layoutControlItem11.Name = "layoutControlItem11";
             this.layoutControlItem11.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem11.Text = "入职日期";
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(48, 14);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.dateDimissionDate;
             this.layoutControlItem12.CustomizationFormText = "年检到期日期";
-            this.layoutControlItem12.Location = new System.Drawing.Point(264, 144);
+            this.layoutControlItem12.Location = new System.Drawing.Point(264, 192);
             this.layoutControlItem12.Name = "layoutControlItem12";
             this.layoutControlItem12.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem12.Text = "离职日期";
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(48, 14);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem19
             // 
             this.layoutControlItem19.Control = this.memoNote;
             this.layoutControlItem19.CustomizationFormText = "   备注";
-            this.layoutControlItem19.Location = new System.Drawing.Point(0, 168);
+            this.layoutControlItem19.Location = new System.Drawing.Point(0, 216);
             this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(528, 132);
+            this.layoutControlItem19.Size = new System.Drawing.Size(528, 84);
             this.layoutControlItem19.Text = "   备注";
             this.layoutControlItem19.TextLocation = DevExpress.Utils.Locations.Default;
-            this.layoutControlItem19.TextSize = new System.Drawing.Size(48, 14);
+            this.layoutControlItem19.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem9
             // 
@@ -445,47 +497,47 @@ namespace CarDistpatchSYS
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem9.Text = "性别";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(48, 14);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem20
             // 
             this.layoutControlItem20.Control = this.comDegree;
             this.layoutControlItem20.CustomizationFormText = "学历";
-            this.layoutControlItem20.Location = new System.Drawing.Point(0, 96);
+            this.layoutControlItem20.Location = new System.Drawing.Point(0, 144);
             this.layoutControlItem20.Name = "layoutControlItem20";
             this.layoutControlItem20.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem20.Text = "学历";
-            this.layoutControlItem20.TextSize = new System.Drawing.Size(48, 14);
+            this.layoutControlItem20.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem21
             // 
             this.layoutControlItem21.Control = this.textCellphone;
             this.layoutControlItem21.CustomizationFormText = "手机";
-            this.layoutControlItem21.Location = new System.Drawing.Point(264, 96);
+            this.layoutControlItem21.Location = new System.Drawing.Point(264, 144);
             this.layoutControlItem21.Name = "layoutControlItem21";
             this.layoutControlItem21.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem21.Text = "手机";
-            this.layoutControlItem21.TextSize = new System.Drawing.Size(48, 14);
+            this.layoutControlItem21.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.textEmail;
             this.layoutControlItem14.CustomizationFormText = "行驶证编号";
-            this.layoutControlItem14.Location = new System.Drawing.Point(0, 120);
+            this.layoutControlItem14.Location = new System.Drawing.Point(0, 168);
             this.layoutControlItem14.Name = "layoutControlItem14";
             this.layoutControlItem14.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem14.Text = "Email";
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(48, 14);
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem16
             // 
             this.layoutControlItem16.Control = this.textQQ;
             this.layoutControlItem16.CustomizationFormText = "累计油费";
-            this.layoutControlItem16.Location = new System.Drawing.Point(264, 120);
+            this.layoutControlItem16.Location = new System.Drawing.Point(264, 168);
             this.layoutControlItem16.Name = "layoutControlItem16";
             this.layoutControlItem16.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem16.Text = "QQ";
-            this.layoutControlItem16.TextSize = new System.Drawing.Size(48, 14);
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem4
             // 
@@ -495,7 +547,7 @@ namespace CarDistpatchSYS
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem4.Text = "姓名";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(48, 14);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem10
             // 
@@ -505,38 +557,7 @@ namespace CarDistpatchSYS
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem10.Text = "生日";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(48, 14);
-            // 
-            // clDepartmentID
-            // 
-            this.clDepartmentID.ClearButton = false;
-            this.clDepartmentID.Currentduty = null;
-            this.clDepartmentID.ListIsValid = null;
-            this.clDepartmentID.Location = new System.Drawing.Point(63, 36);
-            this.clDepartmentID.MaximumSize = new System.Drawing.Size(0, 20);
-            this.clDepartmentID.Name = "clDepartmentID";
-            this.clDepartmentID.Properties.ActionButtonIndex = 1;
-            this.clDepartmentID.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.clDepartmentID.Properties.AutoHeight = false;
-            this.clDepartmentID.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
-            this.clDepartmentID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "刷新", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "新增", null, null, true)});
-            this.clDepartmentID.Properties.CaseSensitiveSearch = true;
-            this.clDepartmentID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.clDepartmentID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DepartmentName", "部门名称"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ParentName", "上级部门"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("InChargeName", "负责人")});
-            this.clDepartmentID.Properties.NullText = "";
-            this.clDepartmentID.Properties.NullValuePromptShowForEmptyValue = true;
-            this.clDepartmentID.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.clDepartmentID.Size = new System.Drawing.Size(209, 20);
-            this.clDepartmentID.StyleController = this.layoutControl1;
-            this.clDepartmentID.TabIndex = 29;
-            this.clDepartmentID.ToolTip = "清除选择:[CTRL + 0]";
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem7
             // 
@@ -546,7 +567,78 @@ namespace CarDistpatchSYS
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem7.Text = "部门";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(48, 14);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(72, 14);
+            // 
+            // textDriverLicense
+            // 
+            this.textDriverLicense.Location = new System.Drawing.Point(87, 84);
+            this.textDriverLicense.Name = "textDriverLicense";
+            this.textDriverLicense.Size = new System.Drawing.Size(185, 20);
+            this.textDriverLicense.StyleController = this.layoutControl1;
+            this.textDriverLicense.TabIndex = 30;
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.textDriverLicense;
+            this.layoutControlItem13.CustomizationFormText = "驾驶证号";
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(264, 24);
+            this.layoutControlItem13.Text = "驾驶证号";
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(72, 14);
+            // 
+            // textFileNumber
+            // 
+            this.textFileNumber.Location = new System.Drawing.Point(351, 84);
+            this.textFileNumber.Name = "textFileNumber";
+            this.textFileNumber.Size = new System.Drawing.Size(185, 20);
+            this.textFileNumber.StyleController = this.layoutControl1;
+            this.textFileNumber.TabIndex = 31;
+            // 
+            // layoutControlItem15
+            // 
+            this.layoutControlItem15.Control = this.textFileNumber;
+            this.layoutControlItem15.CustomizationFormText = "驾驶证档案号";
+            this.layoutControlItem15.Location = new System.Drawing.Point(264, 72);
+            this.layoutControlItem15.Name = "layoutControlItem15";
+            this.layoutControlItem15.Size = new System.Drawing.Size(264, 24);
+            this.layoutControlItem15.Text = "驾驶证档案号";
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(72, 14);
+            // 
+            // comDriverLicenseType
+            // 
+            this.comDriverLicenseType.Location = new System.Drawing.Point(87, 108);
+            this.comDriverLicenseType.Name = "comDriverLicenseType";
+            this.comDriverLicenseType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comDriverLicenseType.Properties.Items.AddRange(new object[] {
+            "B1",
+            "B2",
+            "C1",
+            "C2"});
+            this.comDriverLicenseType.Size = new System.Drawing.Size(185, 20);
+            this.comDriverLicenseType.StyleController = this.layoutControl1;
+            this.comDriverLicenseType.TabIndex = 32;
+            // 
+            // layoutControlItem17
+            // 
+            this.layoutControlItem17.Control = this.comDriverLicenseType;
+            this.layoutControlItem17.CustomizationFormText = "驾驶证类型";
+            this.layoutControlItem17.Location = new System.Drawing.Point(0, 96);
+            this.layoutControlItem17.Name = "layoutControlItem17";
+            this.layoutControlItem17.Size = new System.Drawing.Size(264, 24);
+            this.layoutControlItem17.Text = "驾驶证类型";
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(72, 14);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
+            this.emptySpaceItem1.Location = new System.Drawing.Point(264, 96);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(264, 24);
+            this.emptySpaceItem1.Text = "emptySpaceItem1";
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // FormEditEmployee
             // 
@@ -559,6 +651,7 @@ namespace CarDistpatchSYS
             this.Text = "编辑车辆";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.clDepartmentID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBirthday.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBirthday.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEmployeeName.Properties)).EndInit();
@@ -594,8 +687,14 @@ namespace CarDistpatchSYS
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clDepartmentID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textDriverLicense.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textFileNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comDriverLicenseType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -639,5 +738,12 @@ namespace CarDistpatchSYS
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private CLookDepartment clDepartmentID;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraEditors.ComboBoxEdit comDriverLicenseType;
+        private DevExpress.XtraEditors.TextEdit textFileNumber;
+        private DevExpress.XtraEditors.TextEdit textDriverLicense;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
     }
 }

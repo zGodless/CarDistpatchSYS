@@ -8,6 +8,7 @@ using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.Utils;
 using DevExpress.XtraEditors;
 using DS.Data;
 using DS.MSClient;
@@ -36,6 +37,8 @@ namespace CarDistpatchSYS
 
         void FormEditDispathApply_Load(object sender, EventArgs e)
         {
+            dateApply.Properties.VistaEditTime = DefaultBoolean.True;
+            datePlaceBackDate.Properties.VistaEditTime = DefaultBoolean.True;
             cLCarID.BindList();
             cLookEmployee.BindList();
             if (FormState == DS.MSClient.FormState.Modify) //编辑
@@ -48,6 +51,11 @@ namespace CarDistpatchSYS
                 {
                     BindDate();
                 }
+            }
+            else
+            {
+                cLookEmployee.EditValue = Program.CurrentEmployee.EmployeeID;
+                dateOperateTime.EditValue = DateTime.Now;
             }
         }
 
@@ -90,7 +98,7 @@ namespace CarDistpatchSYS
                 MessageBox.Show("请选择车辆！");
                 return;
             }
-            if (dateApplyDate.EditValue == null)
+            if (dateOperateTime.EditValue == null)
             {
                 MessageBox.Show("请输入申请日期！");
                 return;
@@ -110,12 +118,11 @@ namespace CarDistpatchSYS
             {
                 EmployeeID = ValueConvert.ToInt32(cLookEmployee.EditValue),
                 CarID = ValueConvert.ToInt32(cLCarID.EditValue),
-                ApplyDate = ValueConvert.ToDateTime(dateApplyDate.EditValue),
-                DispatchReason = memoDispatchReason.Text,
+                ApplyDate = ValueConvert.ToDateTime(dateApply.EditValue),
                 PlaceBackDate = ValueConvert.ToDateTime(datePlaceBackDate.EditValue),
                 Status = 1,
                 OperatorID = Program.CurrentEmployee.EmployeeID,
-                OperateTime = DateTime.Now
+                OperateTime = ValueConvert.ToDateTime(dateOperateTime.EditValue)
             };
             bool result = false;
             if (FormState == DS.MSClient.FormState.Modify)
@@ -132,11 +139,11 @@ namespace CarDistpatchSYS
                     EmployeeID = ValueConvert.ToInt32(cLookEmployee.EditValue),
                     DispatchReason = memoDispatchReason.Text,
                     CarID = ValueConvert.ToInt32(cLCarID.EditValue),
-                    ApplyDate = ValueConvert.ToDateTime(dateApplyDate.EditValue),
+                    ApplyDate = ValueConvert.ToDateTime(dateApply.EditValue),
                     PlaceBackDate = ValueConvert.ToDateTime(datePlaceBackDate.EditValue),
                     Status = 0,
                     OperatorID = Program.CurrentEmployee.EmployeeID,
-                    OperateTime = DateTime.Now
+                    OperateTime = ValueConvert.ToDateTime(dateOperateTime.EditValue)
                 };
                 if (new CarDispatchDao().Add(modelDis))
                 {
@@ -164,7 +171,8 @@ namespace CarDistpatchSYS
         {
             cLookEmployee.EditValue = curData.EmployeeID;
             cLCarID.EditValue = curData.CarID;
-            dateApplyDate.EditValue = curData.ApplyDate;
+            dateApply.EditValue = curData.ApplyDate;
+            dateOperateTime.EditValue = curData.OperateTime;
             datePlaceBackDate.EditValue = curData.PlaceBackDate;
             memoDispatchReason.EditValue = curData.DispatchReason;
         }

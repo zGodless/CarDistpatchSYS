@@ -95,6 +95,9 @@ namespace DS.Data
                 parameters.Add(new QfParameter("Birthday", string.Format(@"'{0}'", model.Birthday)));
                 parameters.Add(new QfParameter("Address", string.Format(@"'{0}'", model.Address)));
                 parameters.Add(new QfParameter("IdentityNo", string.Format(@"'{0}'", model.IdentityNo)));
+                parameters.Add(new QfParameter("DriverLicense", string.Format(@"'{0}'", model.DriverLicense)));
+                parameters.Add(new QfParameter("DriverLicenseType", string.Format(@"'{0}'", model.DriverLicenseType)));
+                parameters.Add(new QfParameter("FileNumber", string.Format(@"'{0}'", model.FileNumber)));
                 string colStr = string.Join(",", parameters.FindAll(m => ValueConvert.ToString(m.Value) != null && ValueConvert.ToString(m.Value) != "''").Select(n => n.ParameterName));
                 string atColStr = string.Join(",", parameters.FindAll(m => ValueConvert.ToString(m.Value) != null && ValueConvert.ToString(m.Value) != "''").Select(n => n.Value));
                 string sql = string.Format("insert into t_employee({0}) values ({1})", colStr, atColStr);
@@ -155,6 +158,9 @@ namespace DS.Data
                 parameters.Add(new QfParameter("Birthday", string.Format(@"'{0}'", model.Birthday)));
                 parameters.Add(new QfParameter("Address", string.Format(@"'{0}'", model.Address)));
                 parameters.Add(new QfParameter("IdentityNo", string.Format(@"'{0}'", model.IdentityNo)));
+                parameters.Add(new QfParameter("DriverLicense", string.Format(@"'{0}'", model.DriverLicense)));
+                parameters.Add(new QfParameter("DriverLicenseType", string.Format(@"'{0}'", model.DriverLicenseType)));
+                parameters.Add(new QfParameter("FileNumber", string.Format(@"'{0}'", model.FileNumber)));
                 string setStr = "";
                 foreach (var item in parameters)
                 {
