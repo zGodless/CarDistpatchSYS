@@ -84,6 +84,7 @@
       <DependentUpon>BaseUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="CommonDAO.cs" />
+    <Compile Include="Data\CarApplySocialpeopleDao.cs" />
     <Compile Include="Data\DutyDao.cs" />
     <Compile Include="Data\DepartmentDao.cs" />
     <Compile Include="Data\CarriageReturnDao.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="FormBase.designer.cs">
       <DependentUpon>FormBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\CarApplySocialpeople.cs" />
     <Compile Include="Module\基本信息\FormChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>

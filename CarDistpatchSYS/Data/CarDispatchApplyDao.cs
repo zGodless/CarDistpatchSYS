@@ -74,18 +74,23 @@ namespace DS.Data
             try
             {
                 var parameters = new List<QfParameter>();
-			parameters.Add(new QfParameter("ApplyID", model.ApplyID));
-            parameters.Add(new QfParameter("DispatchID", model.DispatchID));
-            parameters.Add(new QfParameter("EmployeeID", model.EmployeeID));
-            parameters.Add(new QfParameter("ApplyDate", string.Format(@"'{0}'", model.ApplyDate)));
-            parameters.Add(new QfParameter("CarID", model.CarID));
-            parameters.Add(new QfParameter("DispatchReason", string.Format(@"'{0}'", model.DispatchReason)));
-            parameters.Add(new QfParameter("PlaceBackDate", string.Format(@"'{0}'", model.PlaceBackDate)));
-            parameters.Add(new QfParameter("CarBackDate", string.Format(@"'{0}'", model.CarBackDate)));
-            parameters.Add(new QfParameter("Status", model.Status));
-            parameters.Add(new QfParameter("Note", string.Format(@"'{0}'", model.Note)));
-            parameters.Add(new QfParameter("OperatorID", model.OperatorID));
-            parameters.Add(new QfParameter("OperateTime", string.Format(@"'{0}'", model.OperateTime)));
+                parameters.Add(new QfParameter("ApplyID", model.ApplyID));
+                parameters.Add(new QfParameter("Note", string.Format(@"'{0}'", model.Note)));
+                parameters.Add(new QfParameter("OperatorID", model.OperatorID));
+                parameters.Add(new QfParameter("OperateTime", string.Format(@"'{0}'", model.OperateTime)));
+                parameters.Add(new QfParameter("ApplyMode", string.Format(@"'{0}'", model.ApplyMode)));
+                parameters.Add(new QfParameter("IsDriver", model.IsDriver));
+                parameters.Add(new QfParameter("CarModel", string.Format(@"'{0}'", model.CarModel)));
+                parameters.Add(new QfParameter("DriverName", string.Format(@"'{0}'", model.DriverName)));
+                parameters.Add(new QfParameter("DriverLicense", string.Format(@"'{0}'", model.DriverLicense)));
+                parameters.Add(new QfParameter("DispatchID", model.DispatchID));
+                parameters.Add(new QfParameter("EmployeeID", model.EmployeeID));
+                parameters.Add(new QfParameter("ApplyDate", string.Format(@"'{0}'", model.ApplyDate)));
+                parameters.Add(new QfParameter("CarID", model.CarID));
+                parameters.Add(new QfParameter("DispatchReason", string.Format(@"'{0}'", model.DispatchReason)));
+                parameters.Add(new QfParameter("PlaceBackDate", string.Format(@"'{0}'", model.PlaceBackDate)));
+                parameters.Add(new QfParameter("CarBackDate", string.Format(@"'{0}'", model.CarBackDate)));
+                parameters.Add(new QfParameter("Status", model.Status));
                             string colStr = string.Join(",", parameters.FindAll(m => ValueConvert.ToString(m.Value) != null && ValueConvert.ToString(m.Value) != "''").Select(n => n.ParameterName));
                 string atColStr = string.Join(",", parameters.FindAll(m => ValueConvert.ToString(m.Value) != null && ValueConvert.ToString(m.Value) != "''").Select(n => n.Value));
                 string sql = string.Format("insert into t_car_dispatch_apply({0}) values ({1})", colStr, atColStr);
@@ -125,18 +130,18 @@ namespace DS.Data
             try
             {
                 var parameters = new List<QfParameter>();
-			parameters.Add(new QfParameter("ApplyID", model.ApplyID));
-            parameters.Add(new QfParameter("DispatchID", model.DispatchID));
-            parameters.Add(new QfParameter("EmployeeID", model.EmployeeID));
-            parameters.Add(new QfParameter("ApplyDate", string.Format(@"'{0}'", model.ApplyDate)));
-            parameters.Add(new QfParameter("CarID", model.CarID));
-            parameters.Add(new QfParameter("DispatchReason", string.Format(@"'{0}'", model.DispatchReason)));
-            parameters.Add(new QfParameter("PlaceBackDate", string.Format(@"'{0}'", model.PlaceBackDate)));
-            parameters.Add(new QfParameter("CarBackDate", string.Format(@"'{0}'", model.CarBackDate)));
-            parameters.Add(new QfParameter("Status", model.Status));
-            parameters.Add(new QfParameter("Note", string.Format(@"'{0}'", model.Note)));
-            parameters.Add(new QfParameter("OperatorID", model.OperatorID));
-            parameters.Add(new QfParameter("OperateTime", string.Format(@"'{0}'", model.OperateTime)));
+                parameters.Add(new QfParameter("ApplyID", model.ApplyID));
+                parameters.Add(new QfParameter("DispatchID", model.DispatchID));
+                parameters.Add(new QfParameter("EmployeeID", model.EmployeeID));
+                parameters.Add(new QfParameter("ApplyDate", string.Format(@"'{0}'", model.ApplyDate)));
+                parameters.Add(new QfParameter("CarID", model.CarID));
+                parameters.Add(new QfParameter("DispatchReason", string.Format(@"'{0}'", model.DispatchReason)));
+                parameters.Add(new QfParameter("PlaceBackDate", string.Format(@"'{0}'", model.PlaceBackDate)));
+                parameters.Add(new QfParameter("CarBackDate", string.Format(@"'{0}'", model.CarBackDate)));
+                parameters.Add(new QfParameter("Status", model.Status));
+                parameters.Add(new QfParameter("Note", string.Format(@"'{0}'", model.Note)));
+                parameters.Add(new QfParameter("OperatorID", model.OperatorID));
+                parameters.Add(new QfParameter("OperateTime", string.Format(@"'{0}'", model.OperateTime)));
                             string setStr = "";
                 foreach (var item in parameters)
                 {
@@ -156,6 +161,7 @@ namespace DS.Data
                 return false;
             }
         }
+
         /// <summary>
         /// 获得数据列表
         /// </summary>
@@ -179,7 +185,7 @@ namespace DS.Data
             }
         }
 
-        /// <summary>
+        /// <summary  >
         /// 获得数据列表
         /// </summary>
         /// <param name="sql"></param>

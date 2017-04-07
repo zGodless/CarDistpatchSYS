@@ -245,7 +245,7 @@ namespace DS.Data
         {
             try
             {
-                string sql = string.Format("update t_car_dispatch set AuditDate = '{0}' where DispatchID = {1}", model.AuditDate, model.DispatchID);
+                string sql = string.Format("update t_car_dispatch set AuditDate = '{0}', Note = '{1}' where DispatchID = {2}", model.AuditDate, model.Note, model.DispatchID);
                 int row = MysqlHelper.ExecuteNonQuery(sql);
                 return row == 1;
             }
