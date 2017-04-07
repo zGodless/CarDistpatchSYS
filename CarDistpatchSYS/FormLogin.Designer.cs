@@ -124,6 +124,8 @@
             this.textUserName.Location = new System.Drawing.Point(189, 202);
             this.textUserName.MinimumSize = new System.Drawing.Size(0, 30);
             this.textUserName.Name = "textUserName";
+            this.textUserName.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.textUserName.Properties.Appearance.Options.UseForeColor = true;
             this.textUserName.Size = new System.Drawing.Size(167, 20);
             this.textUserName.StyleController = this.layoutControl1;
             this.textUserName.TabIndex = 5;
@@ -154,6 +156,9 @@
             // 
             // layoutControlGroup1
             // 
+            this.layoutControlGroup1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("layoutControlGroup1.BackgroundImage")));
+            this.layoutControlGroup1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.layoutControlGroup1.BackgroundImageVisible = true;
             this.layoutControlGroup1.CustomizationFormText = "layoutControlGroup1";
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
@@ -232,6 +237,12 @@
             // 
             // layoutControlItem3
             // 
+            this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem3.AppearanceItemCaption.ForeColor = System.Drawing.Color.White;
+            this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem3.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem3.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.layoutControlItem3.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.layoutControlItem3.Control = this.textPassWord;
             this.layoutControlItem3.CustomizationFormText = "密码";
             this.layoutControlItem3.Location = new System.Drawing.Point(92, 236);
@@ -294,6 +305,16 @@
             // 
             // layoutControlItem4
             // 
+            this.layoutControlItem4.AppearanceItemCaption.BackColor = System.Drawing.Color.Transparent;
+            this.layoutControlItem4.AppearanceItemCaption.BorderColor = System.Drawing.Color.White;
+            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem4.AppearanceItemCaption.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.layoutControlItem4.AppearanceItemCaption.ForeColor = System.Drawing.Color.White;
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseBackColor = true;
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.layoutControlItem4.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.layoutControlItem4.Control = this.textUserName;
             this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.layoutControlItem4.CustomizationFormText = "用户名";

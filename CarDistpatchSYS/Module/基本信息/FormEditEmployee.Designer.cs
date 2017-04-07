@@ -30,10 +30,13 @@ namespace CarDistpatchSYS
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.comDriverLicenseType = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.textFileNumber = new DevExpress.XtraEditors.TextEdit();
+            this.textDriverLicense = new DevExpress.XtraEditors.TextEdit();
             this.clDepartmentID = new CarDistpatchSYS.UILookUp.CLookDepartment();
             this.dateBirthday = new DevExpress.XtraEditors.DateEdit();
             this.textEmployeeName = new DevExpress.XtraEditors.TextEdit();
@@ -62,7 +65,6 @@ namespace CarDistpatchSYS
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -70,15 +72,16 @@ namespace CarDistpatchSYS
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.textDriverLicense = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.textFileNumber = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.comDriverLicenseType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comDriverLicenseType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textFileNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textDriverLicense.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clDepartmentID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBirthday.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBirthday.Properties)).BeginInit();
@@ -108,7 +111,6 @@ namespace CarDistpatchSYS
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
@@ -116,13 +118,11 @@ namespace CarDistpatchSYS
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textDriverLicense.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textFileNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comDriverLicenseType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -155,6 +155,37 @@ namespace CarDistpatchSYS
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // comDriverLicenseType
+            // 
+            this.comDriverLicenseType.Location = new System.Drawing.Point(87, 108);
+            this.comDriverLicenseType.Name = "comDriverLicenseType";
+            this.comDriverLicenseType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comDriverLicenseType.Properties.Items.AddRange(new object[] {
+            "B1",
+            "B2",
+            "C1",
+            "C2"});
+            this.comDriverLicenseType.Size = new System.Drawing.Size(185, 20);
+            this.comDriverLicenseType.StyleController = this.layoutControl1;
+            this.comDriverLicenseType.TabIndex = 32;
+            // 
+            // textFileNumber
+            // 
+            this.textFileNumber.Location = new System.Drawing.Point(351, 84);
+            this.textFileNumber.Name = "textFileNumber";
+            this.textFileNumber.Size = new System.Drawing.Size(185, 20);
+            this.textFileNumber.StyleController = this.layoutControl1;
+            this.textFileNumber.TabIndex = 31;
+            // 
+            // textDriverLicense
+            // 
+            this.textDriverLicense.Location = new System.Drawing.Point(87, 84);
+            this.textDriverLicense.Name = "textDriverLicense";
+            this.textDriverLicense.Size = new System.Drawing.Size(185, 20);
+            this.textDriverLicense.StyleController = this.layoutControl1;
+            this.textDriverLicense.TabIndex = 30;
+            // 
             // clDepartmentID
             // 
             this.clDepartmentID.ClearButton = false;
@@ -168,10 +199,10 @@ namespace CarDistpatchSYS
             this.clDepartmentID.Properties.AutoHeight = false;
             this.clDepartmentID.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.clDepartmentID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "刷新", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "新增", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "刷新", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "新增", null, null, true)});
             this.clDepartmentID.Properties.CaseSensitiveSearch = true;
             this.clDepartmentID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.clDepartmentID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -489,16 +520,6 @@ namespace CarDistpatchSYS
             this.layoutControlItem19.TextLocation = DevExpress.Utils.Locations.Default;
             this.layoutControlItem19.TextSize = new System.Drawing.Size(72, 14);
             // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.comSex;
-            this.layoutControlItem9.CustomizationFormText = "性别";
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 48);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(264, 24);
-            this.layoutControlItem9.Text = "性别";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(72, 14);
-            // 
             // layoutControlItem20
             // 
             this.layoutControlItem20.Control = this.comDegree;
@@ -569,32 +590,6 @@ namespace CarDistpatchSYS
             this.layoutControlItem7.Text = "部门";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(72, 14);
             // 
-            // textDriverLicense
-            // 
-            this.textDriverLicense.Location = new System.Drawing.Point(87, 84);
-            this.textDriverLicense.Name = "textDriverLicense";
-            this.textDriverLicense.Size = new System.Drawing.Size(185, 20);
-            this.textDriverLicense.StyleController = this.layoutControl1;
-            this.textDriverLicense.TabIndex = 30;
-            // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.Control = this.textDriverLicense;
-            this.layoutControlItem13.CustomizationFormText = "驾驶证号";
-            this.layoutControlItem13.Location = new System.Drawing.Point(0, 72);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(264, 24);
-            this.layoutControlItem13.Text = "驾驶证号";
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(72, 14);
-            // 
-            // textFileNumber
-            // 
-            this.textFileNumber.Location = new System.Drawing.Point(351, 84);
-            this.textFileNumber.Name = "textFileNumber";
-            this.textFileNumber.Size = new System.Drawing.Size(185, 20);
-            this.textFileNumber.StyleController = this.layoutControl1;
-            this.textFileNumber.TabIndex = 31;
-            // 
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.textFileNumber;
@@ -604,21 +599,6 @@ namespace CarDistpatchSYS
             this.layoutControlItem15.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem15.Text = "驾驶证档案号";
             this.layoutControlItem15.TextSize = new System.Drawing.Size(72, 14);
-            // 
-            // comDriverLicenseType
-            // 
-            this.comDriverLicenseType.Location = new System.Drawing.Point(87, 108);
-            this.comDriverLicenseType.Name = "comDriverLicenseType";
-            this.comDriverLicenseType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comDriverLicenseType.Properties.Items.AddRange(new object[] {
-            "B1",
-            "B2",
-            "C1",
-            "C2"});
-            this.comDriverLicenseType.Size = new System.Drawing.Size(185, 20);
-            this.comDriverLicenseType.StyleController = this.layoutControl1;
-            this.comDriverLicenseType.TabIndex = 32;
             // 
             // layoutControlItem17
             // 
@@ -640,6 +620,26 @@ namespace CarDistpatchSYS
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.textDriverLicense;
+            this.layoutControlItem13.CustomizationFormText = "驾驶证号";
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(264, 24);
+            this.layoutControlItem13.Text = "驾驶证号";
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(72, 14);
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.comSex;
+            this.layoutControlItem9.CustomizationFormText = "性别";
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(264, 24);
+            this.layoutControlItem9.Text = "性别";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(72, 14);
+            // 
             // FormEditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -651,6 +651,9 @@ namespace CarDistpatchSYS
             this.Text = "编辑车辆";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.comDriverLicenseType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textFileNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textDriverLicense.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clDepartmentID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBirthday.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBirthday.Properties)).EndInit();
@@ -680,7 +683,6 @@ namespace CarDistpatchSYS
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
@@ -688,13 +690,11 @@ namespace CarDistpatchSYS
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textDriverLicense.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textFileNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comDriverLicenseType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -46,6 +46,7 @@ namespace CarDistpatchSYS
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnClose = new DevExpress.XtraBars.BarButtonItem();
+            this.btnExport = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -79,7 +80,6 @@ namespace CarDistpatchSYS
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnExport = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comResult.Properties)).BeginInit();
@@ -182,6 +182,15 @@ namespace CarDistpatchSYS
             this.btnClose.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnClose.LargeGlyph")));
             this.btnClose.Name = "btnClose";
             this.btnClose.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // btnExport
+            // 
+            this.btnExport.Caption = "导出Excel";
+            this.btnExport.Glyph = ((System.Drawing.Image)(resources.GetObject("btnExport.Glyph")));
+            this.btnExport.Id = 4;
+            this.btnExport.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnExport.LargeGlyph")));
+            this.btnExport.Name = "btnExport";
+            this.btnExport.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // barDockControlTop
             // 
@@ -607,15 +616,6 @@ namespace CarDistpatchSYS
             this.layoutControlItem8.Size = new System.Drawing.Size(262, 24);
             this.layoutControlItem8.Text = "维修结果";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(60, 14);
-            // 
-            // btnExport
-            // 
-            this.btnExport.Caption = "导出Excel";
-            this.btnExport.Glyph = ((System.Drawing.Image)(resources.GetObject("btnExport.Glyph")));
-            this.btnExport.Id = 4;
-            this.btnExport.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnExport.LargeGlyph")));
-            this.btnExport.Name = "btnExport";
-            this.btnExport.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // MainRepairReport
             // 
