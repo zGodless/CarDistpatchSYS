@@ -10,3 +10,10 @@ D:\beifen\1实习\代码\DS\DS\QuickFrame.UI.Common\bin\x86\Release\QuickFrame.C
 D:\beifen\1实习\代码\DS\DS\QuickFrame.UI.Common\bin\x86\Release\QuickFrame.Common.pdb
 D:\beifen\1实习\代码\DS\DS\QuickFrame.UI.Common\obj\x86\Release\QuickFrame.UI.Common.dll
 D:\beifen\1实习\代码\DS\DS\QuickFrame.UI.Common\obj\x86\Release\QuickFrame.UI.Common.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.UI.Common\bin\x86\Release\QuickFrame.UI.Common.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.UI.Common\bin\x86\Release\QuickFrame.UI.Common.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.UI.Common\bin\x86\Release\QuickFrame.Common.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.UI.Common\bin\x86\Release\QuickFrame.Common.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.UI.Common\obj\x86\Release\QuickFrame.UI.Common.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.UI.Common\obj\x86\Release\QuickFrame.UI.Common.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.UI.Common\obj\x86\Release\QuickFrame.UI.Common.csprojResolveAssemblyReference.cache

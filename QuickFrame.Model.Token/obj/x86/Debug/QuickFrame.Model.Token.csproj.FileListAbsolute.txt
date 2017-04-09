@@ -6,3 +6,7 @@ D:\beifen\1实习\代码\DS\DS\QuickFrame.Model.Token\bin\x86\Debug\QuickFrame.M
 D:\beifen\1实习\代码\DS\DS\QuickFrame.Model.Token\bin\x86\Debug\QuickFrame.Model.Token.pdb
 D:\beifen\1实习\代码\DS\DS\QuickFrame.Model.Token\obj\x86\Debug\QuickFrame.Model.Token.dll
 D:\beifen\1实习\代码\DS\DS\QuickFrame.Model.Token\obj\x86\Debug\QuickFrame.Model.Token.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Model.Token\bin\x86\Debug\QuickFrame.Model.Token.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Model.Token\bin\x86\Debug\QuickFrame.Model.Token.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Model.Token\obj\x86\Debug\QuickFrame.Model.Token.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Model.Token\obj\x86\Debug\QuickFrame.Model.Token.pdb

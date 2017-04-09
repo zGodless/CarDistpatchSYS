@@ -6,3 +6,7 @@ D:\beifen\1实习\代码\DS\DS\QuickFrame.Common\bin\x86\Debug\QuickFrame.Common
 D:\beifen\1实习\代码\DS\DS\QuickFrame.Common\bin\x86\Debug\QuickFrame.Common.pdb
 D:\beifen\1实习\代码\DS\DS\QuickFrame.Common\obj\x86\Debug\QuickFrame.Common.dll
 D:\beifen\1实习\代码\DS\DS\QuickFrame.Common\obj\x86\Debug\QuickFrame.Common.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Common\bin\x86\Debug\QuickFrame.Common.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Common\bin\x86\Debug\QuickFrame.Common.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Common\obj\x86\Debug\QuickFrame.Common.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Common\obj\x86\Debug\QuickFrame.Common.pdb

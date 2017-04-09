@@ -14,3 +14,12 @@ D:\beifen\1实习\代码\DS\DS\QuickFrame.Token.Client\bin\x86\Debug\QuickFrame.
 D:\beifen\1实习\代码\DS\DS\QuickFrame.Token.Client\bin\x86\Debug\QuickFrame.Model.Token.pdb
 D:\beifen\1实习\代码\DS\DS\QuickFrame.Token.Client\obj\x86\Debug\QuickFrame.Token.Client.dll
 D:\beifen\1实习\代码\DS\DS\QuickFrame.Token.Client\obj\x86\Debug\QuickFrame.Token.Client.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\bin\x86\Debug\QuickFrame.Token.Client.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\bin\x86\Debug\QuickFrame.Token.Client.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\bin\x86\Debug\QuickFrame.Common.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\bin\x86\Debug\QuickFrame.Model.Token.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\bin\x86\Debug\QuickFrame.Common.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\bin\x86\Debug\QuickFrame.Model.Token.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\obj\x86\Debug\QuickFrame.Token.Client.csprojResolveAssemblyReference.cache
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\obj\x86\Debug\QuickFrame.Token.Client.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Token.Client\obj\x86\Debug\QuickFrame.Token.Client.pdb

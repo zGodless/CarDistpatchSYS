@@ -22,3 +22,16 @@ D:\beifen\1实习\代码\DS\DS\QuickFrame.DbConnector\bin\x86\Debug\QuickFrame.C
 D:\beifen\1实习\代码\DS\DS\QuickFrame.DbConnector\bin\x86\Debug\QuickFrame.Repository.pdb
 D:\beifen\1实习\代码\DS\DS\QuickFrame.DbConnector\obj\x86\Debug\QuickFrame.DbConnector.dll
 D:\beifen\1实习\代码\DS\DS\QuickFrame.DbConnector\obj\x86\Debug\QuickFrame.DbConnector.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.DbConnector\bin\x86\Debug\QuickFrame.DbConnector.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.DbConnector\bin\x86\Debug\QuickFrame.DbConnector.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.DbConnector\bin\x86\Debug\MySql.Data.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.DbConnector\bin\x86\Debug\Npgsql.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.DbConnector\bin\x86\Debug\QuickFrame.Common.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.DbConnector\bin\x86\Debug\QuickFrame.Model.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.DbConnector\bin\x86\Debug\QuickFrame.Repository.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.DbConnector\bin\x86\Debug\QuickFrame.Model.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.DbConnector\bin\x86\Debug\QuickFrame.Common.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.DbConnector\bin\x86\Debug\QuickFrame.Repository.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.DbConnector\obj\x86\Debug\QuickFrame.DbConnector.csprojResolveAssemblyReference.cache
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.DbConnector\obj\x86\Debug\QuickFrame.DbConnector.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.DbConnector\obj\x86\Debug\QuickFrame.DbConnector.pdb

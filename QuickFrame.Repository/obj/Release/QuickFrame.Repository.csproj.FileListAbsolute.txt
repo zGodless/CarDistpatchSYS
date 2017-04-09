@@ -18,3 +18,13 @@ D:\beifen\1实习\代码\DS\DS\QuickFrame.Repository\obj\Release\QuickFrame.Repo
 D:\beifen\1实习\代码\DS\DS\QuickFrame.Repository\obj\Release\QuickFrame.Repository.csproj.GenerateResource.Cache
 D:\beifen\1实习\代码\DS\DS\QuickFrame.Repository\obj\Release\QuickFrame.Repository.dll
 D:\beifen\1实习\代码\DS\DS\QuickFrame.Repository\obj\Release\QuickFrame.Repository.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\bin\Release\QuickFrame.Repository.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\bin\Release\QuickFrame.Repository.pdb
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\obj\Release\QuickFrame.Repository.General.TokenStore.resources
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\obj\Release\QuickFrame.Repository.MySql.TokenStore.resources
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\obj\Release\QuickFrame.Repository.PostgreSql.TokenStore.resources
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\obj\Release\QuickFrame.Repository.Properties.Resources.resources
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\obj\Release\QuickFrame.Repository.SqlServer.TokenStore.resources
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\obj\Release\QuickFrame.Repository.csproj.GenerateResource.Cache
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\obj\Release\QuickFrame.Repository.dll
+E:\毕设\代码仓\CarDistpatchSYS\QuickFrame.Repository\obj\Release\QuickFrame.Repository.pdb
